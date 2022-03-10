@@ -1,0 +1,48 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mqtt-exporter-config
+  namespace: monitoring
+data:
+  conf.yaml: |
+    # MQTT All values default to paho.mqtt.client defaults
+    mqtt:
+      host:      '3.223.97.169'
+      port:       30070
+
+    metrics:
+      - name:     'wwtp_temperature'
+        help:     'Topic wwtp/temperature'
+        type:     'gauge'
+        topic:    'wwtp/temperature'
+        label_configs:
+          - source_labels:  ['__msg_topic__']           # Required (when label_configs is present)
+            separator:      '/'                         # Optional default ';'
+            regex:          '(.*)'                      # Optional default '(.*)'
+            target_label:   '__topic__'                 # Required (when label_configs is present and 'action' = 'replace')
+            replacement:    '\1'                        # Optional default '\1'
+            action:         'replace'                   # Optional default 'replace'
+
+      - name:     'wwtp_led'
+        help:     'Topic wwtp/led'
+        type:     'gauge'
+        topic:    'wwtp/led'
+        label_configs:
+          - source_labels:  ['__msg_topic__']           # Required (when label_configs is present)
+            separator:      '/'                         # Optional default ';'
+            regex:          '(.*)'                      # Optional default '(.*)'
+            target_label:   '__topic__'                 # Required (when label_configs is present and 'action' = 'replace')
+            replacement:    '\1'                        # Optional default '\1'
+            action:         'replace'                   # Optional default 'replace'
+
+      - name:     'wwtp_buzzer'
+        help:     'Topic wwtp/buzzer'
+        type:     'gauge'
+        topic:    'wwtp/buzzer'
+        label_configs:
+          - source_labels:  ['__msg_topic__']           # Required (when label_configs is present)
+            separator:      '/'                         # Optional default ';'
+            regex:          '(.*)'                      # Optional default '(.*)'
+            target_label:   '__topic__'                 # Required (when label_configs is present and 'action' = 'replace')
+            replacement:    '\1'                        # Optional default '\1'
+            action:         'replace'                   # Optional default 'replace'
