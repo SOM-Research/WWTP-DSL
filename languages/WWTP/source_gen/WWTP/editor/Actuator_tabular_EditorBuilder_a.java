@@ -118,7 +118,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
   public Grid createStaticHorizontal_ilbjvu_a0(final EditorContext editorContext, final SNode node) {
     Grid grid = new Grid();
 
-    List<Grid> children = new ArrayList<Grid>(11);
+    List<Grid> children = new ArrayList<Grid>(12);
     if (true) {
       children.add(createTableCell_ilbjvu_a0a(editorContext, node));
     }
@@ -131,14 +131,14 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     if (true) {
       children.add(createTableCell_ilbjvu_d0a(editorContext, node));
     }
+    if (true) {
+      children.add(createTableCell_ilbjvu_e0a(editorContext, node));
+    }
     if (new Object() {
       public boolean condition() {
         return SNodeOperations.isInstanceOf(SNodeOperations.getParent(node), CONCEPTS.IoT_System$Z$);
       }
     }.condition()) {
-      children.add(createTableCell_ilbjvu_e0a(editorContext, node));
-    }
-    if (true) {
       children.add(createTableCell_ilbjvu_f0a(editorContext, node));
     }
     if (true) {
@@ -155,6 +155,9 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     }
     if (true) {
       children.add(createTableCell_ilbjvu_k0a(editorContext, node));
+    }
+    if (true) {
+      children.add(createTableCell_ilbjvu_l0a(editorContext, node));
     }
     int maxHeight = grid.getRowHeadersSizeY();
     for (Grid child : ListSequence.fromList(children)) {
@@ -460,6 +463,52 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     return grid;
   }
   public Grid createTableCell_ilbjvu_e0a(final EditorContext editorContext, final SNode node) {
+
+    EditorCell cell = createConstant_2();
+    final Style style = new ITableStyleFactory() {
+      public Style createStyle(final int columnIndex, final int rowIndex) {
+        Style style = new StyleImpl();
+        final EditorCell editorCell = null;
+        return style;
+      }
+    }.createStyle(0, 0);
+
+    Grid grid;
+    if (cell instanceof PartialTableEditor) {
+      grid = ((PartialTableEditor) cell).getGrid().clone();
+    } else {
+      grid = new Grid();
+      EditorCellGridLeaf leaf = new EditorCellGridLeaf(cell);
+      leaf.setStyle(style);
+      grid.setElement(0, 0, leaf);
+    }
+    grid.setColumnHeaders(0, 0, createStaticHeader_ilbjvu_a4a0(editorContext, node));
+
+    return grid;
+  }
+  private EditorCell createConstant_2() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "---");
+    editorCell.setCellId("Constant_ilbjvu_a4a0");
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  public HeaderGrid createStaticHeader_ilbjvu_a4a0(final EditorContext editorContext, final SNode snode) {
+    final Style style = new ITableStyleFactory() {
+      public Style createStyle(final int columnIndex, final int rowIndex) {
+        Style style = new StyleImpl();
+        final EditorCell editorCell = null;
+        return style;
+      }
+    }.createStyle(0, 0);
+    final EditorCell_Constant cell = new EditorCell_Constant(editorContext, snode, "Threshold", false);
+    Header header = new EditorCellHeader(new StringHeaderReference("Threshold"), cell);
+    header.setLabel("Threshold");
+    header.setStyle(style);
+    HeaderGrid grid = new HeaderGrid();
+    grid.setElement(0, 0, header);
+    return grid;
+  }
+  public Grid createTableCell_ilbjvu_f0a(final EditorContext editorContext, final SNode node) {
     if (!(new Object() {
       public boolean condition() {
         return SNodeOperations.isInstanceOf(SNodeOperations.getParent(node), CONCEPTS.IoT_System$Z$);
@@ -486,12 +535,12 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
       leaf.setStyle(style);
       grid.setElement(0, 0, leaf);
     }
-    grid.setColumnHeaders(0, 0, createStaticHeader_ilbjvu_a4a0(editorContext, node));
+    grid.setColumnHeaders(0, 0, createStaticHeader_ilbjvu_a5a0(editorContext, node));
 
     return grid;
   }
   private EditorCell createRefNodeList_0() {
-    AbstractCellListHandler handler = new regionsListHandler_ilbjvu_a4a0(myNode, getEditorContext());
+    AbstractCellListHandler handler = new regionsListHandler_ilbjvu_a5a0(myNode, getEditorContext());
     EditorCell_Collection editorCell = handler.createCells(new CellLayout_Vertical(), false);
     editorCell.setCellId("refNodeList_regions");
     Style style = new StyleImpl();
@@ -502,11 +551,11 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     editorCell.setSRole(handler.getElementSRole());
     return editorCell;
   }
-  private static class regionsListHandler_ilbjvu_a4a0 extends RefNodeListHandler {
+  private static class regionsListHandler_ilbjvu_a5a0 extends RefNodeListHandler {
     @NotNull
     private SNode myNode;
 
-    public regionsListHandler_ilbjvu_a4a0(SNode ownerNode, EditorContext context) {
+    public regionsListHandler_ilbjvu_a5a0(SNode ownerNode, EditorContext context) {
       super(context, false);
       myNode = ownerNode;
     }
@@ -529,7 +578,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     }
     public EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(regionsListHandler_ilbjvu_a4a0.this.getNode(), LINKS.regions$svWv));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(regionsListHandler_ilbjvu_a5a0.this.getNode(), LINKS.regions$svWv));
       try {
         EditorCell emptyCell = null;
         emptyCell = super.createEmptyCell();
@@ -569,7 +618,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
       }
     }
   }
-  public HeaderGrid createStaticHeader_ilbjvu_a4a0(final EditorContext editorContext, final SNode snode) {
+  public HeaderGrid createStaticHeader_ilbjvu_a5a0(final EditorContext editorContext, final SNode snode) {
     final Style style = new ITableStyleFactory() {
       public Style createStyle(final int columnIndex, final int rowIndex) {
         Style style = new StyleImpl();
@@ -585,7 +634,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     grid.setElement(0, 0, header);
     return grid;
   }
-  public Grid createTableCell_ilbjvu_f0a(final EditorContext editorContext, final SNode node) {
+  public Grid createTableCell_ilbjvu_g0a(final EditorContext editorContext, final SNode node) {
 
     EditorCell cell = createProperty_2();
     final Style style = new ITableStyleFactory() {
@@ -605,7 +654,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
       leaf.setStyle(style);
       grid.setElement(0, 0, leaf);
     }
-    grid.setColumnHeaders(0, 0, createStaticHeader_ilbjvu_a5a0(editorContext, node));
+    grid.setColumnHeaders(0, 0, createStaticHeader_ilbjvu_a6a0(editorContext, node));
 
     return grid;
   }
@@ -634,7 +683,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
       getCellFactory().popCellContext();
     }
   }
-  public HeaderGrid createStaticHeader_ilbjvu_a5a0(final EditorContext editorContext, final SNode snode) {
+  public HeaderGrid createStaticHeader_ilbjvu_a6a0(final EditorContext editorContext, final SNode snode) {
     final Style style = new ITableStyleFactory() {
       public Style createStyle(final int columnIndex, final int rowIndex) {
         Style style = new StyleImpl();
@@ -650,7 +699,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     grid.setElement(0, 0, header);
     return grid;
   }
-  public Grid createTableCell_ilbjvu_g0a(final EditorContext editorContext, final SNode node) {
+  public Grid createTableCell_ilbjvu_h0a(final EditorContext editorContext, final SNode node) {
 
     EditorCell cell = createProperty_3();
     final Style style = new ITableStyleFactory() {
@@ -670,7 +719,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
       leaf.setStyle(style);
       grid.setElement(0, 0, leaf);
     }
-    grid.setColumnHeaders(0, 0, createStaticHeader_ilbjvu_a6a0(editorContext, node));
+    grid.setColumnHeaders(0, 0, createStaticHeader_ilbjvu_a7a0(editorContext, node));
 
     return grid;
   }
@@ -699,7 +748,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
       getCellFactory().popCellContext();
     }
   }
-  public HeaderGrid createStaticHeader_ilbjvu_a6a0(final EditorContext editorContext, final SNode snode) {
+  public HeaderGrid createStaticHeader_ilbjvu_a7a0(final EditorContext editorContext, final SNode snode) {
     final Style style = new ITableStyleFactory() {
       public Style createStyle(final int columnIndex, final int rowIndex) {
         Style style = new StyleImpl();
@@ -707,15 +756,15 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
         return style;
       }
     }.createStyle(0, 0);
-    final EditorCell_Constant cell = new EditorCell_Constant(editorContext, snode, "Communication", false);
-    Header header = new EditorCellHeader(new StringHeaderReference("Communication"), cell);
-    header.setLabel("Communication");
+    final EditorCell_Constant cell = new EditorCell_Constant(editorContext, snode, "Comm.", false);
+    Header header = new EditorCellHeader(new StringHeaderReference("Comm."), cell);
+    header.setLabel("Comm.");
     header.setStyle(style);
     HeaderGrid grid = new HeaderGrid();
     grid.setElement(0, 0, header);
     return grid;
   }
-  public Grid createTableCell_ilbjvu_h0a(final EditorContext editorContext, final SNode node) {
+  public Grid createTableCell_ilbjvu_i0a(final EditorContext editorContext, final SNode node) {
 
     EditorCell cell = createRefCell_1();
     final Style style = new ITableStyleFactory() {
@@ -735,7 +784,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
       leaf.setStyle(style);
       grid.setElement(0, 0, leaf);
     }
-    grid.setColumnHeaders(0, 0, createStaticHeader_ilbjvu_a7a0(editorContext, node));
+    grid.setColumnHeaders(0, 0, createStaticHeader_ilbjvu_a8a0(editorContext, node));
 
     return grid;
   }
@@ -822,7 +871,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
       }
     }
   }
-  public HeaderGrid createStaticHeader_ilbjvu_a7a0(final EditorContext editorContext, final SNode snode) {
+  public HeaderGrid createStaticHeader_ilbjvu_a8a0(final EditorContext editorContext, final SNode snode) {
     final Style style = new ITableStyleFactory() {
       public Style createStyle(final int columnIndex, final int rowIndex) {
         Style style = new StyleImpl();
@@ -838,7 +887,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     grid.setElement(0, 0, header);
     return grid;
   }
-  public Grid createTableCell_ilbjvu_i0a(final EditorContext editorContext, final SNode node) {
+  public Grid createTableCell_ilbjvu_j0a(final EditorContext editorContext, final SNode node) {
 
     EditorCell cell = createRefCell_2();
     final Style style = new ITableStyleFactory() {
@@ -858,7 +907,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
       leaf.setStyle(style);
       grid.setElement(0, 0, leaf);
     }
-    grid.setColumnHeaders(0, 0, createStaticHeader_ilbjvu_a8a0(editorContext, node));
+    grid.setColumnHeaders(0, 0, createStaticHeader_ilbjvu_a9a0(editorContext, node));
 
     return grid;
   }
@@ -948,7 +997,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
       }
     }
   }
-  public HeaderGrid createStaticHeader_ilbjvu_a8a0(final EditorContext editorContext, final SNode snode) {
+  public HeaderGrid createStaticHeader_ilbjvu_a9a0(final EditorContext editorContext, final SNode snode) {
     final Style style = new ITableStyleFactory() {
       public Style createStyle(final int columnIndex, final int rowIndex) {
         Style style = new StyleImpl();
@@ -964,7 +1013,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     grid.setElement(0, 0, header);
     return grid;
   }
-  public Grid createTableCell_ilbjvu_j0a(final EditorContext editorContext, final SNode node) {
+  public Grid createTableCell_ilbjvu_k0a(final EditorContext editorContext, final SNode node) {
 
     EditorCell cell = createProperty_6();
     final Style style = new ITableStyleFactory() {
@@ -984,7 +1033,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
       leaf.setStyle(style);
       grid.setElement(0, 0, leaf);
     }
-    grid.setColumnHeaders(0, 0, createStaticHeader_ilbjvu_a9a0(editorContext, node));
+    grid.setColumnHeaders(0, 0, createStaticHeader_ilbjvu_a01a0(editorContext, node));
 
     return grid;
   }
@@ -1013,7 +1062,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
       getCellFactory().popCellContext();
     }
   }
-  public HeaderGrid createStaticHeader_ilbjvu_a9a0(final EditorContext editorContext, final SNode snode) {
+  public HeaderGrid createStaticHeader_ilbjvu_a01a0(final EditorContext editorContext, final SNode snode) {
     final Style style = new ITableStyleFactory() {
       public Style createStyle(final int columnIndex, final int rowIndex) {
         Style style = new StyleImpl();
@@ -1029,7 +1078,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     grid.setElement(0, 0, header);
     return grid;
   }
-  public Grid createTableCell_ilbjvu_k0a(final EditorContext editorContext, final SNode node) {
+  public Grid createTableCell_ilbjvu_l0a(final EditorContext editorContext, final SNode node) {
 
     EditorCell cell = createProperty_7();
     final Style style = new ITableStyleFactory() {
@@ -1049,7 +1098,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
       leaf.setStyle(style);
       grid.setElement(0, 0, leaf);
     }
-    grid.setColumnHeaders(0, 0, createStaticHeader_ilbjvu_a01a0(editorContext, node));
+    grid.setColumnHeaders(0, 0, createStaticHeader_ilbjvu_a11a0(editorContext, node));
 
     return grid;
   }
@@ -1078,7 +1127,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
       getCellFactory().popCellContext();
     }
   }
-  public HeaderGrid createStaticHeader_ilbjvu_a01a0(final EditorContext editorContext, final SNode snode) {
+  public HeaderGrid createStaticHeader_ilbjvu_a11a0(final EditorContext editorContext, final SNode snode) {
     final Style style = new ITableStyleFactory() {
       public Style createStyle(final int columnIndex, final int rowIndex) {
         Style style = new StyleImpl();

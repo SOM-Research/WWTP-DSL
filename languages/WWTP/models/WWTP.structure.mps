@@ -436,6 +436,11 @@
       <property role="TrG5h" value="unit" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
+    <node concept="1TJgyi" id="19kBTbAtXgP" role="1TKVEl">
+      <property role="IQ2nx" value="1320856044007052341" />
+      <property role="TrG5h" value="threshold" />
+      <ref role="AX2Wp" node="3OwpQzwZCAP" resolve="float" />
+    </node>
     <node concept="1TJgyj" id="2cS6XcGq7n8" role="1TKVEi">
       <property role="IQ2ns" value="2537808983820367304" />
       <property role="20kJfa" value="type" />
@@ -647,6 +652,11 @@
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="MV5QEUF8NI" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyi" id="19kBTbAo4_7" role="1TKVEl">
+      <property role="IQ2nx" value="1320856044005509447" />
+      <property role="TrG5h" value="label" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
   </node>
   <node concept="1TIwiD" id="MV5QEUIV22">
@@ -997,7 +1007,7 @@
     <node concept="1TJgyj" id="3MnXQNRbQv0" role="1TKVEi">
       <property role="IQ2ns" value="4366230411134592960" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="processes" />
+      <property role="20kJfa" value="treatments" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="3MnXQNRbQuZ" resolve="Treatment" />
     </node>
@@ -1052,7 +1062,7 @@
     <property role="EcuMT" value="8835431912742353631" />
     <property role="TrG5h" value="Water_Flow" />
     <property role="3GE5qa" value="WWTP" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="7EtKCcOadQi" role="1TKVEi">
       <property role="IQ2ns" value="8835431912742378898" />
       <property role="20kJfa" value="process" />
@@ -1064,7 +1074,7 @@
     <property role="EcuMT" value="6762967158190278325" />
     <property role="TrG5h" value="Sludge_Flow" />
     <property role="3GE5qa" value="WWTP" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="5RqSGLN$8qQ" role="1TKVEi">
       <property role="IQ2ns" value="6762967158190278326" />
       <property role="20kJfa" value="process" />
@@ -1076,7 +1086,7 @@
     <property role="EcuMT" value="1370887510182958428" />
     <property role="3GE5qa" value="Infrastructure" />
     <property role="TrG5h" value="IoT_Device_Reference" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="1c6nIPvuplt" role="1TKVEi">
       <property role="IQ2ns" value="1370887510182958429" />
       <property role="20kJfa" value="iot_device" />
@@ -1108,8 +1118,8 @@
   <node concept="1TIwiD" id="2W36oaop_qb">
     <property role="EcuMT" value="3387579393406031499" />
     <property role="3GE5qa" value="WWTP.Treatments" />
-    <property role="TrG5h" value="Sludge_Hopper" />
-    <property role="34LRSv" value="Sludge Hopper" />
+    <property role="TrG5h" value="Hopper" />
+    <property role="34LRSv" value="Hopper" />
     <ref role="1TJDcQ" node="3MnXQNRbQuZ" resolve="Treatment" />
   </node>
   <node concept="1TIwiD" id="2W36oaoH5d_">
@@ -1122,8 +1132,8 @@
   <node concept="1TIwiD" id="2W36oaoH6ru">
     <property role="EcuMT" value="3387579393411147486" />
     <property role="3GE5qa" value="WWTP.Treatments" />
-    <property role="TrG5h" value="Mec_Dehydratation" />
-    <property role="34LRSv" value="Mec Dehydratation" />
+    <property role="TrG5h" value="Mec_Dehydration" />
+    <property role="34LRSv" value="Mec Dehydration" />
     <ref role="1TJDcQ" node="3MnXQNRbQuZ" resolve="Treatment" />
   </node>
   <node concept="1TIwiD" id="2W36oaoU8Zv">
@@ -1131,13 +1141,6 @@
     <property role="3GE5qa" value="WWTP.Treatments" />
     <property role="TrG5h" value="Roughing_System" />
     <property role="34LRSv" value="Roughing System" />
-    <ref role="1TJDcQ" node="3MnXQNRbQuZ" resolve="Treatment" />
-  </node>
-  <node concept="1TIwiD" id="2W36oaoU8Zw">
-    <property role="EcuMT" value="3387579393414565856" />
-    <property role="3GE5qa" value="WWTP.Treatments" />
-    <property role="TrG5h" value="Grist_Chamber" />
-    <property role="34LRSv" value="Grist Chamber" />
     <ref role="1TJDcQ" node="3MnXQNRbQuZ" resolve="Treatment" />
   </node>
   <node concept="1TIwiD" id="2W36oaoU8Zx">
@@ -1157,15 +1160,15 @@
   <node concept="1TIwiD" id="2W36oaoU8Zz">
     <property role="EcuMT" value="3387579393414565859" />
     <property role="3GE5qa" value="WWTP.Treatments" />
-    <property role="TrG5h" value="Slude_Thickener" />
-    <property role="34LRSv" value="Slude Thickener" />
+    <property role="TrG5h" value="Sludge_Thickener" />
+    <property role="34LRSv" value="Thickener" />
     <ref role="1TJDcQ" node="3MnXQNRbQuZ" resolve="Treatment" />
   </node>
   <node concept="1TIwiD" id="2W36oaoU8Z$">
     <property role="EcuMT" value="3387579393414565860" />
     <property role="3GE5qa" value="WWTP.Treatments" />
-    <property role="TrG5h" value="Degrease_Chamber" />
-    <property role="34LRSv" value="Degrease Chamber" />
+    <property role="TrG5h" value="Grit_Chamber" />
+    <property role="34LRSv" value="Grit Chamber" />
     <ref role="1TJDcQ" node="3MnXQNRbQuZ" resolve="Treatment" />
   </node>
   <node concept="1TIwiD" id="2W36oaoU8Z_">
@@ -1201,7 +1204,7 @@
     <property role="EcuMT" value="2158116648750276454" />
     <property role="3GE5qa" value="Infrastructure" />
     <property role="TrG5h" value="Volume" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="1RNaUxCBtXD" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -1221,6 +1224,64 @@
     <property role="3GE5qa" value="AdaptationRules" />
     <property role="TrG5h" value="float" />
     <property role="FLfZY" value="-?[0-9]*+(\\.[0-9]*)?" />
+  </node>
+  <node concept="1TIwiD" id="34YZOlhm4ek">
+    <property role="EcuMT" value="3548554229597094804" />
+    <property role="3GE5qa" value="WWTP" />
+    <property role="TrG5h" value="Treatment_Event" />
+    <ref role="1TJDcQ" to="tpee:fz3vP1J" resolve="Expression" />
+    <node concept="1TJgyj" id="34YZOlhm4en" role="1TKVEi">
+      <property role="IQ2ns" value="3548554229597094807" />
+      <property role="20kJfa" value="treatment" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="3MnXQNRbQuZ" resolve="Treatment" />
+    </node>
+    <node concept="1TJgyj" id="34YZOlhm4ep" role="1TKVEi">
+      <property role="IQ2ns" value="3548554229597094809" />
+      <property role="20kJfa" value="sensorType" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="2cS6XcGq5AN" resolve="Sensor_Type" />
+    </node>
+    <node concept="RPilO" id="34YZOlhvbEa" role="lGtFl">
+      <ref role="RPilL" node="34YZOlhm4en" resolve="treatment" />
+      <node concept="ROjv2" id="34YZOlhvdP0" role="ROhUF" />
+    </node>
+    <node concept="PrWs8" id="34YZOlhCQOg" role="PzmwI">
+      <ref role="PrY4T" to="tpck:2WmWrdnSpX3" resolve="ISuppressErrors" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="19kBTbAobBe">
+    <property role="EcuMT" value="1320856044005538254" />
+    <property role="3GE5qa" value="AdaptationRules" />
+    <property role="TrG5h" value="Exp_Cont" />
+    <ref role="1TJDcQ" node="5c6$$01D87u" resolve="Resource_Expression" />
+    <node concept="1TJgyj" id="19kBTbAobBf" role="1TKVEi">
+      <property role="IQ2ns" value="1320856044005538255" />
+      <property role="20kJfa" value="container" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="3c9wsavSfG9" resolve="Container" />
+    </node>
+    <node concept="RPilO" id="19kBTbAobBh" role="lGtFl">
+      <ref role="RPilL" node="19kBTbAobBf" resolve="container" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="19kBTbAr4xC">
+    <property role="EcuMT" value="1320856044006295656" />
+    <property role="3GE5qa" value="AdaptationRules" />
+    <property role="TrG5h" value="Exp_LayerReg" />
+    <ref role="1TJDcQ" node="5c6$$01D87u" resolve="Resource_Expression" />
+    <node concept="1TJgyi" id="19kBTbAr4xP" role="1TKVEl">
+      <property role="IQ2nx" value="1320856044006295669" />
+      <property role="TrG5h" value="layer" />
+      <ref role="AX2Wp" node="5c6$$01Bm38" resolve="layer" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="19kBTbAr4z$">
+    <property role="EcuMT" value="1320856044006295780" />
+    <property role="3GE5qa" value="AdaptationRules" />
+    <property role="TrG5h" value="Threshold_Value" />
+    <property role="34LRSv" value="Threshold value" />
+    <ref role="1TJDcQ" to="tpee:fz3vP1J" resolve="Expression" />
   </node>
 </model>
 

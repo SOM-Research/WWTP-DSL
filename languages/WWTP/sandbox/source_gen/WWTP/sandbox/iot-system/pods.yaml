@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: mosquitto
   labels:
-    app: broker
+    app: brokerMQTT
 spec:
   containers:
     - name: mosquitto
@@ -26,5 +26,29 @@ spec:
     configMap:
       name: mosquitto-config
   nodeSelector:
-    node: edge-node
+    node: edge-node-1
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: realtime-app
+  labels:
+    app: realtimeAnalysis
+spec:
+  containers:
+    - name: realtime-app
+      image: realtime-app:latest
+      resources:
+        limits:
+          cpu: "1m"
+        requests:
+          memory: "600Mi"
+          cpu: "500m"
+      ports:
+      - containerPort: 8080
+
+
+
+  nodeSelector:
+    node: fog-node-1
 ---

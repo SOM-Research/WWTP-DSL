@@ -4,6 +4,7 @@
     <projectModules>
       <modulePath path="$PROJECT_DIR$/languages/WWTP/WWTP.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/WWTP/sandbox/WWTP.sandbox.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/Shapes/Shapes.msd" folder="" />
     </projectModules>
   </component>
 </project>

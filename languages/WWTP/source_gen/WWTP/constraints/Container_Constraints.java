@@ -8,25 +8,20 @@ import jetbrains.mps.smodel.runtime.ConstraintContext_CanBeChild;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.smodel.runtime.CheckingNodeContext;
-import jetbrains.mps.smodel.runtime.base.BasePropertyConstraintsDescriptor;
-import jetbrains.mps.smodel.runtime.ConstraintsDescriptor;
-import org.jetbrains.mps.openapi.model.SNode;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
-import jetbrains.mps.smodel.SNodePointer;
 import java.util.Map;
-import org.jetbrains.mps.openapi.language.SProperty;
-import jetbrains.mps.smodel.runtime.PropertyConstraintsDescriptor;
-import java.util.HashMap;
 import org.jetbrains.mps.openapi.language.SReferenceLink;
 import jetbrains.mps.smodel.runtime.ReferenceConstraintsDescriptor;
 import jetbrains.mps.smodel.runtime.base.BaseReferenceConstraintsDescriptor;
 import jetbrains.mps.smodel.runtime.ReferenceScopeProvider;
 import jetbrains.mps.smodel.runtime.base.BaseScopeProvider;
 import org.jetbrains.mps.openapi.model.SNodeReference;
+import jetbrains.mps.smodel.SNodePointer;
 import jetbrains.mps.scope.Scope;
 import jetbrains.mps.smodel.runtime.ReferenceConstraintsContext;
 import jetbrains.mps.scope.SimpleRoleScope;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import java.util.HashMap;
+import org.jetbrains.mps.openapi.model.SNode;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import WWTP.behavior.Container__BehaviorDescriptor;
@@ -52,45 +47,6 @@ public class Container_Constraints extends BaseConstraintsDescriptor {
         return result;
       }
     };
-  }
-  public static class CpuLimit_Property extends BasePropertyConstraintsDescriptor {
-    public CpuLimit_Property(ConstraintsDescriptor container) {
-      super(PROPS.cpuLimit$PhFS, container, false, false, true);
-    }
-    @Override
-    public boolean validateValue(SNode node, Object propertyValue, CheckingNodeContext checkingNodeContext) {
-      boolean result = staticValidateProperty(node, SPropertyOperations.castInteger(propertyValue));
-      if (!(result) && checkingNodeContext != null) {
-        checkingNodeContext.setBreakingNode(new SNodePointer("r:ef5b13d7-d5e8-4ebf-a18f-76c256afe20a(WWTP.constraints)", "2523733536484666968"));
-      }
-      return result;
-    }
-    private static boolean staticValidateProperty(SNode node, int propertyValue) {
-      return propertyValue > 0;
-    }
-  }
-  public static class MemoryLimit_Property extends BasePropertyConstraintsDescriptor {
-    public MemoryLimit_Property(ConstraintsDescriptor container) {
-      super(PROPS.memoryLimit$Pi9U, container, false, false, true);
-    }
-    @Override
-    public boolean validateValue(SNode node, Object propertyValue, CheckingNodeContext checkingNodeContext) {
-      boolean result = staticValidateProperty(node, SPropertyOperations.castInteger(propertyValue));
-      if (!(result) && checkingNodeContext != null) {
-        checkingNodeContext.setBreakingNode(new SNodePointer("r:ef5b13d7-d5e8-4ebf-a18f-76c256afe20a(WWTP.constraints)", "2523733536484715934"));
-      }
-      return result;
-    }
-    private static boolean staticValidateProperty(SNode node, int propertyValue) {
-      return propertyValue > 0;
-    }
-  }
-  @Override
-  protected Map<SProperty, PropertyConstraintsDescriptor> getSpecifiedProperties() {
-    Map<SProperty, PropertyConstraintsDescriptor> properties = new HashMap<SProperty, PropertyConstraintsDescriptor>();
-    properties.put(PROPS.cpuLimit$PhFS, new CpuLimit_Property(this));
-    properties.put(PROPS.memoryLimit$Pi9U, new MemoryLimit_Property(this));
-    return properties;
   }
   @Override
   protected Map<SReferenceLink, ReferenceConstraintsDescriptor> getSpecifiedReferences() {
@@ -127,11 +83,6 @@ public class Container_Constraints extends BaseConstraintsDescriptor {
   private static final class CONCEPTS {
     /*package*/ static final SConcept Container$SX = MetaAdapterFactory.getConcept(0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x330981c29fe0fb09L, "WWTP.structure.Container");
     /*package*/ static final SConcept IoT_System$Z$ = MetaAdapterFactory.getConcept(0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x23381bd32c6857a2L, "WWTP.structure.IoT_System");
-  }
-
-  private static final class PROPS {
-    /*package*/ static final SProperty cpuLimit$PhFS = MetaAdapterFactory.getProperty(0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x330981c29fe0fb09L, 0x78a11bdb8b481cbeL, "cpuLimit");
-    /*package*/ static final SProperty memoryLimit$Pi9U = MetaAdapterFactory.getProperty(0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x330981c29fe0fb09L, 0x78a11bdb8b481cc0L, "memoryLimit");
   }
 
   private static final class LINKS {

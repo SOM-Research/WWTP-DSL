@@ -13,6 +13,8 @@ import de.itemis.mps.editor.diagram.runtime.ContextVariables;
 import java.util.List;
 import de.itemis.mps.editor.diagram.runtime.model.Port;
 import java.util.ArrayList;
+import de.itemis.mps.editor.diagram.runtime.shape.IShape;
+import de.itemis.mps.editor.diagram.shapes.Ellipsis;
 import de.itemis.mps.editor.diagram.runtime.model.IBoxAccessor;
 import de.itemis.mps.editor.diagram.runtime.model.SNodeBoxAccessor;
 import de.itemis.mps.editor.diagram.runtime.model.IDiagramElementAccessor;
@@ -75,12 +77,16 @@ import org.jetbrains.mps.openapi.language.SConcept;
         EditorCell contentCell = createCollection_0();
         final List<EditorCell> contentCells = new ArrayList<EditorCell>();
         contentCells.add(contentCell);
+        final IShape shape = new Ellipsis();
 
 
         IBoxAccessor accessor = new SNodeBoxAccessor(node) {
           @NotNull
           public List<Port> getPorts() {
             return ports;
+          }
+          public IShape getShape() {
+            return shape;
           }
           @Override
           @NotNull

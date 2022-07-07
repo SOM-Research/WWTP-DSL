@@ -26,8 +26,9 @@ public final class Sensor_Type__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x23381bd32c6859b3L, "WWTP.structure.Sensor_Type");
 
   public static final SMethod<Boolean> checkRegion_id5c6$$01W3Px = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("checkRegion").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("5c6$$01W3Px").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
+  public static final SMethod<Boolean> checkTreatment_id34YZOlh_yGH = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("checkTreatment").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("34YZOlh_yGH").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(checkRegion_id5c6$$01W3Px);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(checkRegion_id5c6$$01W3Px, checkTreatment_id34YZOlh_yGH);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
@@ -40,6 +41,14 @@ public final class Sensor_Type__BehaviorDescriptor extends BaseBHDescriptor {
             return true;
           }
         }
+      }
+    }
+    return false;
+  }
+  /*package*/ static boolean checkTreatment_id34YZOlh_yGH(@NotNull SNode __thisNode__, SNode t) {
+    for (SNode s : SNodeOperations.ofConcept(SLinkOperations.getChildren(t, LINKS.iot_devices$JaN5), CONCEPTS.Sensor$8w)) {
+      if (SLinkOperations.getTarget(s, LINKS.type$LV3W) == __thisNode__) {
+        return true;
       }
     }
     return false;
@@ -62,6 +71,8 @@ public final class Sensor_Type__BehaviorDescriptor extends BaseBHDescriptor {
     switch (methodIndex) {
       case 0:
         return (T) ((Boolean) checkRegion_id5c6$$01W3Px(node, (SNode) parameters[0]));
+      case 1:
+        return (T) ((Boolean) checkTreatment_id34YZOlh_yGH(node, (SNode) parameters[0]));
       default:
         throw new BHMethodNotFoundException(this, method);
     }
@@ -96,6 +107,7 @@ public final class Sensor_Type__BehaviorDescriptor extends BaseBHDescriptor {
     /*package*/ static final SContainmentLink regions$svWv = MetaAdapterFactory.getContainmentLink(0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x23381bd32c687594L, 0x6a28ca9e36a4d858L, "regions");
     /*package*/ static final SReferenceLink type$LV3W = MetaAdapterFactory.getReferenceLink(0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x23381bd32c6875c5L, 0x23381bd32c6875c8L, "type");
     /*package*/ static final SContainmentLink IoTDevices$XO04 = MetaAdapterFactory.getContainmentLink(0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x23381bd32c6857a2L, 0x6175b41c53adc0f4L, "IoTDevices");
+    /*package*/ static final SContainmentLink iot_devices$JaN5 = MetaAdapterFactory.getContainmentLink(0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x3c97f76cf72f67bfL, 0x13065eed5f799554L, "iot_devices");
   }
 
   private static final class CONCEPTS {

@@ -13,7 +13,6 @@ import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
 import jetbrains.mps.openapi.editor.style.Style;
 import jetbrains.mps.editor.runtime.style.StyleImpl;
 import jetbrains.mps.editor.runtime.style.StyleAttributes;
-import jetbrains.mps.nodeEditor.MPSFonts;
 import jetbrains.mps.baseLanguage.closures.runtime.Wrappers;
 import de.itemis.mps.editor.diagram.runtime.jgraph.BaseDiagramECell;
 import de.itemis.mps.editor.diagram.runtime.EditorUtil;
@@ -45,6 +44,8 @@ import java.util.Collections;
 import de.itemis.mps.editor.diagram.runtime.model.GeneratedConnectionType;
 import de.itemis.mps.editor.diagram.runtime.model.IConnectionEndpoint;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
+import Shapes.blocks.IconWaterFlow;
+import Shapes.blocks.IconSludgeFlow;
 import de.itemis.mps.editor.diagram.runtime.model.DiagramModel;
 import de.itemis.mps.editor.diagram.runtime.model.IPaletteEntryProvider;
 import de.itemis.mps.editor.diagram.runtime.model.CompositePaletteEntryProvider;
@@ -84,7 +85,6 @@ import org.jetbrains.mps.openapi.language.SConcept;
     editorCell.setBig(true);
     setCellContext(editorCell);
     editorCell.addEditorCell(createConstant_0());
-    editorCell.addEditorCell(createConstant_1());
     editorCell.addEditorCell(createDiagram_1());
     return editorCell;
   }
@@ -93,17 +93,6 @@ import org.jetbrains.mps.openapi.language.SConcept;
     editorCell.setCellId("Constant_yt7qvq_a0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.INDENT_LAYOUT_ON_NEW_LINE, true);
-    editorCell.getStyle().putAll(style);
-    editorCell.setDefaultText("");
-    return editorCell;
-  }
-  private EditorCell createConstant_1() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Process block diagram");
-    editorCell.setCellId("Constant_yt7qvq_b0");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.INDENT_LAYOUT_ON_NEW_LINE, true);
-    style.set(StyleAttributes.FONT_STYLE, MPSFonts.BOLD);
-    style.set(StyleAttributes.FONT_SIZE, 16);
     editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
@@ -129,21 +118,21 @@ import org.jetbrains.mps.openapi.language.SConcept;
                         final List<IDiagramElementAccessor> elements = new ArrayList<IDiagramElementAccessor>();
                         for (SNode e : Sequence.fromIterable(new Object() {
                           public Iterable<SNode> query() {
-                            return SNodeOperations.ofConcept(SLinkOperations.getChildren(node, LINKS.processes$nJIi), CONCEPTS.Treatment$Cu);
+                            return SNodeOperations.ofConcept(SLinkOperations.getChildren(node, LINKS.treatments$nJIi), CONCEPTS.Treatment$Cu);
                           }
                         }.query())) {
                           elements.addAll(accessorFactory.fromSNode(e, false));
                         }
                         for (final SNode parameterObject : new Object() {
                           public Iterable<SNode> query() {
-                            return SLinkOperations.collectMany(SLinkOperations.getChildren(((SNode) _variablesContext.getValue("thisNode")), LINKS.processes$nJIi), LINKS.water_flows$ZGz8);
+                            return SLinkOperations.collectMany(SLinkOperations.getChildren(((SNode) _variablesContext.getValue("thisNode")), LINKS.treatments$nJIi), LINKS.water_flows$ZGz8);
                           }
                         }.query()) {
                           ContextVariables.withParentAndValue(_variablesContext, "parameterObject", parameterObject, new Runnable() {
                             public void run() {
                               final ContextVariables _variablesContext = ContextVariables.getCurrent();
                               final EditorCell_Collection editorCell = EditorCell_Collection.createHorizontal(editorContext, parameterObject);
-                              editorCell.setCellId("transformedGraphElement_b2a" + "." + ((SNode) _variablesContext.getValue("parameterObject")));
+                              editorCell.setCellId("transformedGraphElement_b1a" + "." + ((SNode) _variablesContext.getValue("parameterObject")));
 
 
                               final IShape startShape = null;
@@ -195,14 +184,14 @@ import org.jetbrains.mps.openapi.language.SConcept;
                         }
                         for (final SNode parameterObject : new Object() {
                           public Iterable<SNode> query() {
-                            return SLinkOperations.collectMany(SLinkOperations.getChildren(((SNode) _variablesContext.getValue("thisNode")), LINKS.processes$nJIi), LINKS.sludge_flows$UdVe);
+                            return SLinkOperations.collectMany(SLinkOperations.getChildren(((SNode) _variablesContext.getValue("thisNode")), LINKS.treatments$nJIi), LINKS.sludge_flows$UdVe);
                           }
                         }.query()) {
                           ContextVariables.withParentAndValue(_variablesContext, "parameterObject", parameterObject, new Runnable() {
                             public void run() {
                               final ContextVariables _variablesContext = ContextVariables.getCurrent();
                               final EditorCell_Collection editorCell = EditorCell_Collection.createHorizontal(editorContext, parameterObject);
-                              editorCell.setCellId("transformedGraphElement_c2a" + "." + ((SNode) _variablesContext.getValue("parameterObject")));
+                              editorCell.setCellId("transformedGraphElement_c1a" + "." + ((SNode) _variablesContext.getValue("parameterObject")));
 
 
                               final IShape startShape = null;
@@ -268,9 +257,13 @@ import org.jetbrains.mps.openapi.language.SConcept;
                           public void create(final IConnectionEndpoint from, final IConnectionEndpoint to) {
                             SNode fromNode = SNodeOperations.as(from.getSNode(), CONCEPTS.Treatment$Cu);
                             SNode toNode = SNodeOperations.as(to.getSNode(), CONCEPTS.Treatment$Cu);
-                            ListSequence.fromList(SLinkOperations.getChildren(fromNode, LINKS.water_flows$ZGz8)).addElement(createWater_Flow_yt7qvq_a0a2a0a2a(toNode));
+                            ListSequence.fromList(SLinkOperations.getChildren(fromNode, LINKS.water_flows$ZGz8)).addElement(createWater_Flow_yt7qvq_a0a2a0a1a(toNode));
                           }
 
+                          @Override
+                          protected IShape getIconShape() {
+                            return new IconWaterFlow();
+                          }
                         }));
                         connectionTypes.addAll(Collections.singletonList(new GeneratedConnectionType() {
                           public String getName() {
@@ -283,7 +276,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
                             final String fromPort = from.getPortName();
                             final String toPort = to.getPortName();
 
-                            ListSequence.fromList(SLinkOperations.getChildren(fromNode, LINKS.sludge_flows$UdVe)).addElement(createSludge_Flow_yt7qvq_a0a0a0b2a(toNode));
+                            ListSequence.fromList(SLinkOperations.getChildren(fromNode, LINKS.sludge_flows$UdVe)).addElement(createSludge_Flow_yt7qvq_a0a0a0b1a(toNode));
                           }
                           @Override
                           public boolean isValidStart(IConnectionEndpoint from) {
@@ -303,6 +296,10 @@ import org.jetbrains.mps.openapi.language.SConcept;
                             final String toPort = to.getPortName();
                             return true;
                           }
+                          @Override
+                          protected IShape getIconShape() {
+                            return new IconSludgeFlow();
+                          }
                         }));
                         return connectionTypes;
                       }
@@ -311,7 +308,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
 
                     DiagramModel model = DiagramModel.getModel(editorContext, node, "682959282309565034", accessor);
 
-                    IPaletteEntryProvider paletteEntryProvider = new CompositePaletteEntryProvider(new SubstituteInfoPaletteEntryProvider(new SubstituteInfoFactory(editorContext, node).forChildLink(node, SLinkOperations.findLinkDeclaration(LINKS.processes$nJIi))));
+                    IPaletteEntryProvider paletteEntryProvider = new CompositePaletteEntryProvider(new SubstituteInfoPaletteEntryProvider(new SubstituteInfoFactory(editorContext, node).forChildLink(node, SLinkOperations.findLinkDeclaration(LINKS.treatments$nJIi))));
                     model.setPaletteEntryProvider(paletteEntryProvider);
 
                     if (DiagramCreationContext.isSubdiagram()) {
@@ -319,10 +316,12 @@ import org.jetbrains.mps.openapi.language.SConcept;
                     } else {
                       editorCell.value = new RootDiagramECell(editorContext, node, model);
                     }
-                    editorCell.value.setCellId("Diagram_yt7qvq_c0");
+                    editorCell.value.setCellId("Diagram_yt7qvq_b0");
                     Style style = new StyleImpl();
                     style.set(StyleAttributes.INDENT_LAYOUT_ON_NEW_LINE, true);
                     style.set(StyleAttributes.INDENT_LAYOUT_ON_NEW_LINE, true);
+                    style.set(StyleAttributes.INDENT_LAYOUT_ON_NEW_LINE, true);
+                    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
                     editorCell.value.getStyle().putAll(style);
                     if (editorCell.value.getContextGraph() != null) {
                       Object defaultParent = editorCell.value.getContextGraph().getDefaultParent();
@@ -344,19 +343,19 @@ import org.jetbrains.mps.openapi.language.SConcept;
   private EditorCell createDiagram_1() {
     return createDiagram_0(getEditorContext(), myNode);
   }
-  private static SNode createWater_Flow_yt7qvq_a0a2a0a2a(SNode p0) {
+  private static SNode createWater_Flow_yt7qvq_a0a2a0a1a(SNode p0) {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.Water_Flow$md);
     n0.setReferenceTarget(LINKS.process$2sxT, p0);
     return n0.getResult();
   }
-  private static SNode createSludge_Flow_yt7qvq_a0a0a0b2a(SNode p0) {
+  private static SNode createSludge_Flow_yt7qvq_a0a0a0b1a(SNode p0) {
     SNodeBuilder n0 = new SNodeBuilder().init(CONCEPTS.Sludge_Flow$zB);
     n0.setReferenceTarget(LINKS.process$q89q, p0);
     return n0.getResult();
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink processes$nJIi = MetaAdapterFactory.getContainmentLink(0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x3071940349ee7875L, 0x3c97f76cf72f67c0L, "processes");
+    /*package*/ static final SContainmentLink treatments$nJIi = MetaAdapterFactory.getContainmentLink(0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x3071940349ee7875L, 0x3c97f76cf72f67c0L, "treatments");
     /*package*/ static final SReferenceLink process$2sxT = MetaAdapterFactory.getReferenceLink(0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x7a9dc28334287adfL, 0x7a9dc2833428dd92L, "process");
     /*package*/ static final SContainmentLink water_flows$ZGz8 = MetaAdapterFactory.getContainmentLink(0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x3c97f76cf72f67bfL, 0x7a9dc28334287afeL, "water_flows");
     /*package*/ static final SReferenceLink process$q89q = MetaAdapterFactory.getReferenceLink(0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x5ddae2cc739086b5L, 0x5ddae2cc739086b6L, "process");

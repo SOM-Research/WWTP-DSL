@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="k2k42js54bi48ukskvwfrww35jjhs4">
-  <files names="BehaviorAspectDescriptor.java:Container__BehaviorDescriptor.java:Mec_Dehydratation__BehaviorDescriptor.java:Node__BehaviorDescriptor.java:Region__BehaviorDescriptor.java:Sensor_Type__BehaviorDescriptor.java:Slude_Thickener__BehaviorDescriptor.java:Sludge_Hopper__BehaviorDescriptor.java" />
+<product version="3" modelHash="-4g6hxmw2o7a8sf5l07fko5y03qs98gr">
+  <files names="BehaviorAspectDescriptor.java:Container__BehaviorDescriptor.java:Hopper__BehaviorDescriptor.java:Mec_Dehydration__BehaviorDescriptor.java:Node__BehaviorDescriptor.java:Region__BehaviorDescriptor.java:Sensor_Type__BehaviorDescriptor.java:Sludge_Thickener__BehaviorDescriptor.java" />
 </product>
 

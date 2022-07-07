@@ -529,6 +529,67 @@
         </node>
       </node>
     </node>
+    <node concept="13i0hz" id="34YZOlh_yGH" role="13h7CS">
+      <property role="TrG5h" value="checkTreatment" />
+      <node concept="3Tm1VV" id="34YZOlh_yGI" role="1B3o_S" />
+      <node concept="10P_77" id="34YZOlh_yIs" role="3clF45" />
+      <node concept="3clFbS" id="34YZOlh_yGK" role="3clF47">
+        <node concept="1DcWWT" id="34YZOlh_yJE" role="3cqZAp">
+          <node concept="3cpWsn" id="34YZOlh_yJF" role="1Duv9x">
+            <property role="TrG5h" value="s" />
+            <node concept="3Tqbb2" id="34YZOlh_ySA" role="1tU5fm">
+              <ref role="ehGHo" to="40ag:2cS6XcGq7n5" resolve="Sensor" />
+            </node>
+          </node>
+          <node concept="2OqwBi" id="34YZOlh_AYh" role="1DdaDG">
+            <node concept="2OqwBi" id="34YZOlh_z_a" role="2Oq$k0">
+              <node concept="37vLTw" id="34YZOlh_zj7" role="2Oq$k0">
+                <ref role="3cqZAo" node="34YZOlh_yJ8" resolve="t" />
+              </node>
+              <node concept="3Tsc0h" id="34YZOlh_zZB" role="2OqNvi">
+                <ref role="3TtcxE" to="40ag:1c6nIPvuplk" resolve="iot_devices" />
+              </node>
+            </node>
+            <node concept="v3k3i" id="34YZOlh_Ekt" role="2OqNvi">
+              <node concept="chp4Y" id="34YZOlh_EuD" role="v3oSu">
+                <ref role="cht4Q" to="40ag:2cS6XcGq7n5" resolve="Sensor" />
+              </node>
+            </node>
+          </node>
+          <node concept="3clFbS" id="34YZOlh_yJH" role="2LFqv$">
+            <node concept="3clFbJ" id="34YZOlh_E_H" role="3cqZAp">
+              <node concept="3clFbC" id="34YZOlh_Flf" role="3clFbw">
+                <node concept="13iPFW" id="34YZOlh_Frq" role="3uHU7w" />
+                <node concept="2OqwBi" id="34YZOlh_EKB" role="3uHU7B">
+                  <node concept="37vLTw" id="34YZOlh_EA1" role="2Oq$k0">
+                    <ref role="3cqZAo" node="34YZOlh_yJF" resolve="s" />
+                  </node>
+                  <node concept="3TrEf2" id="34YZOlh_F5m" role="2OqNvi">
+                    <ref role="3Tt5mk" to="40ag:2cS6XcGq7n8" resolve="type" />
+                  </node>
+                </node>
+              </node>
+              <node concept="3clFbS" id="34YZOlh_E_J" role="3clFbx">
+                <node concept="3cpWs6" id="34YZOlh_FrX" role="3cqZAp">
+                  <node concept="3clFbT" id="34YZOlh_F$O" role="3cqZAk">
+                    <property role="3clFbU" value="true" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs6" id="34YZOlh_FAx" role="3cqZAp">
+          <node concept="3clFbT" id="34YZOlh_FCn" role="3cqZAk" />
+        </node>
+      </node>
+      <node concept="37vLTG" id="34YZOlh_yJ8" role="3clF46">
+        <property role="TrG5h" value="t" />
+        <node concept="3Tqbb2" id="34YZOlh_yJ7" role="1tU5fm">
+          <ref role="ehGHo" to="40ag:3MnXQNRbQuZ" resolve="Treatment" />
+        </node>
+      </node>
+    </node>
     <node concept="13hLZK" id="5c6$$01W3Pn" role="13h7CW">
       <node concept="3clFbS" id="5c6$$01W3Po" role="2VODD2" />
     </node>
@@ -586,7 +647,7 @@
   </node>
   <node concept="13h7C7" id="2W36oaoOJdV">
     <property role="3GE5qa" value="WWTP.Treatments" />
-    <ref role="13h7C2" to="40ag:2W36oaoH6ru" resolve="Mec_Dehydratation" />
+    <ref role="13h7C2" to="40ag:2W36oaoH6ru" resolve="Mec_Dehydration" />
     <node concept="13hLZK" id="2W36oaoOJdW" role="13h7CW">
       <node concept="3clFbS" id="2W36oaoOJdX" role="2VODD2">
         <node concept="3clFbF" id="2W36oaoPbvq" role="3cqZAp">
@@ -609,7 +670,7 @@
   </node>
   <node concept="13h7C7" id="2W36oaoRDiD">
     <property role="3GE5qa" value="WWTP.Treatments" />
-    <ref role="13h7C2" to="40ag:2W36oaop_qb" resolve="Sludge_Hopper" />
+    <ref role="13h7C2" to="40ag:2W36oaop_qb" resolve="Hopper" />
     <node concept="13hLZK" id="2W36oaoRDiE" role="13h7CW">
       <node concept="3clFbS" id="2W36oaoRDiF" role="2VODD2">
         <node concept="3clFbF" id="2W36oaoRDiO" role="3cqZAp">
@@ -632,7 +693,7 @@
   </node>
   <node concept="13h7C7" id="2W36oaoUaVJ">
     <property role="3GE5qa" value="WWTP.Treatments" />
-    <ref role="13h7C2" to="40ag:2W36oaoU8Zz" resolve="Slude_Thickener" />
+    <ref role="13h7C2" to="40ag:2W36oaoU8Zz" resolve="Sludge_Thickener" />
     <node concept="13hLZK" id="2W36oaoUaVK" role="13h7CW">
       <node concept="3clFbS" id="2W36oaoUaVL" role="2VODD2">
         <node concept="3clFbF" id="2W36oaoUaVU" role="3cqZAp">

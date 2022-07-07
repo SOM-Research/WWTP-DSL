@@ -52,6 +52,9 @@
       <concept id="1068580123137" name="jetbrains.mps.baseLanguage.structure.BooleanConstant" flags="nn" index="3clFbT">
         <property id="1068580123138" name="value" index="3clFbU" />
       </concept>
+      <concept id="1068580320020" name="jetbrains.mps.baseLanguage.structure.IntegerConstant" flags="nn" index="3cmrfG">
+        <property id="1068580320021" name="value" index="3cmrfH" />
+      </concept>
       <concept id="1068581242878" name="jetbrains.mps.baseLanguage.structure.ReturnStatement" flags="nn" index="3cpWs6">
         <child id="1068581517676" name="expression" index="3cqZAk" />
       </concept>
@@ -1413,6 +1416,51 @@
         </node>
       </node>
     </node>
+    <node concept="3aamgX" id="p56yfDhu9B" role="3acgRq">
+      <ref role="30HIoZ" to="tpee:gMdkU$l" resolve="LessThanOrEqualsExpression" />
+      <node concept="gft3U" id="p56yfDhu9C" role="1lVwrX">
+        <node concept="356sEK" id="p56yfDhu9D" role="gfFT$">
+          <node concept="2EixSi" id="p56yfDhu9E" role="2EinRH" />
+          <node concept="356sEF" id="p56yfDhu9F" role="356sEH">
+            <property role="TrG5h" value="left" />
+            <node concept="29HgVG" id="p56yfDhu9G" role="lGtFl">
+              <node concept="3NFfHV" id="p56yfDhu9H" role="3NFExx">
+                <node concept="3clFbS" id="p56yfDhu9I" role="2VODD2">
+                  <node concept="3clFbF" id="p56yfDhu9J" role="3cqZAp">
+                    <node concept="2OqwBi" id="p56yfDhu9K" role="3clFbG">
+                      <node concept="3TrEf2" id="p56yfDhu9L" role="2OqNvi">
+                        <ref role="3Tt5mk" to="tpee:fJuHU4s" resolve="leftExpression" />
+                      </node>
+                      <node concept="30H73N" id="p56yfDhu9M" role="2Oq$k0" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="356sEF" id="p56yfDhu9N" role="356sEH">
+            <property role="TrG5h" value=" &lt;= " />
+          </node>
+          <node concept="356sEF" id="p56yfDhu9O" role="356sEH">
+            <property role="TrG5h" value="right" />
+            <node concept="29HgVG" id="p56yfDhu9P" role="lGtFl">
+              <node concept="3NFfHV" id="p56yfDhu9Q" role="3NFExx">
+                <node concept="3clFbS" id="p56yfDhu9R" role="2VODD2">
+                  <node concept="3clFbF" id="p56yfDhu9S" role="3cqZAp">
+                    <node concept="2OqwBi" id="p56yfDhu9T" role="3clFbG">
+                      <node concept="3TrEf2" id="p56yfDhu9U" role="2OqNvi">
+                        <ref role="3Tt5mk" to="tpee:fJuHU4r" resolve="rightExpression" />
+                      </node>
+                      <node concept="30H73N" id="p56yfDhu9V" role="2Oq$k0" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
     <node concept="3aamgX" id="5uujG9VChz1" role="3acgRq">
       <ref role="30HIoZ" to="tpee:fJeOSZf" resolve="GreaterThanExpression" />
       <node concept="gft3U" id="5uujG9VCief" role="1lVwrX">
@@ -1449,6 +1497,51 @@
                         <ref role="3Tt5mk" to="tpee:fJuHU4r" resolve="rightExpression" />
                       </node>
                       <node concept="30H73N" id="5uujG9VCieR" role="2Oq$k0" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="3aamgX" id="p56yfDhv3S" role="3acgRq">
+      <ref role="30HIoZ" to="tpee:gMd3UKG" resolve="GreaterThanOrEqualsExpression" />
+      <node concept="gft3U" id="p56yfDhv3T" role="1lVwrX">
+        <node concept="356sEK" id="p56yfDhv3U" role="gfFT$">
+          <node concept="2EixSi" id="p56yfDhv3V" role="2EinRH" />
+          <node concept="356sEF" id="p56yfDhv3W" role="356sEH">
+            <property role="TrG5h" value="left" />
+            <node concept="29HgVG" id="p56yfDhv3X" role="lGtFl">
+              <node concept="3NFfHV" id="p56yfDhv3Y" role="3NFExx">
+                <node concept="3clFbS" id="p56yfDhv3Z" role="2VODD2">
+                  <node concept="3clFbF" id="p56yfDhv40" role="3cqZAp">
+                    <node concept="2OqwBi" id="p56yfDhv41" role="3clFbG">
+                      <node concept="3TrEf2" id="p56yfDhv42" role="2OqNvi">
+                        <ref role="3Tt5mk" to="tpee:fJuHU4s" resolve="leftExpression" />
+                      </node>
+                      <node concept="30H73N" id="p56yfDhv43" role="2Oq$k0" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="356sEF" id="p56yfDhv44" role="356sEH">
+            <property role="TrG5h" value=" &gt;= " />
+          </node>
+          <node concept="356sEF" id="p56yfDhv45" role="356sEH">
+            <property role="TrG5h" value="right" />
+            <node concept="29HgVG" id="p56yfDhv46" role="lGtFl">
+              <node concept="3NFfHV" id="p56yfDhv47" role="3NFExx">
+                <node concept="3clFbS" id="p56yfDhv48" role="2VODD2">
+                  <node concept="3clFbF" id="p56yfDhv49" role="3cqZAp">
+                    <node concept="2OqwBi" id="p56yfDhv4a" role="3clFbG">
+                      <node concept="3TrEf2" id="p56yfDhv4b" role="2OqNvi">
+                        <ref role="3Tt5mk" to="tpee:fJuHU4r" resolve="rightExpression" />
+                      </node>
+                      <node concept="30H73N" id="p56yfDhv4c" role="2Oq$k0" />
                     </node>
                   </node>
                 </node>
@@ -1673,27 +1766,27 @@
     </node>
     <node concept="3lhOvk" id="59mvfwECR$N" role="3lj3bC">
       <ref role="30HIoZ" to="40ag:2cS6XcGq5uy" resolve="IoT_System" />
-      <ref role="3lhOvi" node="59mvfwECRMN" resolve="pods" />
+      <ref role="3lhOvi" node="59mvfwECRMN" resolve="iot-system/pods" />
     </node>
     <node concept="3lhOvk" id="7P467DONFqa" role="3lj3bC">
       <ref role="30HIoZ" to="40ag:2cS6XcGq5uy" resolve="IoT_System" />
-      <ref role="3lhOvi" node="7P467DONFqd" resolve="prometheus_rules" />
+      <ref role="3lhOvi" node="7P467DONFqd" resolve="prometheus/rules" />
     </node>
     <node concept="3lhOvk" id="7Dtq_D61fvD" role="3lj3bC">
       <ref role="30HIoZ" to="40ag:69a1RFtckYv" resolve="Container_Reference" />
-      <ref role="3lhOvi" node="7Dtq_D60odf" resolve="config-map" />
+      <ref role="3lhOvi" node="7Dtq_D60odf" resolve="mqtt-exporter/config-map" />
     </node>
     <node concept="3lhOvk" id="7Dtq_D65pzT" role="3lj3bC">
       <ref role="30HIoZ" to="40ag:2cS6XcGq5uy" resolve="IoT_System" />
-      <ref role="3lhOvi" node="7Dtq_D65ryD" resolve="services" />
+      <ref role="3lhOvi" node="7Dtq_D65ryD" resolve="iot-system/services" />
     </node>
     <node concept="3lhOvk" id="1RNaUxCLtDW" role="3lj3bC">
       <ref role="30HIoZ" to="40ag:2cS6XcGq5uy" resolve="IoT_System" />
-      <ref role="3lhOvi" node="1RNaUxCLyQ_" resolve="cofig-map" />
+      <ref role="3lhOvi" node="1RNaUxCLyQ_" resolve="iot-system/cofig-map" />
     </node>
     <node concept="3lhOvk" id="2NYVsZUI7n4" role="3lj3bC">
       <ref role="30HIoZ" to="40ag:2cS6XcGq5uy" resolve="IoT_System" />
-      <ref role="3lhOvi" node="2NYVsZUI7V_" resolve="adaptation-engine/clusterRole.yaml" />
+      <ref role="3lhOvi" node="2NYVsZUI7V_" resolve="adaptation-engine/clusterRole" />
     </node>
     <node concept="3lhOvk" id="2NYVsZUI8mI" role="3lj3bC">
       <ref role="30HIoZ" to="40ag:2cS6XcGq5uy" resolve="IoT_System" />
@@ -1705,83 +1798,87 @@
     </node>
     <node concept="3lhOvk" id="2NYVsZULr1M" role="3lj3bC">
       <ref role="30HIoZ" to="40ag:2cS6XcGq5uy" resolve="IoT_System" />
-      <ref role="3lhOvi" node="2NYVsZULr_W" resolve="map_IoT_System" />
+      <ref role="3lhOvi" node="2NYVsZULr_W" resolve="alert-manager/config-map" />
     </node>
     <node concept="3lhOvk" id="2NYVsZULs2q" role="3lj3bC">
       <ref role="30HIoZ" to="40ag:2cS6XcGq5uy" resolve="IoT_System" />
-      <ref role="3lhOvi" node="2NYVsZULsA_" resolve="map_IoT_System" />
+      <ref role="3lhOvi" node="2NYVsZULsA_" resolve="alert-manager/deployment" />
     </node>
     <node concept="3lhOvk" id="2NYVsZULt4x" role="3lj3bC">
       <ref role="30HIoZ" to="40ag:2cS6XcGq5uy" resolve="IoT_System" />
-      <ref role="3lhOvi" node="2NYVsZULtCH" resolve="map_IoT_System" />
+      <ref role="3lhOvi" node="2NYVsZULtCH" resolve="alert-manager/service" />
     </node>
     <node concept="3lhOvk" id="2NYVsZULuhl" role="3lj3bC">
       <ref role="30HIoZ" to="40ag:2cS6XcGq5uy" resolve="IoT_System" />
-      <ref role="3lhOvi" node="2NYVsZULuPW" resolve="map_IoT_System" />
+      <ref role="3lhOvi" node="2NYVsZULuPW" resolve="grafana/config-map" />
     </node>
     <node concept="3lhOvk" id="2NYVsZULvhz" role="3lj3bC">
       <ref role="30HIoZ" to="40ag:2cS6XcGq5uy" resolve="IoT_System" />
-      <ref role="3lhOvi" node="2NYVsZULvPL" resolve="map_IoT_System" />
+      <ref role="3lhOvi" node="2NYVsZULvPL" resolve="grafana/deployment" />
     </node>
     <node concept="3lhOvk" id="2NYVsZULw1D" role="3lj3bC">
       <ref role="30HIoZ" to="40ag:2cS6XcGq5uy" resolve="IoT_System" />
-      <ref role="3lhOvi" node="2NYVsZULxnW" resolve="map_IoT_System" />
+      <ref role="3lhOvi" node="2NYVsZULxnW" resolve="grafana/service" />
     </node>
     <node concept="3lhOvk" id="2NYVsZULxSE" role="3lj3bC">
       <ref role="30HIoZ" to="40ag:2cS6XcGq5uy" resolve="IoT_System" />
-      <ref role="3lhOvi" node="2NYVsZULytk" resolve="map_IoT_System" />
+      <ref role="3lhOvi" node="2NYVsZULytk" resolve="kube-state-metrics/cluster-role-binding" />
     </node>
     <node concept="3lhOvk" id="2NYVsZULyCM" role="3lj3bC">
       <ref role="30HIoZ" to="40ag:2cS6XcGq5uy" resolve="IoT_System" />
-      <ref role="3lhOvi" node="2NYVsZULz_Z" resolve="map_IoT_System" />
+      <ref role="3lhOvi" node="2NYVsZULz_Z" resolve="kube-state-metrics/cluster-role" />
     </node>
     <node concept="3lhOvk" id="2NYVsZULzd5" role="3lj3bC">
       <ref role="30HIoZ" to="40ag:2cS6XcGq5uy" resolve="IoT_System" />
-      <ref role="3lhOvi" node="2NYVsZULzWR" resolve="map_IoT_System" />
+      <ref role="3lhOvi" node="2NYVsZULzWR" resolve="kube-state-metrics/deployment" />
     </node>
     <node concept="3lhOvk" id="2NYVsZUL$8l" role="3lj3bC">
       <ref role="30HIoZ" to="40ag:2cS6XcGq5uy" resolve="IoT_System" />
-      <ref role="3lhOvi" node="2NYVsZUL$H2" resolve="map_IoT_System" />
+      <ref role="3lhOvi" node="2NYVsZUL$H2" resolve="kube-state-metrics/service-account" />
     </node>
     <node concept="3lhOvk" id="2NYVsZUL$Sw" role="3lj3bC">
       <ref role="30HIoZ" to="40ag:2cS6XcGq5uy" resolve="IoT_System" />
-      <ref role="3lhOvi" node="2NYVsZUL_sW" resolve="map_IoT_System" />
+      <ref role="3lhOvi" node="2NYVsZUL_sW" resolve="kube-state-metrics/service" />
     </node>
     <node concept="3lhOvk" id="2NYVsZULDh9" role="3lj3bC">
       <ref role="30HIoZ" to="40ag:2cS6XcGq5uy" resolve="IoT_System" />
-      <ref role="3lhOvi" node="2NYVsZULDPu" resolve="map_IoT_System" />
+      <ref role="3lhOvi" node="2NYVsZULDPu" resolve="mqtt-exporter/deployment" />
     </node>
     <node concept="3lhOvk" id="2NYVsZULE0W" role="3lj3bC">
       <ref role="30HIoZ" to="40ag:2cS6XcGq5uy" resolve="IoT_System" />
-      <ref role="3lhOvi" node="2NYVsZULE_k" resolve="map_IoT_System" />
+      <ref role="3lhOvi" node="2NYVsZULE_k" resolve="mqtt-exporter/service" />
     </node>
     <node concept="3lhOvk" id="2NYVsZULF42" role="3lj3bC">
       <ref role="30HIoZ" to="40ag:2cS6XcGq5uy" resolve="IoT_System" />
-      <ref role="3lhOvi" node="2NYVsZULFCL" resolve="map_IoT_System" />
+      <ref role="3lhOvi" node="2NYVsZULFCL" resolve="node-exporter/daemonset" />
     </node>
     <node concept="3lhOvk" id="2NYVsZULFOf" role="3lj3bC">
       <ref role="30HIoZ" to="40ag:2cS6XcGq5uy" resolve="IoT_System" />
-      <ref role="3lhOvi" node="2NYVsZULGoZ" resolve="map_IoT_System" />
+      <ref role="3lhOvi" node="2NYVsZULGoZ" resolve="node-exporter/service" />
     </node>
     <node concept="3lhOvk" id="2NYVsZULMEj" role="3lj3bC">
       <ref role="30HIoZ" to="40ag:2cS6XcGq5uy" resolve="IoT_System" />
-      <ref role="3lhOvi" node="2NYVsZULNeI" resolve="map_IoT_System" />
+      <ref role="3lhOvi" node="2NYVsZULNeI" resolve="prometheus/config-map" />
     </node>
     <node concept="3lhOvk" id="2NYVsZULNqe" role="3lj3bC">
       <ref role="30HIoZ" to="40ag:2cS6XcGq5uy" resolve="IoT_System" />
-      <ref role="3lhOvi" node="2NYVsZULNYE" resolve="map_IoT_System" />
+      <ref role="3lhOvi" node="2NYVsZULNYE" resolve="prometheus/deployment" />
     </node>
     <node concept="3lhOvk" id="2NYVsZULOay" role="3lj3bC">
       <ref role="30HIoZ" to="40ag:2cS6XcGq5uy" resolve="IoT_System" />
-      <ref role="3lhOvi" node="2NYVsZULOJn" resolve="map_IoT_System" />
+      <ref role="3lhOvi" node="2NYVsZULOJn" resolve="namespace/namespace" />
     </node>
     <node concept="3lhOvk" id="2NYVsZULOUP" role="3lj3bC">
       <ref role="30HIoZ" to="40ag:2cS6XcGq5uy" resolve="IoT_System" />
-      <ref role="3lhOvi" node="2NYVsZULPvF" resolve="map_IoT_System" />
+      <ref role="3lhOvi" node="2NYVsZULPvF" resolve="prometheus/service" />
     </node>
     <node concept="3lhOvk" id="2NYVsZULQrS" role="3lj3bC">
       <ref role="30HIoZ" to="40ag:2cS6XcGq5uy" resolve="IoT_System" />
-      <ref role="3lhOvi" node="2NYVsZULR0o" resolve="map_IoT_System" />
+      <ref role="3lhOvi" node="2NYVsZULR0o" resolve="prometheus/clusterRole" />
+    </node>
+    <node concept="3lhOvk" id="1vojgn5WVOD" role="3lj3bC">
+      <ref role="30HIoZ" to="40ag:2cS6XcGq5uy" resolve="IoT_System" />
+      <ref role="3lhOvi" node="1vojgn5SWey" resolve="start" />
     </node>
   </node>
   <node concept="356sEV" id="59mvfwECRMN">
@@ -1962,6 +2059,38 @@
                     <node concept="356sEF" id="2NYVsZUGwds" role="356sEH">
                       <property role="TrG5h" value="limits:" />
                     </node>
+                    <node concept="1W57fq" id="7os6F0svJhH" role="lGtFl">
+                      <node concept="3IZrLx" id="7os6F0svJhI" role="3IZSJc">
+                        <node concept="3clFbS" id="7os6F0svJhJ" role="2VODD2">
+                          <node concept="3clFbF" id="7os6F0svJi7" role="3cqZAp">
+                            <node concept="22lmx$" id="7os6F0svNfk" role="3clFbG">
+                              <node concept="3y3z36" id="7os6F0svQW4" role="3uHU7w">
+                                <node concept="3cmrfG" id="7os6F0svQZ5" role="3uHU7w">
+                                  <property role="3cmrfH" value="0" />
+                                </node>
+                                <node concept="2OqwBi" id="7os6F0svNw$" role="3uHU7B">
+                                  <node concept="30H73N" id="7os6F0svNh_" role="2Oq$k0" />
+                                  <node concept="3TrcHB" id="7os6F0svPeO" role="2OqNvi">
+                                    <ref role="3TsBF5" to="40ag:7yx6XIbi1MY" resolve="cpuLimit" />
+                                  </node>
+                                </node>
+                              </node>
+                              <node concept="3y3z36" id="7os6F0svMHt" role="3uHU7B">
+                                <node concept="2OqwBi" id="7os6F0svJwl" role="3uHU7B">
+                                  <node concept="30H73N" id="7os6F0svJi6" role="2Oq$k0" />
+                                  <node concept="3TrcHB" id="7os6F0svL1r" role="2OqNvi">
+                                    <ref role="3TsBF5" to="40ag:7yx6XIbi1N0" resolve="memoryLimit" />
+                                  </node>
+                                </node>
+                                <node concept="3cmrfG" id="7os6F0svNa8" role="3uHU7w">
+                                  <property role="3cmrfH" value="0" />
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
                   </node>
                   <node concept="356sEK" id="2NYVsZUGxA5" role="383Ya9">
                     <node concept="356sEQ" id="2NYVsZUGxHB" role="356sEH">
@@ -1997,6 +2126,25 @@
                         <node concept="356sEF" id="2NYVsZUGxP9" role="356sEH">
                           <property role="TrG5h" value="Mi&quot;" />
                         </node>
+                        <node concept="1W57fq" id="7os6F0svRp2" role="lGtFl">
+                          <node concept="3IZrLx" id="7os6F0svRp3" role="3IZSJc">
+                            <node concept="3clFbS" id="7os6F0svRp4" role="2VODD2">
+                              <node concept="3clFbF" id="7os6F0svSck" role="3cqZAp">
+                                <node concept="3y3z36" id="7os6F0svUZ$" role="3clFbG">
+                                  <node concept="3cmrfG" id="7os6F0svVsf" role="3uHU7w">
+                                    <property role="3cmrfH" value="0" />
+                                  </node>
+                                  <node concept="2OqwBi" id="7os6F0svSqy" role="3uHU7B">
+                                    <node concept="30H73N" id="7os6F0svScj" role="2Oq$k0" />
+                                    <node concept="3TrcHB" id="7os6F0svTSw" role="2OqNvi">
+                                      <ref role="3TsBF5" to="40ag:7yx6XIbi1N0" resolve="memoryLimit" />
+                                    </node>
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
                       </node>
                       <node concept="356sEK" id="2NYVsZUGzz2" role="383Ya9">
                         <node concept="356sEF" id="2NYVsZUGzz3" role="356sEH">
@@ -2029,6 +2177,25 @@
                           <property role="TrG5h" value="m&quot;" />
                         </node>
                         <node concept="2EixSi" id="2NYVsZUGzz4" role="2EinRH" />
+                        <node concept="1W57fq" id="7os6F0svWq6" role="lGtFl">
+                          <node concept="3IZrLx" id="7os6F0svWq7" role="3IZSJc">
+                            <node concept="3clFbS" id="7os6F0svWq8" role="2VODD2">
+                              <node concept="3clFbF" id="7os6F0svWvP" role="3cqZAp">
+                                <node concept="3y3z36" id="7os6F0svYN7" role="3clFbG">
+                                  <node concept="3cmrfG" id="7os6F0svZfM" role="3uHU7w">
+                                    <property role="3cmrfH" value="0" />
+                                  </node>
+                                  <node concept="2OqwBi" id="7os6F0svWI3" role="3uHU7B">
+                                    <node concept="30H73N" id="7os6F0svWvO" role="2Oq$k0" />
+                                    <node concept="3TrcHB" id="7os6F0svXGz" role="2OqNvi">
+                                      <ref role="3TsBF5" to="40ag:7yx6XIbi1MY" resolve="cpuLimit" />
+                                    </node>
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
                       </node>
                     </node>
                     <node concept="2EixSi" id="2NYVsZUGxA7" role="2EinRH" />
@@ -2982,7 +3149,7 @@
           <node concept="3clFbF" id="Rw9t2G1F9$" role="3cqZAp">
             <node concept="17R0WA" id="Rw9t2G1GQs" role="3clFbG">
               <node concept="Xl_RD" id="Rw9t2G1GZc" role="3uHU7w">
-                <property role="Xl_RC" value="CPU" />
+                <property role="Xl_RC" value="CPU consumption" />
               </node>
               <node concept="2OqwBi" id="Rw9t2G1FRs" role="3uHU7B">
                 <node concept="2OqwBi" id="Rw9t2G1Fnd" role="2Oq$k0">
@@ -3007,7 +3174,7 @@
         <node concept="356sEK" id="Rw9t2G1Y$6" role="gfFT$">
           <node concept="2EixSi" id="Rw9t2G1Y$7" role="2EinRH" />
           <node concept="356sEF" id="Rw9t2G1Y$8" role="356sEH">
-            <property role="TrG5h" value="node_memory_MemAvailable_bytes{node_hostname=&quot;" />
+            <property role="TrG5h" value="(node_memory_MemAvailable_bytes{node_hostname=&quot;" />
           </node>
           <node concept="356sEF" id="Rw9t2G1Y$9" role="356sEH">
             <property role="TrG5h" value="node" />
@@ -3026,8 +3193,28 @@
               </node>
             </node>
           </node>
-          <node concept="356sEF" id="Rw9t2G1Y$b" role="356sEH">
-            <property role="TrG5h" value="&quot;} / node_memory_MemTotal_bytes{node_hostname=&quot;" />
+          <node concept="356sEF" id="7os6F0szZLM" role="356sEH">
+            <property role="TrG5h" value="&quot;} - node_memory_MemTotal_bytes{node_hostname=&quot;" />
+          </node>
+          <node concept="356sEF" id="7os6F0szZSD" role="356sEH">
+            <property role="TrG5h" value="node" />
+            <node concept="29HgVG" id="7os6F0szZSE" role="lGtFl">
+              <node concept="3NFfHV" id="7os6F0szZSF" role="3NFExx">
+                <node concept="3clFbS" id="7os6F0szZSG" role="2VODD2">
+                  <node concept="3clFbF" id="7os6F0szZSH" role="3cqZAp">
+                    <node concept="2OqwBi" id="7os6F0szZSI" role="3clFbG">
+                      <node concept="30H73N" id="7os6F0szZSJ" role="2Oq$k0" />
+                      <node concept="3TrEf2" id="7os6F0szZSK" role="2OqNvi">
+                        <ref role="3Tt5mk" to="40ag:5c6$$01D87z" resolve="expr" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="356sEF" id="7os6F0szZLN" role="356sEH">
+            <property role="TrG5h" value="&quot;) / node_memory_MemTotal_bytes{node_hostname=&quot;" />
           </node>
           <node concept="356sEF" id="Rw9t2G1Y$c" role="356sEH">
             <property role="TrG5h" value="node" />
@@ -3056,7 +3243,7 @@
           <node concept="3clFbF" id="Rw9t2G1WBs" role="3cqZAp">
             <node concept="17R0WA" id="Rw9t2G1Y90" role="3clFbG">
               <node concept="Xl_RD" id="Rw9t2G1Ya4" role="3uHU7w">
-                <property role="Xl_RC" value="Ram" />
+                <property role="Xl_RC" value="Ram memory consumption" />
               </node>
               <node concept="2OqwBi" id="Rw9t2G1XpS" role="3uHU7B">
                 <node concept="2OqwBi" id="Rw9t2G1WP5" role="2Oq$k0">
@@ -3195,7 +3382,7 @@
                   </node>
                 </node>
                 <node concept="Xl_RD" id="Rw9t2G218y" role="3uHU7w">
-                  <property role="Xl_RC" value="Network_throughput_in" />
+                  <property role="Xl_RC" value="Network throughput in" />
                 </node>
               </node>
             </node>
@@ -3259,7 +3446,7 @@
           <node concept="3clFbF" id="5uujG9VCwSi" role="3cqZAp">
             <node concept="17R0WA" id="5uujG9VCz0J" role="3clFbG">
               <node concept="Xl_RD" id="5uujG9VCz1N" role="3uHU7w">
-                <property role="Xl_RC" value="Disk_space" />
+                <property role="Xl_RC" value="Used disk space" />
               </node>
               <node concept="2OqwBi" id="5uujG9VCxyE" role="3uHU7B">
                 <node concept="2OqwBi" id="5uujG9VCx5V" role="2Oq$k0">
@@ -4092,7 +4279,7 @@
         <property role="333NGx" value="  " />
         <node concept="356sEK" id="2NYVsZUI7W3" role="383Ya9">
           <node concept="356sEF" id="2NYVsZUI7W4" role="356sEH">
-            <property role="TrG5h" value="resources: [&quot;pods&quot;, &quot;deployments&quot;, &quot;jobs&quot;, &quot;services&quot;, &quot;endpoints&quot;, &quot;nodes&quot;]" />
+            <property role="TrG5h" value="resources: [&quot;pods&quot;, &quot;pods/status&quot;, &quot;deployments&quot;, &quot;jobs&quot;, &quot;services&quot;, &quot;endpoints&quot;, &quot;nodes&quot;]" />
           </node>
           <node concept="2EixSi" id="2NYVsZUI7W6" role="2EinRH" />
         </node>
@@ -9584,6 +9771,255 @@
       </node>
     </node>
     <node concept="n94m4" id="2NYVsZULR0q" role="lGtFl">
+      <ref role="n9lRv" to="40ag:2cS6XcGq5uy" resolve="IoT_System" />
+    </node>
+  </node>
+  <node concept="356sEV" id="1vojgn5SWey">
+    <property role="TrG5h" value="start" />
+    <property role="3Le9LX" value=".sh" />
+    <node concept="356WMU" id="1vojgn5SWeA" role="356KY_">
+      <node concept="356sEK" id="1vojgn5SWeB" role="383Ya9">
+        <node concept="356sEF" id="1vojgn5SWeC" role="356sEH">
+          <property role="TrG5h" value="#!/bin/bash" />
+        </node>
+        <node concept="2EixSi" id="1vojgn5SWeE" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1vojgn5SWeF" role="383Ya9">
+        <node concept="2EixSi" id="1vojgn5SWeI" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1vojgn5SWeJ" role="383Ya9">
+        <node concept="356sEF" id="1vojgn5SWeK" role="356sEH">
+          <property role="TrG5h" value="# Namespace" />
+        </node>
+        <node concept="2EixSi" id="1vojgn5SWeM" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1vojgn5SWeN" role="383Ya9">
+        <node concept="356sEF" id="1vojgn5SWeO" role="356sEH">
+          <property role="TrG5h" value="kubectl create -f namespace/" />
+        </node>
+        <node concept="2EixSi" id="1vojgn5SWeQ" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1vojgn5SWeR" role="383Ya9">
+        <node concept="2EixSi" id="1vojgn5SWeU" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1vojgn5SWeV" role="383Ya9">
+        <node concept="356sEF" id="1vojgn5SWeW" role="356sEH">
+          <property role="TrG5h" value="# Prometheus" />
+        </node>
+        <node concept="2EixSi" id="1vojgn5SWeY" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1vojgn5SWeZ" role="383Ya9">
+        <node concept="356sEF" id="1vojgn5SWf0" role="356sEH">
+          <property role="TrG5h" value="kubectl create -f prometheus/clusterRole.yaml" />
+        </node>
+        <node concept="2EixSi" id="1vojgn5SWf2" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1vojgn5SWf3" role="383Ya9">
+        <node concept="356sEF" id="1vojgn5SWf4" role="356sEH">
+          <property role="TrG5h" value="kubectl create -f prometheus/config-map.yaml" />
+        </node>
+        <node concept="2EixSi" id="1vojgn5SWf6" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1vojgn5SWf7" role="383Ya9">
+        <node concept="356sEF" id="1vojgn5SWf8" role="356sEH">
+          <property role="TrG5h" value="kubectl create -f prometheus/rules.yml" />
+        </node>
+        <node concept="2EixSi" id="1vojgn5SWfa" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1vojgn5SWfb" role="383Ya9">
+        <node concept="356sEF" id="1vojgn5SWfc" role="356sEH">
+          <property role="TrG5h" value="kubectl create -f prometheus/deployment.yaml" />
+        </node>
+        <node concept="2EixSi" id="1vojgn5SWfe" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1vojgn5SWff" role="383Ya9">
+        <node concept="356sEF" id="1vojgn5SWfg" role="356sEH">
+          <property role="TrG5h" value="kubectl create -f prometheus/service.yaml" />
+        </node>
+        <node concept="2EixSi" id="1vojgn5SWfi" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1vojgn5SWfj" role="383Ya9">
+        <node concept="2EixSi" id="1vojgn5SWfm" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1vojgn5SWfn" role="383Ya9">
+        <node concept="356sEF" id="1vojgn5SWfo" role="356sEH">
+          <property role="TrG5h" value="# kube-state-metrics" />
+        </node>
+        <node concept="2EixSi" id="1vojgn5SWfq" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1vojgn5SWfr" role="383Ya9">
+        <node concept="356sEF" id="1vojgn5SWfs" role="356sEH">
+          <property role="TrG5h" value="kubectl create -f kube-state-metrics/" />
+        </node>
+        <node concept="2EixSi" id="1vojgn5SWfu" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1vojgn5SWfv" role="383Ya9">
+        <node concept="2EixSi" id="1vojgn5SWfy" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1vojgn5SWfz" role="383Ya9">
+        <node concept="356sEF" id="1vojgn5SWf$" role="356sEH">
+          <property role="TrG5h" value="# alert-manager" />
+        </node>
+        <node concept="2EixSi" id="1vojgn5SWfA" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1vojgn5SWfB" role="383Ya9">
+        <node concept="356sEF" id="1vojgn5SWfC" role="356sEH">
+          <property role="TrG5h" value="kubectl create -f alert-manager/config-map.yaml" />
+        </node>
+        <node concept="2EixSi" id="1vojgn5SWfE" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1vojgn5SWfF" role="383Ya9">
+        <node concept="356sEF" id="1vojgn5SWfG" role="356sEH">
+          <property role="TrG5h" value="kubectl create -f alert-manager/deployment.yaml" />
+        </node>
+        <node concept="2EixSi" id="1vojgn5SWfI" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1vojgn5SWfJ" role="383Ya9">
+        <node concept="356sEF" id="1vojgn5SWfK" role="356sEH">
+          <property role="TrG5h" value="kubectl create -f alert-manager/service.yaml" />
+        </node>
+        <node concept="2EixSi" id="1vojgn5SWfM" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1vojgn5SWfN" role="383Ya9">
+        <node concept="2EixSi" id="1vojgn5SWfQ" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1vojgn5SWfR" role="383Ya9">
+        <node concept="356sEF" id="1vojgn5SWfS" role="356sEH">
+          <property role="TrG5h" value="# node-exporter" />
+        </node>
+        <node concept="2EixSi" id="1vojgn5SWfU" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1vojgn5SWfV" role="383Ya9">
+        <node concept="356sEF" id="1vojgn5SWfW" role="356sEH">
+          <property role="TrG5h" value="kubectl create -f node-exporter/daemonset.yaml" />
+        </node>
+        <node concept="2EixSi" id="1vojgn5SWfY" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1vojgn5SWfZ" role="383Ya9">
+        <node concept="356sEF" id="1vojgn5SWg0" role="356sEH">
+          <property role="TrG5h" value="kubectl create -f node-exporter/service.yaml" />
+        </node>
+        <node concept="2EixSi" id="1vojgn5SWg2" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1vojgn5SWg3" role="383Ya9">
+        <node concept="2EixSi" id="1vojgn5SWg6" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1vojgn5SWg7" role="383Ya9">
+        <node concept="356sEF" id="1vojgn5SWg8" role="356sEH">
+          <property role="TrG5h" value="# mqtt-exporter" />
+        </node>
+        <node concept="2EixSi" id="1vojgn5SWga" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1vojgn5SWgb" role="383Ya9">
+        <node concept="356sEF" id="1vojgn5SWgc" role="356sEH">
+          <property role="TrG5h" value="kubectl create -f mqtt-exporter/config-map.yaml" />
+        </node>
+        <node concept="2EixSi" id="1vojgn5SWge" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1vojgn5SWgf" role="383Ya9">
+        <node concept="356sEF" id="1vojgn5SWgg" role="356sEH">
+          <property role="TrG5h" value="kubectl create -f mqtt-exporter/deployment.yaml" />
+        </node>
+        <node concept="2EixSi" id="1vojgn5SWgi" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1vojgn5SWgj" role="383Ya9">
+        <node concept="356sEF" id="1vojgn5SWgk" role="356sEH">
+          <property role="TrG5h" value="kubectl create -f mqtt-exporter/service.yaml" />
+        </node>
+        <node concept="2EixSi" id="1vojgn5SWgm" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1vojgn5SWgn" role="383Ya9">
+        <node concept="2EixSi" id="1vojgn5SWgq" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1vojgn5SWgr" role="383Ya9">
+        <node concept="356sEF" id="1vojgn5SWgs" role="356sEH">
+          <property role="TrG5h" value="# adaptation-engine" />
+        </node>
+        <node concept="2EixSi" id="1vojgn5SWgu" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1vojgn5SWgv" role="383Ya9">
+        <node concept="356sEF" id="1vojgn5SWgw" role="356sEH">
+          <property role="TrG5h" value="kubectl create -f adaptation-engine/clusterRole.yaml" />
+        </node>
+        <node concept="2EixSi" id="1vojgn5SWgy" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1vojgn5SWgz" role="383Ya9">
+        <node concept="356sEF" id="1vojgn5SWg$" role="356sEH">
+          <property role="TrG5h" value="kubectl create -f adaptation-engine/deployment.yaml" />
+        </node>
+        <node concept="2EixSi" id="1vojgn5SWgA" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1vojgn5SWgB" role="383Ya9">
+        <node concept="356sEF" id="1vojgn5SWgC" role="356sEH">
+          <property role="TrG5h" value="kubectl create -f adaptation-engine/service.yaml" />
+        </node>
+        <node concept="2EixSi" id="1vojgn5SWgE" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1vojgn5SWgF" role="383Ya9">
+        <node concept="2EixSi" id="1vojgn5SWgI" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1vojgn5SWgJ" role="383Ya9">
+        <node concept="356sEF" id="1vojgn5SWgK" role="356sEH">
+          <property role="TrG5h" value="# Grafana" />
+        </node>
+        <node concept="2EixSi" id="1vojgn5SWgM" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1vojgn5SWgN" role="383Ya9">
+        <node concept="356sEF" id="1vojgn5SWgO" role="356sEH">
+          <property role="TrG5h" value="kubectl create -f grafana/config-map.yaml" />
+        </node>
+        <node concept="2EixSi" id="1vojgn5SWgQ" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1vojgn5SWgR" role="383Ya9">
+        <node concept="356sEF" id="1vojgn5SWgS" role="356sEH">
+          <property role="TrG5h" value="kubectl create -f grafana/deployment.yaml" />
+        </node>
+        <node concept="2EixSi" id="1vojgn5SWgU" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1vojgn5SWgV" role="383Ya9">
+        <node concept="356sEF" id="1vojgn5SWgW" role="356sEH">
+          <property role="TrG5h" value="kubectl create -f grafana/service.yaml" />
+        </node>
+        <node concept="2EixSi" id="1vojgn5SWgY" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1vojgn5SWgZ" role="383Ya9">
+        <node concept="2EixSi" id="1vojgn5SWh2" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1vojgn5SWh3" role="383Ya9">
+        <node concept="356sEF" id="1vojgn5SWh4" role="356sEH">
+          <property role="TrG5h" value="# IoT apps" />
+        </node>
+        <node concept="2EixSi" id="1vojgn5SWh6" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1vojgn5SWh7" role="383Ya9">
+        <node concept="356sEF" id="1vojgn5SWh8" role="356sEH">
+          <property role="TrG5h" value="kubectl create -f iot-system/config-map.yaml" />
+        </node>
+        <node concept="2EixSi" id="1vojgn5SWha" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1vojgn5SWhb" role="383Ya9">
+        <node concept="356sEF" id="1vojgn5SWhc" role="356sEH">
+          <property role="TrG5h" value="kubectl create -f iot-system/pods.yaml" />
+        </node>
+        <node concept="2EixSi" id="1vojgn5SWhe" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1vojgn5SWhf" role="383Ya9">
+        <node concept="356sEF" id="1vojgn5SWhg" role="356sEH">
+          <property role="TrG5h" value="kubectl create -f iot-system/services.yaml" />
+        </node>
+        <node concept="2EixSi" id="1vojgn5SWhi" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1vojgn5SWhj" role="383Ya9">
+        <node concept="2EixSi" id="1vojgn5SWhm" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="1vojgn5SWhn" role="383Ya9">
+        <node concept="356sEF" id="1vojgn5SWho" role="356sEH">
+          <property role="TrG5h" value="echo &quot;Configuration completed&quot;" />
+        </node>
+        <node concept="2EixSi" id="1vojgn5SWhq" role="2EinRH" />
+      </node>
+    </node>
+    <node concept="n94m4" id="1vojgn5SWe$" role="lGtFl">
       <ref role="n9lRv" to="40ag:2cS6XcGq5uy" resolve="IoT_System" />
     </node>
   </node>

@@ -30,20 +30,22 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptContainer = createDescriptorForContainer();
   /*package*/ final ConceptDescriptor myConceptContainer_Reference = createDescriptorForContainer_Reference();
   /*package*/ final ConceptDescriptor myConceptDecanter = createDescriptorForDecanter();
-  /*package*/ final ConceptDescriptor myConceptDegrease_Chamber = createDescriptorForDegrease_Chamber();
   /*package*/ final ConceptDescriptor myConceptEdge_Node = createDescriptorForEdge_Node();
   /*package*/ final ConceptDescriptor myConceptExp_ClusterLayer = createDescriptorForExp_ClusterLayer();
+  /*package*/ final ConceptDescriptor myConceptExp_Cont = createDescriptorForExp_Cont();
+  /*package*/ final ConceptDescriptor myConceptExp_LayerReg = createDescriptorForExp_LayerReg();
   /*package*/ final ConceptDescriptor myConceptExp_Node = createDescriptorForExp_Node();
   /*package*/ final ConceptDescriptor myConceptExp_RegLayer = createDescriptorForExp_RegLayer();
   /*package*/ final ConceptDescriptor myConceptFiltrator = createDescriptorForFiltrator();
   /*package*/ final ConceptDescriptor myConceptFog_Node = createDescriptorForFog_Node();
   /*package*/ final ConceptDescriptor myConceptGrammar = createDescriptorForGrammar();
-  /*package*/ final ConceptDescriptor myConceptGrist_Chamber = createDescriptorForGrist_Chamber();
+  /*package*/ final ConceptDescriptor myConceptGrit_Chamber = createDescriptorForGrit_Chamber();
+  /*package*/ final ConceptDescriptor myConceptHopper = createDescriptorForHopper();
   /*package*/ final ConceptDescriptor myConceptIoT_Device = createDescriptorForIoT_Device();
   /*package*/ final ConceptDescriptor myConceptIoT_Device_Reference = createDescriptorForIoT_Device_Reference();
   /*package*/ final ConceptDescriptor myConceptIoT_System = createDescriptorForIoT_System();
   /*package*/ final ConceptDescriptor myConceptList_Of_Metrics = createDescriptorForList_Of_Metrics();
-  /*package*/ final ConceptDescriptor myConceptMec_Dehydratation = createDescriptorForMec_Dehydratation();
+  /*package*/ final ConceptDescriptor myConceptMec_Dehydration = createDescriptorForMec_Dehydration();
   /*package*/ final ConceptDescriptor myConceptMetric = createDescriptorForMetric();
   /*package*/ final ConceptDescriptor myConceptNode = createDescriptorForNode();
   /*package*/ final ConceptDescriptor myConceptNode_Reference = createDescriptorForNode_Reference();
@@ -65,11 +67,12 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptSensor_Event = createDescriptorForSensor_Event();
   /*package*/ final ConceptDescriptor myConceptSensor_Events = createDescriptorForSensor_Events();
   /*package*/ final ConceptDescriptor myConceptSensor_Type = createDescriptorForSensor_Type();
-  /*package*/ final ConceptDescriptor myConceptSlude_Thickener = createDescriptorForSlude_Thickener();
   /*package*/ final ConceptDescriptor myConceptSludge_Flow = createDescriptorForSludge_Flow();
-  /*package*/ final ConceptDescriptor myConceptSludge_Hopper = createDescriptorForSludge_Hopper();
+  /*package*/ final ConceptDescriptor myConceptSludge_Thickener = createDescriptorForSludge_Thickener();
+  /*package*/ final ConceptDescriptor myConceptThreshold_Value = createDescriptorForThreshold_Value();
   /*package*/ final ConceptDescriptor myConceptTopic = createDescriptorForTopic();
   /*package*/ final ConceptDescriptor myConceptTreatment = createDescriptorForTreatment();
+  /*package*/ final ConceptDescriptor myConceptTreatment_Event = createDescriptorForTreatment_Event();
   /*package*/ final ConceptDescriptor myConceptUltraviolet = createDescriptorForUltraviolet();
   /*package*/ final ConceptDescriptor myConceptVolume = createDescriptorForVolume();
   /*package*/ final ConceptDescriptor myConceptWater_Flow = createDescriptorForWater_Flow();
@@ -97,7 +100,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAction, myConceptActuator, myConceptActuator_Type, myConceptAdaptationRule, myConceptApplication, myConceptBio_Reactor, myConceptCloud_Node, myConceptCluster, myConceptCluster_Reference, myConceptContainer, myConceptContainer_Reference, myConceptDecanter, myConceptDegrease_Chamber, myConceptEdge_Node, myConceptExp_ClusterLayer, myConceptExp_Node, myConceptExp_RegLayer, myConceptFiltrator, myConceptFog_Node, myConceptGrammar, myConceptGrist_Chamber, myConceptIoT_Device, myConceptIoT_Device_Reference, myConceptIoT_System, myConceptList_Of_Metrics, myConceptMec_Dehydratation, myConceptMetric, myConceptNode, myConceptNode_Reference, myConceptNum_Value, myConceptOffloading, myConceptOperate_Actuator, myConceptOther_Process, myConceptPeriod, myConceptPlant, myConceptQoS_Event, myConceptRedeployment, myConceptRegion, myConceptRegion_Reference, myConceptResource_Expression, myConceptRoughing_System, myConceptScaling, myConceptSensor, myConceptSensor_Actuator_Type, myConceptSensor_Event, myConceptSensor_Events, myConceptSensor_Type, myConceptSlude_Thickener, myConceptSludge_Flow, myConceptSludge_Hopper, myConceptTopic, myConceptTreatment, myConceptUltraviolet, myConceptVolume, myConceptWater_Flow, myConceptWorkerReference);
+    return Arrays.asList(myConceptAction, myConceptActuator, myConceptActuator_Type, myConceptAdaptationRule, myConceptApplication, myConceptBio_Reactor, myConceptCloud_Node, myConceptCluster, myConceptCluster_Reference, myConceptContainer, myConceptContainer_Reference, myConceptDecanter, myConceptEdge_Node, myConceptExp_ClusterLayer, myConceptExp_Cont, myConceptExp_LayerReg, myConceptExp_Node, myConceptExp_RegLayer, myConceptFiltrator, myConceptFog_Node, myConceptGrammar, myConceptGrit_Chamber, myConceptHopper, myConceptIoT_Device, myConceptIoT_Device_Reference, myConceptIoT_System, myConceptList_Of_Metrics, myConceptMec_Dehydration, myConceptMetric, myConceptNode, myConceptNode_Reference, myConceptNum_Value, myConceptOffloading, myConceptOperate_Actuator, myConceptOther_Process, myConceptPeriod, myConceptPlant, myConceptQoS_Event, myConceptRedeployment, myConceptRegion, myConceptRegion_Reference, myConceptResource_Expression, myConceptRoughing_System, myConceptScaling, myConceptSensor, myConceptSensor_Actuator_Type, myConceptSensor_Event, myConceptSensor_Events, myConceptSensor_Type, myConceptSludge_Flow, myConceptSludge_Thickener, myConceptThreshold_Value, myConceptTopic, myConceptTreatment, myConceptTreatment_Event, myConceptUltraviolet, myConceptVolume, myConceptWater_Flow, myConceptWorkerReference);
   }
 
   @Override
@@ -128,12 +131,14 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptContainer_Reference;
       case LanguageConceptSwitch.Decanter:
         return myConceptDecanter;
-      case LanguageConceptSwitch.Degrease_Chamber:
-        return myConceptDegrease_Chamber;
       case LanguageConceptSwitch.Edge_Node:
         return myConceptEdge_Node;
       case LanguageConceptSwitch.Exp_ClusterLayer:
         return myConceptExp_ClusterLayer;
+      case LanguageConceptSwitch.Exp_Cont:
+        return myConceptExp_Cont;
+      case LanguageConceptSwitch.Exp_LayerReg:
+        return myConceptExp_LayerReg;
       case LanguageConceptSwitch.Exp_Node:
         return myConceptExp_Node;
       case LanguageConceptSwitch.Exp_RegLayer:
@@ -144,8 +149,10 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptFog_Node;
       case LanguageConceptSwitch.Grammar:
         return myConceptGrammar;
-      case LanguageConceptSwitch.Grist_Chamber:
-        return myConceptGrist_Chamber;
+      case LanguageConceptSwitch.Grit_Chamber:
+        return myConceptGrit_Chamber;
+      case LanguageConceptSwitch.Hopper:
+        return myConceptHopper;
       case LanguageConceptSwitch.IoT_Device:
         return myConceptIoT_Device;
       case LanguageConceptSwitch.IoT_Device_Reference:
@@ -154,8 +161,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptIoT_System;
       case LanguageConceptSwitch.List_Of_Metrics:
         return myConceptList_Of_Metrics;
-      case LanguageConceptSwitch.Mec_Dehydratation:
-        return myConceptMec_Dehydratation;
+      case LanguageConceptSwitch.Mec_Dehydration:
+        return myConceptMec_Dehydration;
       case LanguageConceptSwitch.Metric:
         return myConceptMetric;
       case LanguageConceptSwitch.Node:
@@ -198,16 +205,18 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptSensor_Events;
       case LanguageConceptSwitch.Sensor_Type:
         return myConceptSensor_Type;
-      case LanguageConceptSwitch.Slude_Thickener:
-        return myConceptSlude_Thickener;
       case LanguageConceptSwitch.Sludge_Flow:
         return myConceptSludge_Flow;
-      case LanguageConceptSwitch.Sludge_Hopper:
-        return myConceptSludge_Hopper;
+      case LanguageConceptSwitch.Sludge_Thickener:
+        return myConceptSludge_Thickener;
+      case LanguageConceptSwitch.Threshold_Value:
+        return myConceptThreshold_Value;
       case LanguageConceptSwitch.Topic:
         return myConceptTopic;
       case LanguageConceptSwitch.Treatment:
         return myConceptTreatment;
+      case LanguageConceptSwitch.Treatment_Event:
+        return myConceptTreatment_Event;
       case LanguageConceptSwitch.Ultraviolet:
         return myConceptUltraviolet;
       case LanguageConceptSwitch.Volume:
@@ -350,15 +359,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.alias("Decanter");
     return b.create();
   }
-  private static ConceptDescriptor createDescriptorForDegrease_Chamber() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("WWTP", "Degrease_Chamber", 0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x2f03198298e88fe4L);
-    b.class_(false, false, false);
-    b.super_("WWTP.structure.Treatment", 0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x3c97f76cf72f67bfL);
-    b.origin("r:589c5fd8-b628-4aae-9e87-31a99b5068a7(WWTP.structure)/3387579393414565860");
-    b.version(2);
-    b.alias("Degrease Chamber");
-    return b.create();
-  }
   private static ConceptDescriptor createDescriptorForEdge_Node() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("WWTP", "Edge_Node", 0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x23381bd32c6859a6L);
     b.class_(false, false, false);
@@ -378,6 +378,24 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("layer", 0x5306924001b2832cL).type(MetaIdFactory.dataTypeId(0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x53069240019d60c8L)).origin("5982629958612321068").done();
     b.property("quantity", 0x5306924001d611c6L).type(PrimitiveTypeId.STRING).origin("5982629958614651334").done();
     b.associate("cluster", 0x5306924001b2832eL).target(0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x23381bd32c6859a9L).optional(false).origin("5982629958612321070").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForExp_Cont() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("WWTP", "Exp_Cont", 0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x12549f92e660b9ceL);
+    b.class_(false, false, false);
+    b.super_("WWTP.structure.Resource_Expression", 0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x5306924001a481deL);
+    b.origin("r:589c5fd8-b628-4aae-9e87-31a99b5068a7(WWTP.structure)/1320856044005538254");
+    b.version(2);
+    b.associate("container", 0x12549f92e660b9cfL).target(0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x330981c29fe0fb09L).optional(false).origin("1320856044005538255").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForExp_LayerReg() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("WWTP", "Exp_LayerReg", 0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x12549f92e66c4868L);
+    b.class_(false, false, false);
+    b.super_("WWTP.structure.Resource_Expression", 0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x5306924001a481deL);
+    b.origin("r:589c5fd8-b628-4aae-9e87-31a99b5068a7(WWTP.structure)/1320856044006295656");
+    b.version(2);
+    b.property("layer", 0x12549f92e66c4875L).type(MetaIdFactory.dataTypeId(0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x53069240019d60c8L)).origin("1320856044006295669").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForExp_Node() {
@@ -428,13 +446,22 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("value", 0x530692400145291fL).type(PrimitiveTypeId.STRING).origin("5982629958605154591").done();
     return b.create();
   }
-  private static ConceptDescriptor createDescriptorForGrist_Chamber() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("WWTP", "Grist_Chamber", 0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x2f03198298e88fe0L);
+  private static ConceptDescriptor createDescriptorForGrit_Chamber() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("WWTP", "Grit_Chamber", 0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x2f03198298e88fe4L);
     b.class_(false, false, false);
     b.super_("WWTP.structure.Treatment", 0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x3c97f76cf72f67bfL);
-    b.origin("r:589c5fd8-b628-4aae-9e87-31a99b5068a7(WWTP.structure)/3387579393414565856");
+    b.origin("r:589c5fd8-b628-4aae-9e87-31a99b5068a7(WWTP.structure)/3387579393414565860");
     b.version(2);
-    b.alias("Grist Chamber");
+    b.alias("Grit Chamber");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForHopper() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("WWTP", "Hopper", 0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x2f0319829866568bL);
+    b.class_(false, false, false);
+    b.super_("WWTP.structure.Treatment", 0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x3c97f76cf72f67bfL);
+    b.origin("r:589c5fd8-b628-4aae-9e87-31a99b5068a7(WWTP.structure)/3387579393406031499");
+    b.version(2);
+    b.alias("Hopper");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForIoT_Device() {
@@ -484,13 +511,13 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.aggregate("metric", 0xcbb176abaac8ceaL).target(0x222ccd66f9d64014L, 0x8569354bddee8138L, 0xcbb176abaac8cedL).optional(true).ordered(true).multiple(true).origin("917352696265870570").done();
     return b.create();
   }
-  private static ConceptDescriptor createDescriptorForMec_Dehydratation() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("WWTP", "Mec_Dehydratation", 0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x2f03198298b466deL);
+  private static ConceptDescriptor createDescriptorForMec_Dehydration() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("WWTP", "Mec_Dehydration", 0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x2f03198298b466deL);
     b.class_(false, false, false);
     b.super_("WWTP.structure.Treatment", 0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x3c97f76cf72f67bfL);
     b.origin("r:589c5fd8-b628-4aae-9e87-31a99b5068a7(WWTP.structure)/3387579393411147486");
     b.version(2);
-    b.alias("Mec Dehydratation");
+    b.alias("Mec Dehydration");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForMetric() {
@@ -499,6 +526,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:589c5fd8-b628-4aae-9e87-31a99b5068a7(WWTP.structure)/917352696265870573");
     b.version(2);
+    b.property("label", 0x12549f92e6604947L).type(PrimitiveTypeId.STRING).origin("1320856044005509447").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForNode() {
@@ -585,7 +613,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:589c5fd8-b628-4aae-9e87-31a99b5068a7(WWTP.structure)/3490733928035022965");
     b.version(2);
-    b.aggregate("processes", 0x3c97f76cf72f67c0L).target(0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x3c97f76cf72f67bfL).optional(true).ordered(true).multiple(true).origin("4366230411134592960").done();
+    b.aggregate("treatments", 0x3c97f76cf72f67c0L).target(0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x3c97f76cf72f67bfL).optional(true).ordered(true).multiple(true).origin("4366230411134592960").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForQoS_Event() {
@@ -664,6 +692,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:589c5fd8-b628-4aae-9e87-31a99b5068a7(WWTP.structure)/2537808983820367301");
     b.version(2);
     b.property("unit", 0x65ae998d2a1ca237L).type(PrimitiveTypeId.STRING).origin("7326962475354333751").done();
+    b.property("threshold", 0x12549f92e677d435L).type(MetaIdFactory.dataTypeId(0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x3d206768e0fe89b5L)).origin("1320856044007052341").done();
     b.associate("type", 0x23381bd32c6875c8L).target(0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x23381bd32c6859b3L).optional(false).origin("2537808983820367304").done();
     b.alias("Sensor");
     return b.create();
@@ -709,15 +738,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.alias("Variable");
     return b.create();
   }
-  private static ConceptDescriptor createDescriptorForSlude_Thickener() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("WWTP", "Slude_Thickener", 0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x2f03198298e88fe3L);
-    b.class_(false, false, false);
-    b.super_("WWTP.structure.Treatment", 0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x3c97f76cf72f67bfL);
-    b.origin("r:589c5fd8-b628-4aae-9e87-31a99b5068a7(WWTP.structure)/3387579393414565859");
-    b.version(2);
-    b.alias("Slude Thickener");
-    return b.create();
-  }
   private static ConceptDescriptor createDescriptorForSludge_Flow() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("WWTP", "Sludge_Flow", 0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x5ddae2cc739086b5L);
     b.class_(false, false, false);
@@ -726,13 +746,22 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.associate("process", 0x5ddae2cc739086b6L).target(0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x3c97f76cf72f67bfL).optional(false).origin("6762967158190278326").done();
     return b.create();
   }
-  private static ConceptDescriptor createDescriptorForSludge_Hopper() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("WWTP", "Sludge_Hopper", 0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x2f0319829866568bL);
+  private static ConceptDescriptor createDescriptorForSludge_Thickener() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("WWTP", "Sludge_Thickener", 0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x2f03198298e88fe3L);
     b.class_(false, false, false);
     b.super_("WWTP.structure.Treatment", 0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x3c97f76cf72f67bfL);
-    b.origin("r:589c5fd8-b628-4aae-9e87-31a99b5068a7(WWTP.structure)/3387579393406031499");
+    b.origin("r:589c5fd8-b628-4aae-9e87-31a99b5068a7(WWTP.structure)/3387579393414565859");
     b.version(2);
-    b.alias("Sludge Hopper");
+    b.alias("Thickener");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForThreshold_Value() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("WWTP", "Threshold_Value", 0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x12549f92e66c48e4L);
+    b.class_(false, false, false);
+    b.super_("jetbrains.mps.baseLanguage.structure.Expression", 0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf8c37f506fL);
+    b.origin("r:589c5fd8-b628-4aae-9e87-31a99b5068a7(WWTP.structure)/1320856044006295780");
+    b.version(2);
+    b.alias("Threshold value");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForTopic() {
@@ -755,6 +784,17 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.aggregate("sludge_flows", 0x5ddae2cc739d5f66L).target(0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x5ddae2cc739086b5L).optional(true).ordered(true).multiple(true).origin("6762967158191120230").done();
     b.aggregate("iot_devices", 0x13065eed5f799554L).target(0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x23381bd32c687594L).optional(true).ordered(true).multiple(true).origin("1370887510182958420").done();
     b.aggregate("regions", 0x6e66c4c32a453bfcL).target(0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x424863e2f3693460L).optional(true).ordered(true).multiple(true).origin("7955262134303407100").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForTreatment_Event() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("WWTP", "Treatment_Event", 0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x313eff4551584394L);
+    b.class_(false, false, false);
+    b.super_("jetbrains.mps.baseLanguage.structure.Expression", 0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf8c37f506fL);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x2f16f1b357e19f43L);
+    b.origin("r:589c5fd8-b628-4aae-9e87-31a99b5068a7(WWTP.structure)/3548554229597094804");
+    b.version(2);
+    b.associate("treatment", 0x313eff4551584397L).target(0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x3c97f76cf72f67bfL).optional(false).origin("3548554229597094807").done();
+    b.associate("sensorType", 0x313eff4551584399L).target(0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x23381bd32c6859b3L).optional(false).origin("3548554229597094809").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForUltraviolet() {

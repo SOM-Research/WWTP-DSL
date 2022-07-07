@@ -118,7 +118,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
   public Grid createStaticHorizontal_8gfsze_a0(final EditorContext editorContext, final SNode node) {
     Grid grid = new Grid();
 
-    List<Grid> children = new ArrayList<Grid>(11);
+    List<Grid> children = new ArrayList<Grid>(12);
     if (true) {
       children.add(createTableCell_8gfsze_a0a(editorContext, node));
     }
@@ -131,14 +131,14 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     if (true) {
       children.add(createTableCell_8gfsze_d0a(editorContext, node));
     }
+    if (true) {
+      children.add(createTableCell_8gfsze_e0a(editorContext, node));
+    }
     if (new Object() {
       public boolean condition() {
         return SNodeOperations.isInstanceOf(SNodeOperations.getParent(node), CONCEPTS.IoT_System$Z$);
       }
     }.condition()) {
-      children.add(createTableCell_8gfsze_e0a(editorContext, node));
-    }
-    if (true) {
       children.add(createTableCell_8gfsze_f0a(editorContext, node));
     }
     if (true) {
@@ -155,6 +155,9 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     }
     if (true) {
       children.add(createTableCell_8gfsze_k0a(editorContext, node));
+    }
+    if (true) {
+      children.add(createTableCell_8gfsze_l0a(editorContext, node));
     }
     int maxHeight = grid.getRowHeadersSizeY();
     for (Grid child : ListSequence.fromList(children)) {
@@ -479,6 +482,71 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     return grid;
   }
   public Grid createTableCell_8gfsze_e0a(final EditorContext editorContext, final SNode node) {
+
+    EditorCell cell = createProperty_3();
+    final Style style = new ITableStyleFactory() {
+      public Style createStyle(final int columnIndex, final int rowIndex) {
+        Style style = new StyleImpl();
+        final EditorCell editorCell = null;
+        return style;
+      }
+    }.createStyle(0, 0);
+
+    Grid grid;
+    if (cell instanceof PartialTableEditor) {
+      grid = ((PartialTableEditor) cell).getGrid().clone();
+    } else {
+      grid = new Grid();
+      EditorCellGridLeaf leaf = new EditorCellGridLeaf(cell);
+      leaf.setStyle(style);
+      grid.setElement(0, 0, leaf);
+    }
+    grid.setColumnHeaders(0, 0, createStaticHeader_8gfsze_a4a0(editorContext, node));
+
+    return grid;
+  }
+  private EditorCell createProperty_3() {
+    getCellFactory().pushCellContext();
+    try {
+      final SProperty property = PROPS.threshold$lsR1;
+      getCellFactory().setPropertyInfo(new SPropertyInfo(myNode, property));
+      EditorCell_Property editorCell = EditorCell_Property.create(getEditorContext(), new SPropertyAccessor(myNode, property, false, false), myNode);
+      editorCell.setDefaultText("<no threshold>");
+      editorCell.setCellId("property_threshold");
+      editorCell.setSubstituteInfo(new SPropertySubstituteInfo(editorCell, property));
+      setCellContext(editorCell);
+      Iterable<SNode> propertyAttributes = SNodeOperations.ofConcept(new IAttributeDescriptor.AllAttributes().list(myNode), CONCEPTS.PropertyAttribute$Gb);
+      Iterable<SNode> currentPropertyAttributes = Sequence.fromIterable(propertyAttributes).where(new IWhereFilter<SNode>() {
+        public boolean accept(SNode it) {
+          return Objects.equals(PropertyAttribute__BehaviorDescriptor.getProperty_id1avfQ4BBzOo.invoke(it), property);
+        }
+      });
+      if (Sequence.fromIterable(currentPropertyAttributes).isNotEmpty()) {
+        EditorManager manager = EditorManager.getInstanceFromContext(getEditorContext());
+        return manager.createNodeRoleAttributeCell(Sequence.fromIterable(currentPropertyAttributes).first(), AttributeKind.PROPERTY, editorCell);
+      } else
+      return editorCell;
+    } finally {
+      getCellFactory().popCellContext();
+    }
+  }
+  public HeaderGrid createStaticHeader_8gfsze_a4a0(final EditorContext editorContext, final SNode snode) {
+    final Style style = new ITableStyleFactory() {
+      public Style createStyle(final int columnIndex, final int rowIndex) {
+        Style style = new StyleImpl();
+        final EditorCell editorCell = null;
+        return style;
+      }
+    }.createStyle(0, 0);
+    final EditorCell_Constant cell = new EditorCell_Constant(editorContext, snode, "Threshold", false);
+    Header header = new EditorCellHeader(new StringHeaderReference("Threshold"), cell);
+    header.setLabel("Threshold");
+    header.setStyle(style);
+    HeaderGrid grid = new HeaderGrid();
+    grid.setElement(0, 0, header);
+    return grid;
+  }
+  public Grid createTableCell_8gfsze_f0a(final EditorContext editorContext, final SNode node) {
     if (!(new Object() {
       public boolean condition() {
         return SNodeOperations.isInstanceOf(SNodeOperations.getParent(node), CONCEPTS.IoT_System$Z$);
@@ -505,12 +573,12 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
       leaf.setStyle(style);
       grid.setElement(0, 0, leaf);
     }
-    grid.setColumnHeaders(0, 0, createStaticHeader_8gfsze_a4a0(editorContext, node));
+    grid.setColumnHeaders(0, 0, createStaticHeader_8gfsze_a5a0(editorContext, node));
 
     return grid;
   }
   private EditorCell createRefNodeList_0() {
-    AbstractCellListHandler handler = new regionsListHandler_8gfsze_a4a0(myNode, getEditorContext());
+    AbstractCellListHandler handler = new regionsListHandler_8gfsze_a5a0(myNode, getEditorContext());
     EditorCell_Collection editorCell = handler.createCells(new CellLayout_Vertical(), false);
     editorCell.setCellId("refNodeList_regions");
     Style style = new StyleImpl();
@@ -521,11 +589,11 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     editorCell.setSRole(handler.getElementSRole());
     return editorCell;
   }
-  private static class regionsListHandler_8gfsze_a4a0 extends RefNodeListHandler {
+  private static class regionsListHandler_8gfsze_a5a0 extends RefNodeListHandler {
     @NotNull
     private SNode myNode;
 
-    public regionsListHandler_8gfsze_a4a0(SNode ownerNode, EditorContext context) {
+    public regionsListHandler_8gfsze_a5a0(SNode ownerNode, EditorContext context) {
       super(context, false);
       myNode = ownerNode;
     }
@@ -548,7 +616,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     }
     public EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(regionsListHandler_8gfsze_a4a0.this.getNode(), LINKS.regions$svWv));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(regionsListHandler_8gfsze_a5a0.this.getNode(), LINKS.regions$svWv));
       try {
         EditorCell emptyCell = null;
         emptyCell = super.createEmptyCell();
@@ -588,7 +656,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
       }
     }
   }
-  public HeaderGrid createStaticHeader_8gfsze_a4a0(final EditorContext editorContext, final SNode snode) {
+  public HeaderGrid createStaticHeader_8gfsze_a5a0(final EditorContext editorContext, final SNode snode) {
     final Style style = new ITableStyleFactory() {
       public Style createStyle(final int columnIndex, final int rowIndex) {
         Style style = new StyleImpl();
@@ -599,71 +667,6 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     final EditorCell_Constant cell = new EditorCell_Constant(editorContext, snode, "Regions", false);
     Header header = new EditorCellHeader(new StringHeaderReference("Regions"), cell);
     header.setLabel("Regions");
-    header.setStyle(style);
-    HeaderGrid grid = new HeaderGrid();
-    grid.setElement(0, 0, header);
-    return grid;
-  }
-  public Grid createTableCell_8gfsze_f0a(final EditorContext editorContext, final SNode node) {
-
-    EditorCell cell = createProperty_3();
-    final Style style = new ITableStyleFactory() {
-      public Style createStyle(final int columnIndex, final int rowIndex) {
-        Style style = new StyleImpl();
-        final EditorCell editorCell = null;
-        return style;
-      }
-    }.createStyle(0, 0);
-
-    Grid grid;
-    if (cell instanceof PartialTableEditor) {
-      grid = ((PartialTableEditor) cell).getGrid().clone();
-    } else {
-      grid = new Grid();
-      EditorCellGridLeaf leaf = new EditorCellGridLeaf(cell);
-      leaf.setStyle(style);
-      grid.setElement(0, 0, leaf);
-    }
-    grid.setColumnHeaders(0, 0, createStaticHeader_8gfsze_a5a0(editorContext, node));
-
-    return grid;
-  }
-  private EditorCell createProperty_3() {
-    getCellFactory().pushCellContext();
-    try {
-      final SProperty property = PROPS.brand$Jlco;
-      getCellFactory().setPropertyInfo(new SPropertyInfo(myNode, property));
-      EditorCell_Property editorCell = EditorCell_Property.create(getEditorContext(), new SPropertyAccessor(myNode, property, false, false), myNode);
-      editorCell.setDefaultText("<no brand>");
-      editorCell.setCellId("property_brand");
-      editorCell.setSubstituteInfo(new SPropertySubstituteInfo(editorCell, property));
-      setCellContext(editorCell);
-      Iterable<SNode> propertyAttributes = SNodeOperations.ofConcept(new IAttributeDescriptor.AllAttributes().list(myNode), CONCEPTS.PropertyAttribute$Gb);
-      Iterable<SNode> currentPropertyAttributes = Sequence.fromIterable(propertyAttributes).where(new IWhereFilter<SNode>() {
-        public boolean accept(SNode it) {
-          return Objects.equals(PropertyAttribute__BehaviorDescriptor.getProperty_id1avfQ4BBzOo.invoke(it), property);
-        }
-      });
-      if (Sequence.fromIterable(currentPropertyAttributes).isNotEmpty()) {
-        EditorManager manager = EditorManager.getInstanceFromContext(getEditorContext());
-        return manager.createNodeRoleAttributeCell(Sequence.fromIterable(currentPropertyAttributes).first(), AttributeKind.PROPERTY, editorCell);
-      } else
-      return editorCell;
-    } finally {
-      getCellFactory().popCellContext();
-    }
-  }
-  public HeaderGrid createStaticHeader_8gfsze_a5a0(final EditorContext editorContext, final SNode snode) {
-    final Style style = new ITableStyleFactory() {
-      public Style createStyle(final int columnIndex, final int rowIndex) {
-        Style style = new StyleImpl();
-        final EditorCell editorCell = null;
-        return style;
-      }
-    }.createStyle(0, 0);
-    final EditorCell_Constant cell = new EditorCell_Constant(editorContext, snode, "Brand", false);
-    Header header = new EditorCellHeader(new StringHeaderReference("Brand"), cell);
-    header.setLabel("Brand");
     header.setStyle(style);
     HeaderGrid grid = new HeaderGrid();
     grid.setElement(0, 0, header);
@@ -696,11 +699,11 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
   private EditorCell createProperty_4() {
     getCellFactory().pushCellContext();
     try {
-      final SProperty property = PROPS.communication$Jk1j;
+      final SProperty property = PROPS.brand$Jlco;
       getCellFactory().setPropertyInfo(new SPropertyInfo(myNode, property));
       EditorCell_Property editorCell = EditorCell_Property.create(getEditorContext(), new SPropertyAccessor(myNode, property, false, false), myNode);
-      editorCell.setDefaultText("<no communication>");
-      editorCell.setCellId("property_communication");
+      editorCell.setDefaultText("<no brand>");
+      editorCell.setCellId("property_brand");
       editorCell.setSubstituteInfo(new SPropertySubstituteInfo(editorCell, property));
       setCellContext(editorCell);
       Iterable<SNode> propertyAttributes = SNodeOperations.ofConcept(new IAttributeDescriptor.AllAttributes().list(myNode), CONCEPTS.PropertyAttribute$Gb);
@@ -726,15 +729,80 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
         return style;
       }
     }.createStyle(0, 0);
-    final EditorCell_Constant cell = new EditorCell_Constant(editorContext, snode, "Communication", false);
-    Header header = new EditorCellHeader(new StringHeaderReference("Communication"), cell);
-    header.setLabel("Communication");
+    final EditorCell_Constant cell = new EditorCell_Constant(editorContext, snode, "Brand", false);
+    Header header = new EditorCellHeader(new StringHeaderReference("Brand"), cell);
+    header.setLabel("Brand");
     header.setStyle(style);
     HeaderGrid grid = new HeaderGrid();
     grid.setElement(0, 0, header);
     return grid;
   }
   public Grid createTableCell_8gfsze_h0a(final EditorContext editorContext, final SNode node) {
+
+    EditorCell cell = createProperty_5();
+    final Style style = new ITableStyleFactory() {
+      public Style createStyle(final int columnIndex, final int rowIndex) {
+        Style style = new StyleImpl();
+        final EditorCell editorCell = null;
+        return style;
+      }
+    }.createStyle(0, 0);
+
+    Grid grid;
+    if (cell instanceof PartialTableEditor) {
+      grid = ((PartialTableEditor) cell).getGrid().clone();
+    } else {
+      grid = new Grid();
+      EditorCellGridLeaf leaf = new EditorCellGridLeaf(cell);
+      leaf.setStyle(style);
+      grid.setElement(0, 0, leaf);
+    }
+    grid.setColumnHeaders(0, 0, createStaticHeader_8gfsze_a7a0(editorContext, node));
+
+    return grid;
+  }
+  private EditorCell createProperty_5() {
+    getCellFactory().pushCellContext();
+    try {
+      final SProperty property = PROPS.communication$Jk1j;
+      getCellFactory().setPropertyInfo(new SPropertyInfo(myNode, property));
+      EditorCell_Property editorCell = EditorCell_Property.create(getEditorContext(), new SPropertyAccessor(myNode, property, false, false), myNode);
+      editorCell.setDefaultText("<no communication>");
+      editorCell.setCellId("property_communication");
+      editorCell.setSubstituteInfo(new SPropertySubstituteInfo(editorCell, property));
+      setCellContext(editorCell);
+      Iterable<SNode> propertyAttributes = SNodeOperations.ofConcept(new IAttributeDescriptor.AllAttributes().list(myNode), CONCEPTS.PropertyAttribute$Gb);
+      Iterable<SNode> currentPropertyAttributes = Sequence.fromIterable(propertyAttributes).where(new IWhereFilter<SNode>() {
+        public boolean accept(SNode it) {
+          return Objects.equals(PropertyAttribute__BehaviorDescriptor.getProperty_id1avfQ4BBzOo.invoke(it), property);
+        }
+      });
+      if (Sequence.fromIterable(currentPropertyAttributes).isNotEmpty()) {
+        EditorManager manager = EditorManager.getInstanceFromContext(getEditorContext());
+        return manager.createNodeRoleAttributeCell(Sequence.fromIterable(currentPropertyAttributes).first(), AttributeKind.PROPERTY, editorCell);
+      } else
+      return editorCell;
+    } finally {
+      getCellFactory().popCellContext();
+    }
+  }
+  public HeaderGrid createStaticHeader_8gfsze_a7a0(final EditorContext editorContext, final SNode snode) {
+    final Style style = new ITableStyleFactory() {
+      public Style createStyle(final int columnIndex, final int rowIndex) {
+        Style style = new StyleImpl();
+        final EditorCell editorCell = null;
+        return style;
+      }
+    }.createStyle(0, 0);
+    final EditorCell_Constant cell = new EditorCell_Constant(editorContext, snode, "Comm.", false);
+    Header header = new EditorCellHeader(new StringHeaderReference("Comm."), cell);
+    header.setLabel("Comm.");
+    header.setStyle(style);
+    HeaderGrid grid = new HeaderGrid();
+    grid.setElement(0, 0, header);
+    return grid;
+  }
+  public Grid createTableCell_8gfsze_i0a(final EditorContext editorContext, final SNode node) {
 
     EditorCell cell = createRefCell_1();
     final Style style = new ITableStyleFactory() {
@@ -754,7 +822,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
       leaf.setStyle(style);
       grid.setElement(0, 0, leaf);
     }
-    grid.setColumnHeaders(0, 0, createStaticHeader_8gfsze_a7a0(editorContext, node));
+    grid.setColumnHeaders(0, 0, createStaticHeader_8gfsze_a8a0(editorContext, node));
 
     return grid;
   }
@@ -806,7 +874,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     }
 
     /*package*/ EditorCell createCell() {
-      return createProperty_5();
+      return createProperty_6();
     }
 
     @NotNull
@@ -815,7 +883,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
       return myNode;
     }
 
-    private EditorCell createProperty_5() {
+    private EditorCell createProperty_6() {
       getCellFactory().pushCellContext();
       try {
         final SProperty property = PROPS.name$MnvL;
@@ -841,7 +909,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
       }
     }
   }
-  public HeaderGrid createStaticHeader_8gfsze_a7a0(final EditorContext editorContext, final SNode snode) {
+  public HeaderGrid createStaticHeader_8gfsze_a8a0(final EditorContext editorContext, final SNode snode) {
     final Style style = new ITableStyleFactory() {
       public Style createStyle(final int columnIndex, final int rowIndex) {
         Style style = new StyleImpl();
@@ -857,7 +925,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     grid.setElement(0, 0, header);
     return grid;
   }
-  public Grid createTableCell_8gfsze_i0a(final EditorContext editorContext, final SNode node) {
+  public Grid createTableCell_8gfsze_j0a(final EditorContext editorContext, final SNode node) {
 
     EditorCell cell = createRefCell_2();
     final Style style = new ITableStyleFactory() {
@@ -877,7 +945,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
       leaf.setStyle(style);
       grid.setElement(0, 0, leaf);
     }
-    grid.setColumnHeaders(0, 0, createStaticHeader_8gfsze_a8a0(editorContext, node));
+    grid.setColumnHeaders(0, 0, createStaticHeader_8gfsze_a9a0(editorContext, node));
 
     return grid;
   }
@@ -929,7 +997,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     }
 
     /*package*/ EditorCell createCell() {
-      return createProperty_6();
+      return createProperty_7();
     }
 
     @NotNull
@@ -938,7 +1006,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
       return myNode;
     }
 
-    private EditorCell createProperty_6() {
+    private EditorCell createProperty_7() {
       getCellFactory().pushCellContext();
       try {
         final SProperty property = PROPS.name$MnvL;
@@ -967,7 +1035,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
       }
     }
   }
-  public HeaderGrid createStaticHeader_8gfsze_a8a0(final EditorContext editorContext, final SNode snode) {
+  public HeaderGrid createStaticHeader_8gfsze_a9a0(final EditorContext editorContext, final SNode snode) {
     final Style style = new ITableStyleFactory() {
       public Style createStyle(final int columnIndex, final int rowIndex) {
         Style style = new StyleImpl();
@@ -978,71 +1046,6 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     final EditorCell_Constant cell = new EditorCell_Constant(editorContext, snode, "Topic", false);
     Header header = new EditorCellHeader(new StringHeaderReference("Topic"), cell);
     header.setLabel("Topic");
-    header.setStyle(style);
-    HeaderGrid grid = new HeaderGrid();
-    grid.setElement(0, 0, header);
-    return grid;
-  }
-  public Grid createTableCell_8gfsze_j0a(final EditorContext editorContext, final SNode node) {
-
-    EditorCell cell = createProperty_7();
-    final Style style = new ITableStyleFactory() {
-      public Style createStyle(final int columnIndex, final int rowIndex) {
-        Style style = new StyleImpl();
-        final EditorCell editorCell = null;
-        return style;
-      }
-    }.createStyle(0, 0);
-
-    Grid grid;
-    if (cell instanceof PartialTableEditor) {
-      grid = ((PartialTableEditor) cell).getGrid().clone();
-    } else {
-      grid = new Grid();
-      EditorCellGridLeaf leaf = new EditorCellGridLeaf(cell);
-      leaf.setStyle(style);
-      grid.setElement(0, 0, leaf);
-    }
-    grid.setColumnHeaders(0, 0, createStaticHeader_8gfsze_a9a0(editorContext, node));
-
-    return grid;
-  }
-  private EditorCell createProperty_7() {
-    getCellFactory().pushCellContext();
-    try {
-      final SProperty property = PROPS.latitude$WAjg;
-      getCellFactory().setPropertyInfo(new SPropertyInfo(myNode, property));
-      EditorCell_Property editorCell = EditorCell_Property.create(getEditorContext(), new SPropertyAccessor(myNode, property, false, false), myNode);
-      editorCell.setDefaultText("<no latitude>");
-      editorCell.setCellId("property_latitude");
-      editorCell.setSubstituteInfo(new SPropertySubstituteInfo(editorCell, property));
-      setCellContext(editorCell);
-      Iterable<SNode> propertyAttributes = SNodeOperations.ofConcept(new IAttributeDescriptor.AllAttributes().list(myNode), CONCEPTS.PropertyAttribute$Gb);
-      Iterable<SNode> currentPropertyAttributes = Sequence.fromIterable(propertyAttributes).where(new IWhereFilter<SNode>() {
-        public boolean accept(SNode it) {
-          return Objects.equals(PropertyAttribute__BehaviorDescriptor.getProperty_id1avfQ4BBzOo.invoke(it), property);
-        }
-      });
-      if (Sequence.fromIterable(currentPropertyAttributes).isNotEmpty()) {
-        EditorManager manager = EditorManager.getInstanceFromContext(getEditorContext());
-        return manager.createNodeRoleAttributeCell(Sequence.fromIterable(currentPropertyAttributes).first(), AttributeKind.PROPERTY, editorCell);
-      } else
-      return editorCell;
-    } finally {
-      getCellFactory().popCellContext();
-    }
-  }
-  public HeaderGrid createStaticHeader_8gfsze_a9a0(final EditorContext editorContext, final SNode snode) {
-    final Style style = new ITableStyleFactory() {
-      public Style createStyle(final int columnIndex, final int rowIndex) {
-        Style style = new StyleImpl();
-        final EditorCell editorCell = null;
-        return style;
-      }
-    }.createStyle(0, 0);
-    final EditorCell_Constant cell = new EditorCell_Constant(editorContext, snode, "Latitude", false);
-    Header header = new EditorCellHeader(new StringHeaderReference("Latitude"), cell);
-    header.setLabel("Latitude");
     header.setStyle(style);
     HeaderGrid grid = new HeaderGrid();
     grid.setElement(0, 0, header);
@@ -1075,6 +1078,71 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
   private EditorCell createProperty_8() {
     getCellFactory().pushCellContext();
     try {
+      final SProperty property = PROPS.latitude$WAjg;
+      getCellFactory().setPropertyInfo(new SPropertyInfo(myNode, property));
+      EditorCell_Property editorCell = EditorCell_Property.create(getEditorContext(), new SPropertyAccessor(myNode, property, false, false), myNode);
+      editorCell.setDefaultText("<no latitude>");
+      editorCell.setCellId("property_latitude");
+      editorCell.setSubstituteInfo(new SPropertySubstituteInfo(editorCell, property));
+      setCellContext(editorCell);
+      Iterable<SNode> propertyAttributes = SNodeOperations.ofConcept(new IAttributeDescriptor.AllAttributes().list(myNode), CONCEPTS.PropertyAttribute$Gb);
+      Iterable<SNode> currentPropertyAttributes = Sequence.fromIterable(propertyAttributes).where(new IWhereFilter<SNode>() {
+        public boolean accept(SNode it) {
+          return Objects.equals(PropertyAttribute__BehaviorDescriptor.getProperty_id1avfQ4BBzOo.invoke(it), property);
+        }
+      });
+      if (Sequence.fromIterable(currentPropertyAttributes).isNotEmpty()) {
+        EditorManager manager = EditorManager.getInstanceFromContext(getEditorContext());
+        return manager.createNodeRoleAttributeCell(Sequence.fromIterable(currentPropertyAttributes).first(), AttributeKind.PROPERTY, editorCell);
+      } else
+      return editorCell;
+    } finally {
+      getCellFactory().popCellContext();
+    }
+  }
+  public HeaderGrid createStaticHeader_8gfsze_a01a0(final EditorContext editorContext, final SNode snode) {
+    final Style style = new ITableStyleFactory() {
+      public Style createStyle(final int columnIndex, final int rowIndex) {
+        Style style = new StyleImpl();
+        final EditorCell editorCell = null;
+        return style;
+      }
+    }.createStyle(0, 0);
+    final EditorCell_Constant cell = new EditorCell_Constant(editorContext, snode, "Latitude", false);
+    Header header = new EditorCellHeader(new StringHeaderReference("Latitude"), cell);
+    header.setLabel("Latitude");
+    header.setStyle(style);
+    HeaderGrid grid = new HeaderGrid();
+    grid.setElement(0, 0, header);
+    return grid;
+  }
+  public Grid createTableCell_8gfsze_l0a(final EditorContext editorContext, final SNode node) {
+
+    EditorCell cell = createProperty_9();
+    final Style style = new ITableStyleFactory() {
+      public Style createStyle(final int columnIndex, final int rowIndex) {
+        Style style = new StyleImpl();
+        final EditorCell editorCell = null;
+        return style;
+      }
+    }.createStyle(0, 0);
+
+    Grid grid;
+    if (cell instanceof PartialTableEditor) {
+      grid = ((PartialTableEditor) cell).getGrid().clone();
+    } else {
+      grid = new Grid();
+      EditorCellGridLeaf leaf = new EditorCellGridLeaf(cell);
+      leaf.setStyle(style);
+      grid.setElement(0, 0, leaf);
+    }
+    grid.setColumnHeaders(0, 0, createStaticHeader_8gfsze_a11a0(editorContext, node));
+
+    return grid;
+  }
+  private EditorCell createProperty_9() {
+    getCellFactory().pushCellContext();
+    try {
       final SProperty property = PROPS.longitude$WBul;
       getCellFactory().setPropertyInfo(new SPropertyInfo(myNode, property));
       EditorCell_Property editorCell = EditorCell_Property.create(getEditorContext(), new SPropertyAccessor(myNode, property, false, false), myNode);
@@ -1097,7 +1165,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
       getCellFactory().popCellContext();
     }
   }
-  public HeaderGrid createStaticHeader_8gfsze_a01a0(final EditorContext editorContext, final SNode snode) {
+  public HeaderGrid createStaticHeader_8gfsze_a11a0(final EditorContext editorContext, final SNode snode) {
     final Style style = new ITableStyleFactory() {
       public Style createStyle(final int columnIndex, final int rowIndex) {
         Style style = new StyleImpl();
@@ -1124,6 +1192,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
   private static final class PROPS {
     /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
     /*package*/ static final SProperty unit$USAN = MetaAdapterFactory.getProperty(0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x23381bd32c6875c5L, 0x65ae998d2a1ca237L, "unit");
+    /*package*/ static final SProperty threshold$lsR1 = MetaAdapterFactory.getProperty(0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x23381bd32c6875c5L, 0x12549f92e677d435L, "threshold");
     /*package*/ static final SProperty brand$Jlco = MetaAdapterFactory.getProperty(0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x23381bd32c687594L, 0x23381bd32c6875bfL, "brand");
     /*package*/ static final SProperty communication$Jk1j = MetaAdapterFactory.getProperty(0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x23381bd32c687594L, 0x23381bd32c6875baL, "communication");
     /*package*/ static final SProperty latitude$WAjg = MetaAdapterFactory.getProperty(0x222ccd66f9d64014L, 0x8569354bddee8138L, 0x23381bd32c687594L, 0x4dd57832ebc1dc98L, "latitude");
