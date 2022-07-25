@@ -10,7 +10,6 @@
   <registry>
     <language id="222ccd66-f9d6-4014-8569-354bddee8138" name="WWTP">
       <concept id="8692323605775115144" name="WWTP.structure.Period" flags="ng" index="22lFnb">
-        <property id="8692323605775115147" name="unit" index="22lFn8" />
         <property id="8692323605775115145" name="value" index="22lFna" />
       </concept>
       <concept id="2223746026162203921" name="WWTP.structure.Num_Value" flags="ng" index="26MvwF">
@@ -130,11 +129,6 @@
       <concept id="8835431912742353631" name="WWTP.structure.Water_Flow" flags="ng" index="1eHrxs">
         <reference id="8835431912742378898" name="process" index="1eHhWh" />
       </concept>
-      <concept id="3548554229597094804" name="WWTP.structure.Treatment_Event" flags="ng" index="1wpFNh">
-        <reference id="3548554229597094807" name="treatment" index="1wpFNi" />
-        <reference id="3548554229597094809" name="sensorType" index="1wpFNs" />
-      </concept>
-      <concept id="1320856044006295780" name="WWTP.structure.Threshold_Value" flags="ng" index="3OedtQ" />
       <concept id="2158116648750276454" name="WWTP.structure.Volume" flags="ng" index="1PrJje">
         <property id="2158116648750276459" name="mountPath" index="1PrJj3" />
         <property id="2158116648750276461" name="subPath" index="1PrJj5" />
@@ -247,8 +241,8 @@
       <property role="3Oddrl" value="latency" />
     </node>
     <node concept="2Q5TI7" id="MV5QEUHA9V" role="2Q5TI0">
-      <property role="TrG5h" value="Availability" />
-      <property role="3Oddrl" value="availability" />
+      <property role="TrG5h" value="Unavailability" />
+      <property role="3Oddrl" value="unavailability" />
     </node>
     <node concept="2Q5TI7" id="MV5QEUHA9Y" role="2Q5TI0">
       <property role="TrG5h" value="CPU consumption" />
@@ -303,7 +297,7 @@
       <node concept="3eOSWO" id="XBRjBL$EGs" role="2AxvoC">
         <node concept="26MvwF" id="XBRjBL$EGB" role="3uHU7w">
           <property role="26Mvwu" value="10" />
-          <property role="26MvwC" value="." />
+          <property role="26MvwC" value="C" />
         </node>
         <node concept="2QtbNP" id="XBRjBL$EGg" role="3uHU7B">
           <ref role="2QtbNa" node="46bHwglzUMd" resolve="ph-sen-1" />
@@ -311,24 +305,6 @@
       </node>
       <node concept="22lFnb" id="XBRjBL$EG4" role="22lFFm">
         <property role="22lFna" value="60" />
-      </node>
-    </node>
-    <node concept="2QBq3y" id="1GcyzcRMc0G" role="2QBqNM">
-      <property role="TrG5h" value="Rule: GC level" />
-      <node concept="16Hu8y" id="1GcyzcRMc1V" role="2A_Y2i">
-        <property role="16HGMk" value="Open" />
-        <ref role="16HxaX" node="1GcyzcRMc05" resolve="GC-va" />
-      </node>
-      <node concept="22lFnb" id="1GcyzcRMc0J" role="22lFFm">
-        <property role="22lFna" value="5" />
-        <property role="22lFn8" value="7yxl$fUXYej/m" />
-      </node>
-      <node concept="3eOSWO" id="1GcyzcRMc1C" role="2AxvoC">
-        <node concept="3OedtQ" id="1GcyzcRMc1O" role="3uHU7w" />
-        <node concept="1wpFNh" id="1GcyzcRMc13" role="3uHU7B">
-          <ref role="1wpFNi" node="15_HfRpZF2Y" resolve="GC-01" />
-          <ref role="1wpFNs" node="1GcyzcRMc0o" resolve="level" />
-        </node>
       </node>
     </node>
     <node concept="fk49P" id="1VsljEocxNm" role="MQ7jN">
