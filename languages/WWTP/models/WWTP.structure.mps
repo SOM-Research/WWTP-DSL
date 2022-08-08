@@ -662,7 +662,7 @@
   <node concept="1TIwiD" id="MV5QEUIV22">
     <property role="EcuMT" value="917352696266862722" />
     <property role="3GE5qa" value="AdaptationRules" />
-    <property role="TrG5h" value="Exp_RegLayer" />
+    <property role="TrG5h" value="QoSRegion" />
     <ref role="1TJDcQ" node="5c6$$01D87u" resolve="Resource_Expression" />
     <node concept="1TJgyj" id="5c6$$01hkRE" role="1TKVEi">
       <property role="IQ2ns" value="5982629958605164010" />
@@ -687,7 +687,7 @@
   <node concept="1TIwiD" id="MV5QEUNUIv">
     <property role="EcuMT" value="917352696268172191" />
     <property role="3GE5qa" value="AdaptationRules" />
-    <property role="TrG5h" value="Sensor_Event" />
+    <property role="TrG5h" value="SensorEvent" />
     <ref role="1TJDcQ" to="tpee:fz3vP1J" resolve="Expression" />
     <node concept="1TJgyj" id="MV5QEUNUIw" role="1TKVEi">
       <property role="IQ2ns" value="917352696268172192" />
@@ -713,7 +713,7 @@
   <node concept="1TIwiD" id="5c6$$01qJv7">
     <property role="EcuMT" value="5982629958607632327" />
     <property role="3GE5qa" value="AdaptationRules" />
-    <property role="TrG5h" value="Sensor_Events" />
+    <property role="TrG5h" value="SensorTypeEvent" />
     <ref role="1TJDcQ" to="tpee:fz3vP1J" resolve="Expression" />
     <node concept="1TJgyi" id="5c6$$01NIgP" role="1TKVEl">
       <property role="IQ2nx" value="5982629958614180917" />
@@ -770,7 +770,7 @@
   <node concept="1TIwiD" id="5c6$$01GCcF">
     <property role="EcuMT" value="5982629958612321067" />
     <property role="3GE5qa" value="AdaptationRules" />
-    <property role="TrG5h" value="Exp_ClusterLayer" />
+    <property role="TrG5h" value="QoSCluster" />
     <ref role="1TJDcQ" node="5c6$$01D87u" resolve="Resource_Expression" />
     <node concept="1TJgyi" id="5c6$$01GCcG" role="1TKVEl">
       <property role="IQ2nx" value="5982629958612321068" />
@@ -795,7 +795,7 @@
   <node concept="1TIwiD" id="5c6$$01LUV1">
     <property role="EcuMT" value="5982629958613708481" />
     <property role="3GE5qa" value="AdaptationRules" />
-    <property role="TrG5h" value="Exp_Node" />
+    <property role="TrG5h" value="QoSNode" />
     <ref role="1TJDcQ" node="5c6$$01D87u" resolve="Resource_Expression" />
     <node concept="1TJgyj" id="5c6$$01LUV2" role="1TKVEi">
       <property role="IQ2ns" value="5982629958613708482" />
@@ -1253,7 +1253,7 @@
   <node concept="1TIwiD" id="19kBTbAobBe">
     <property role="EcuMT" value="1320856044005538254" />
     <property role="3GE5qa" value="AdaptationRules" />
-    <property role="TrG5h" value="Exp_Cont" />
+    <property role="TrG5h" value="QoSContainer" />
     <ref role="1TJDcQ" node="5c6$$01D87u" resolve="Resource_Expression" />
     <node concept="1TJgyj" id="19kBTbAobBf" role="1TKVEi">
       <property role="IQ2ns" value="1320856044005538255" />

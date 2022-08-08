@@ -2968,7 +2968,7 @@
             <node concept="3clFbS" id="bR" role="1pnPq1">
               <node concept="3cpWs6" id="bT" role="3cqZAp">
                 <node concept="1nCR9W" id="bU" role="3cqZAk">
-                  <property role="1nD$Q0" value="WWTP.constraints.Sensor_Events_Constraints" />
+                  <property role="1nD$Q0" value="WWTP.constraints.SensorTypeEvent_Constraints" />
                   <node concept="3uibUv" id="bV" role="2lIhxL">
                     <ref role="3uigEE" to="ze1i:~ConstraintsDescriptor" resolve="ConstraintsDescriptor" />
                   </node>
@@ -2976,7 +2976,7 @@
               </node>
             </node>
             <node concept="3gn64h" id="bS" role="1pnPq6">
-              <ref role="3gnhBz" to="40ag:5c6$$01qJv7" resolve="Sensor_Events" />
+              <ref role="3gnhBz" to="40ag:5c6$$01qJv7" resolve="SensorTypeEvent" />
             </node>
           </node>
           <node concept="1pnPoh" id="bh" role="1_3QMm">
@@ -6092,7 +6092,7 @@
   </node>
   <node concept="312cEu" id="p9">
     <property role="3GE5qa" value="AdaptationRules" />
-    <property role="TrG5h" value="Sensor_Events_Constraints" />
+    <property role="TrG5h" value="SensorTypeEvent_Constraints" />
     <uo k="s:originTrace" v="n:5982629958615616538" />
     <node concept="3Tm1VV" id="pa" role="1B3o_S">
       <uo k="s:originTrace" v="n:5982629958615616538" />
@@ -6113,7 +6113,7 @@
           <uo k="s:originTrace" v="n:5982629958615616538" />
           <node concept="1BaE9c" id="pj" role="37wK5m">
             <property role="1ouuDV" value="CONCEPTS" />
-            <property role="1BaxDp" value="Sensor_Events$lo" />
+            <property role="1BaxDp" value="SensorTypeEvent$lo" />
             <uo k="s:originTrace" v="n:5982629958615616538" />
             <node concept="2YIFZM" id="pk" role="1Bazha">
               <ref role="1Pybhc" to="2k9e:~MetaAdapterFactory" resolve="MetaAdapterFactory" />
@@ -6132,7 +6132,7 @@
                 <uo k="s:originTrace" v="n:5982629958615616538" />
               </node>
               <node concept="Xl_RD" id="po" role="37wK5m">
-                <property role="Xl_RC" value="WWTP.structure.Sensor_Events" />
+                <property role="Xl_RC" value="WWTP.structure.SensorTypeEvent" />
                 <uo k="s:originTrace" v="n:5982629958615616538" />
               </node>
             </node>
