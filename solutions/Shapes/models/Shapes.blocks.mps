@@ -464,7 +464,7 @@
         </node>
         <node concept="3cpWs8" id="4fvawlufFoo" role="3cqZAp">
           <node concept="3cpWsn" id="4fvawlufFop" role="3cpWs9">
-            <property role="TrG5h" value="rect" />
+            <property role="TrG5h" value="rect1" />
             <node concept="3uibUv" id="4fvawlufFoq" role="1tU5fm">
               <ref role="3uigEE" to="fbzs:~Rectangle2D$Double" resolve="Double" />
             </node>

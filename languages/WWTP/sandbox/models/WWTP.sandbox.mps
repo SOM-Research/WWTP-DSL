@@ -95,7 +95,7 @@
       <concept id="917352696265870573" name="WWTP.structure.Metric" flags="ng" index="2Q5TI7">
         <property id="1320856044005509447" name="label" index="3Oddrl" />
       </concept>
-      <concept id="917352696268172191" name="WWTP.structure.Sensor_Event" flags="ng" index="2QtbNP">
+      <concept id="917352696268172191" name="WWTP.structure.SensorEvent" flags="ng" index="2QtbNP">
         <reference id="917352696268172192" name="sensor" index="2QtbNa" />
       </concept>
       <concept id="917352696257099656" name="WWTP.structure.AdaptationRule" flags="ng" index="2QBq3y">
