@@ -214,10 +214,10 @@
   <root nodeRef="r:39ec7b95-5b57-470b-856f-626b37e6655c(Shapes.blocks)/4890673922892015419">
     <file name="Bio_Reactor.java">
       <node id="4890673922892019219" at="18,51,19,27" concept="3" />
-      <node id="4890673922892019224" at="19,27,20,127" concept="3" />
-      <node id="4890673922892019273" at="20,127,21,139" concept="3" />
-      <node id="4890673922892019321" at="21,139,22,29" concept="1" />
-      <node id="4890673922892019335" at="22,29,23,34" concept="1" />
+      <node id="4890673922892019224" at="19,27,20,128" concept="3" />
+      <node id="4890673922892019273" at="20,128,21,139" concept="3" />
+      <node id="4890673922892019321" at="21,139,22,30" concept="1" />
+      <node id="4890673922892019335" at="22,30,23,34" concept="1" />
       <node id="4890673922892019349" at="23,34,24,16" concept="4" />
       <node id="4890673922892015419" at="13,0,15,0" concept="0" trace="Bio_Reactor#()V" />
       <node id="4890673922892015419" at="17,0,26,0" concept="2" trace="getShape#(Ljava/awt/geom/Rectangle2D;)Ljava/awt/Shape;" />
@@ -226,7 +226,7 @@
       <scope id="4890673922892015419" at="18,51,24,16">
         <var name="area" id="4890673922892019220" />
         <var name="line" id="4890673922892019274" />
-        <var name="rect" id="4890673922892019225" />
+        <var name="rect1" id="4890673922892019225" />
       </scope>
       <scope id="4890673922892015419" at="17,0,26,0">
         <var name="bounds" id="4890673922892015419" />

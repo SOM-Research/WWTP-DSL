@@ -17,9 +17,9 @@ public class Bio_Reactor extends AbstractShape {
   @Override
   public Shape getShape(final Rectangle2D bounds) {
     Area area = new Area();
-    Rectangle2D.Double rect = new Rectangle2D.Double(bounds.getX(), bounds.getY() + 60, bounds.getWidth(), bounds.getHeight());
+    Rectangle2D.Double rect1 = new Rectangle2D.Double(bounds.getX(), bounds.getY() + 60, bounds.getWidth(), bounds.getHeight());
     Rectangle2D.Double line = new Rectangle2D.Double(bounds.getX() + 3, bounds.getY() + 50 + bounds.getHeight(), bounds.getWidth() - 6, 5);
-    area.add(new Area(rect));
+    area.add(new Area(rect1));
     area.subtract(new Area(line));
     return area;
   }
