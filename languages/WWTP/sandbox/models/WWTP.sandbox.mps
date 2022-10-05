@@ -316,7 +316,7 @@
       <property role="fk49r" value="Raspbian" />
       <property role="fk499" value="2cS6XcGq5Ay/ARM" />
       <node concept="2GUnFb" id="1VsljEocxNx" role="MQ7lO">
-        <property role="TrG5h" value="mosquitto" />
+        <property role="TrG5h" value="c-mosquitto" />
         <property role="3NUgsr" value="500" />
         <property role="3NUgt_" value="500" />
         <ref role="MQ7m4" node="1VsljEocxN2" resolve="broker" />

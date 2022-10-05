@@ -14,7 +14,7 @@ data:
         expr: wwtp_temp > 150
         for: 30s
         annotations:
-          adaptations: '{"operate_actuator_0.5423550037757807":{"broker_ip":"3.223.97.169","port":30070,"topic":"wwtp/buzzer","message":"On"}}'
+          adaptations: '{"operate_actuator_0.7953022583923484":{"broker_ip":"3.223.97.169","port":30070,"topic":"wwtp/buzzer","message":"On"}}'
         labels:
           severity: 'critical'
           actions: 'all'
@@ -27,7 +27,7 @@ data:
         expr: wwtp_ph > 10
         for: 60s
         annotations:
-          adaptations: '{"operate_actuator_0.7316071248178979":{"broker_ip":"3.223.97.169","port":30070,"topic":"wwtp/valve","message":"Open"}}'
+          adaptations: '{"operate_actuator_0.8093990382164862":{"broker_ip":"3.223.97.169","port":30070,"topic":"wwtp/valve","message":"Open"}}'
         labels:
           severity: 'critical'
           actions: 'all'
