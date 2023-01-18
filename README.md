@@ -16,8 +16,6 @@ The metamodel (abstract syntax) of the DSL is summarised in the following figure
 * [Installation guide](https://github.com/SOM-Research/WWTP-DSL/tree/main/docs/installation-guide.pdf)
 * [Generated code example](https://github.com/SOM-Research/WWTP-DSL/tree/main/docs/code-example)
 
-Or you can find the installation and configuration [guide here.]
-
 ## Publications and Other Resources
 
 * Alfonso, I., Garcés, K., Castro, H., & Cabot, J. (2021, October). Modeling self-adaptative IoT architectures. In 2021 ACM/IEEE International Conference on Model Driven Engineering Languages and Systems Companion. https://doi.org/10.1109/MODELS-C53483.2021.00122
