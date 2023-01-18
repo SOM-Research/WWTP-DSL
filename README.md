@@ -11,13 +11,19 @@ The metamodel (abstract syntax) of the DSL is summarised in the following figure
 
 <img src="/docs/img/metamodel.jpg" alt="Metamodel" style="height: 100%; width:100%;"/>
 
-## Prerequisites
+## Documentation
 
-To run this DSL in MPS you need the following prerequisites:
+* [Installation guide](https://github.com/SOM-Research/WWTP-DSL/tree/main/docs/installation-guide.pdf)
+* [Generated code example](https://github.com/SOM-Research/WWTP-DSL/tree/main/docs/code-example)
 
-* [Jetbrains MPS 2021.2.2](https://www.jetbrains.com/es-es/mps/) or above.
-* [mbeddr platform](http://mbeddr.com/) (MPS plugin)
-* [plaintext-gen](https://jetbrains.github.io/MPS-extensions/extensions/plaintext-gen/) (MPS plugin)
-* MPS Table Editor Component (MPS plugin)
+Or you can find the installation and configuration [guide here.]
 
-Or you can find the installation and configuration [guide here.](https://github.com/SOM-Research/WWTP-DSL/tree/main/docs/installation-guide.pdf)
+## Publications and Other Resources
+
+* Alfonso, I., Garcés, K., Castro, H., & Cabot, J. (2021, October). Modeling self-adaptative IoT architectures. In 2021 ACM/IEEE International Conference on Model Driven Engineering Languages and Systems Companion. https://doi.org/10.1109/MODELS-C53483.2021.00122
+
+* Modeling self-adaptive IoT architectures. Post in [modeling-languajes](https://modeling-languages.com/modeling-self-adaptative-iot-architectures/)
+
+* Alfonso, I., Garcés, K., Castro, H., & Cabot, J. Modelado de Sistemas IoT para la Industria en Minerıa Subterránea de Carbón. Actas de las XXVI Jornadas de Ingeniería del Software y Bases de Datos (JISBD 2022), Sistedes, 2022. http://hdl.handle.net/11705/JISBD/2022/8557 (only in Spanish).
+
+* Modelando Sistemas IoT para la Industria Minera - Ejemplo de Creación de un Lenguaje Específico de Dominio. Post in [Ingeniería de Software](https://ingenieriadesoftware.es/modelando-sistemas-iot-para-la-industria-minera-ejemplo-de-creacion-de-un-lenguaje-especifico-de-dominio/) (only in Spanish).
