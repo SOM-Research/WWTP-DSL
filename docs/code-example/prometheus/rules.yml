@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: prometheus-rules
+  namespace: monitoring
+data:
+  prometheus.rules: |-
+    groups:
+    - name: Alert-Temperature Alarm
+      interval: 1s
+      rules:
+      - alert: Temperature Alarm
+        # Condition for alerting
+        expr: wwtp_temp > 150
+        for: 30s
+        annotations:
+          adaptations: '{"operate_actuator_0.7953022583923484":{"broker_ip":"3.223.97.169","port":30070,"topic":"wwtp/buzzer","message":"On"}}'
+        labels:
+          severity: 'critical'
+          actions: 'all'
+
+    - name: Alert-ph Alarm
+      interval: 1s
+      rules:
+      - alert: ph Alarm
+        # Condition for alerting
+        expr: wwtp_ph > 10
+        for: 60s
+        annotations:
+          adaptations: '{"operate_actuator_0.8093990382164862":{"broker_ip":"3.223.97.169","port":30070,"topic":"wwtp/valve","message":"Open"}}'
+        labels:
+          severity: 'critical'
+          actions: 'all'
