@@ -10111,6 +10111,40 @@
           <property role="VOm3f" value="true" />
         </node>
       </node>
+      <node concept="3EZMnI" id="1RLcWz1PRqr" role="3EZMnx">
+        <node concept="VPM3Z" id="1RLcWz1PRqv" role="3F10Kt" />
+        <node concept="3F0ifn" id="1RLcWz1PSh0" role="3EZMnx">
+          <property role="3F0ifm" value="slude fluids:" />
+        </node>
+        <node concept="3F2HdR" id="1RLcWz1PSh6" role="3EZMnx">
+          <ref role="1NtTu8" to="40ag:5RqSGLNBlXA" resolve="sludge_flows" />
+          <node concept="2iRfu4" id="1RLcWz1PSh8" role="2czzBx" />
+        </node>
+        <node concept="2iRfu4" id="1RLcWz1PRq$" role="2iSdaV" />
+        <node concept="pVoyu" id="1RLcWz1PSgN" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="lj46D" id="1RLcWz1PSgQ" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3EZMnI" id="1RLcWz1PT7q" role="3EZMnx">
+        <node concept="VPM3Z" id="1RLcWz1PT7s" role="3F10Kt" />
+        <node concept="3F0ifn" id="1RLcWz1PTXQ" role="3EZMnx">
+          <property role="3F0ifm" value="water fluids:" />
+        </node>
+        <node concept="3F2HdR" id="1RLcWz1PTXW" role="3EZMnx">
+          <ref role="1NtTu8" to="40ag:7EtKCcOa7FY" resolve="water_flows" />
+          <node concept="2iRfu4" id="1RLcWz1PTXY" role="2czzBx" />
+        </node>
+        <node concept="2iRfu4" id="1RLcWz1PT7v" role="2iSdaV" />
+        <node concept="pVoyu" id="1RLcWz1PTY2" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="lj46D" id="1RLcWz1PTY5" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
       <node concept="3EZMnI" id="6TALccEhjMq" role="3EZMnx">
         <node concept="2iRfu4" id="6TALccEhjMr" role="2iSdaV" />
         <node concept="3F0ifn" id="6TALccEhjMd" role="3EZMnx">

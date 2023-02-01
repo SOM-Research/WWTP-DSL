@@ -6,28 +6,17 @@ metadata:
 data:
   prometheus.rules: |-
     groups:
-    - name: Alert-Temperature Alarm
+    - name: Alert-GC-level Alarm
       interval: 1s
       rules:
-      - alert: Temperature Alarm
+      - alert: GC-level Alarm
         # Condition for alerting
-        expr: wwtp_temp > 150
-        for: 30s
+        expr: wwtp_level > 400
+        for: 5m
         annotations:
-          adaptations: '{"operate_actuator_0.7953022583923484":{"broker_ip":"3.223.97.169","port":30070,"topic":"wwtp/buzzer","message":"On"}}'
-        labels:
-          severity: 'critical'
-          actions: 'all'
-
-    - name: Alert-ph Alarm
-      interval: 1s
-      rules:
-      - alert: ph Alarm
-        # Condition for alerting
-        expr: wwtp_ph > 10
-        for: 60s
-        annotations:
-          adaptations: '{"operate_actuator_0.8093990382164862":{"broker_ip":"3.223.97.169","port":30070,"topic":"wwtp/valve","message":"Open"}}'
+          adaptations: '{"operate_actuator":{"broker_ip":"3.223.97.169","port":30070,"topic":"wwtp/valve",
+                        "message":"open"},"operate_actuator_0.4650132056856807":{"broker_ip":"3.223.97.169",
+                        "port":30070,"topic":"wwtp/buzzer","message":"on"}}'
         labels:
           severity: 'critical'
           actions: 'all'
