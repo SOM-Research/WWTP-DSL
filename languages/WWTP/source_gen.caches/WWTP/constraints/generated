@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="27votocorkt0qlkviq230o62f6stb0d">
-  <files names="Application_Constraints.java:Cluster_Constraints.java:ConstraintsAspectDescriptor.java:Container_Constraints.java:IoT_Device_Constraints.java:Node_Constraints.java:Region_Constraints.java:Region_Reference_Constraints.java:SensorTypeEvent_Constraints.java:Treatment_Event_Constraints.java:WorkerReference_Constraints.java" />
-</product>
-

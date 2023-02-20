@@ -557,7 +557,7 @@
                 <ref role="3cqZAo" node="34YZOlh_yJ8" resolve="t" />
               </node>
               <node concept="3Tsc0h" id="34YZOlh_zZB" role="2OqNvi">
-                <ref role="3TtcxE" to="40ag:1c6nIPvuplk" resolve="iot_devices" />
+                <ref role="3TtcxE" to="40ag:1c6nIPvuplk" resolve="devices" />
               </node>
             </node>
             <node concept="v3k3i" id="34YZOlh_Ekt" role="2OqNvi">
@@ -596,7 +596,7 @@
       <node concept="37vLTG" id="34YZOlh_yJ8" role="3clF46">
         <property role="TrG5h" value="t" />
         <node concept="3Tqbb2" id="34YZOlh_yJ7" role="1tU5fm">
-          <ref role="ehGHo" to="40ag:3MnXQNRbQuZ" resolve="Treatment" />
+          <ref role="ehGHo" to="40ag:3MnXQNRbQuZ" resolve="UnitOperation" />
         </node>
       </node>
     </node>
@@ -656,7 +656,7 @@
     </node>
   </node>
   <node concept="13h7C7" id="2W36oaoOJdV">
-    <property role="3GE5qa" value="WWTP.Treatments" />
+    <property role="3GE5qa" value="UnitOperations" />
     <ref role="13h7C2" to="40ag:2W36oaoH6ru" resolve="Mec_Dehydration" />
     <node concept="13hLZK" id="2W36oaoOJdW" role="13h7CW">
       <node concept="3clFbS" id="2W36oaoOJdX" role="2VODD2">
@@ -679,7 +679,7 @@
     </node>
   </node>
   <node concept="13h7C7" id="2W36oaoRDiD">
-    <property role="3GE5qa" value="WWTP.Treatments" />
+    <property role="3GE5qa" value="UnitOperations" />
     <ref role="13h7C2" to="40ag:2W36oaop_qb" resolve="Hopper" />
     <node concept="13hLZK" id="2W36oaoRDiE" role="13h7CW">
       <node concept="3clFbS" id="2W36oaoRDiF" role="2VODD2">
@@ -702,7 +702,7 @@
     </node>
   </node>
   <node concept="13h7C7" id="2W36oaoUaVJ">
-    <property role="3GE5qa" value="WWTP.Treatments" />
+    <property role="3GE5qa" value="UnitOperations" />
     <ref role="13h7C2" to="40ag:2W36oaoU8Zz" resolve="Sludge_Thickener" />
     <node concept="13hLZK" id="2W36oaoUaVK" role="13h7CW">
       <node concept="3clFbS" id="2W36oaoUaVL" role="2VODD2">

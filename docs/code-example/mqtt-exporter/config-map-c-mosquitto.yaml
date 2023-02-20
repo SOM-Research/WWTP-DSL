@@ -23,6 +23,18 @@ data:
             replacement:    '\1'                        # Optional default '\1'
             action:         'replace'                   # Optional default 'replace'
 
+      - name:     'wwtp_ec2'
+        help:     'Topic wwtp/ec2'
+        type:     'gauge'
+        topic:    'wwtp/ec2'
+        label_configs:
+          - source_labels:  ['__msg_topic__']           # Required (when label_configs is present)
+            separator:      '/'                         # Optional default ';'
+            regex:          '(.*)'                      # Optional default '(.*)'
+            target_label:   '__topic__'                 # Required (when label_configs is present and 'action' = 'replace')
+            replacement:    '\1'                        # Optional default '\1'
+            action:         'replace'                   # Optional default 'replace'
+
       - name:     'wwtp_temp'
         help:     'Topic wwtp/temp'
         type:     'gauge'
@@ -35,10 +47,22 @@ data:
             replacement:    '\1'                        # Optional default '\1'
             action:         'replace'                   # Optional default 'replace'
 
-      - name:     'wwtp_buzzer'
-        help:     'Topic wwtp/buzzer'
+      - name:     'wwtp_buzzer1'
+        help:     'Topic wwtp/buzzer1'
         type:     'gauge'
-        topic:    'wwtp/buzzer'
+        topic:    'wwtp/buzzer1'
+        label_configs:
+          - source_labels:  ['__msg_topic__']           # Required (when label_configs is present)
+            separator:      '/'                         # Optional default ';'
+            regex:          '(.*)'                      # Optional default '(.*)'
+            target_label:   '__topic__'                 # Required (when label_configs is present and 'action' = 'replace')
+            replacement:    '\1'                        # Optional default '\1'
+            action:         'replace'                   # Optional default 'replace'
+
+      - name:     'wwtp_buzzer2'
+        help:     'Topic wwtp/buzzer2'
+        type:     'gauge'
+        topic:    'wwtp/buzzer2'
         label_configs:
           - source_labels:  ['__msg_topic__']           # Required (when label_configs is present)
             separator:      '/'                         # Optional default ';'
@@ -59,10 +83,10 @@ data:
             replacement:    '\1'                        # Optional default '\1'
             action:         'replace'                   # Optional default 'replace'
 
-      - name:     'wwtp_ec'
-        help:     'Topic wwtp/ec'
+      - name:     'wwtp_ec1'
+        help:     'Topic wwtp/ec1'
         type:     'gauge'
-        topic:    'wwtp/ec'
+        topic:    'wwtp/ec1'
         label_configs:
           - source_labels:  ['__msg_topic__']           # Required (when label_configs is present)
             separator:      '/'                         # Optional default ';'
