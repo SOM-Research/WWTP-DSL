@@ -46,6 +46,7 @@
         <child id="917352696257100696" name="adaptationRules" index="2QBqNM" />
         <child id="7082481588271664825" name="brokers" index="2ZpOB3" />
         <child id="7955262134318622318" name="wwtp" index="15iUaH" />
+        <child id="8803956863434857927" name="users" index="1cM6Ro" />
       </concept>
       <concept id="2537808983820359590" name="WWTP.structure.Application" flags="ng" index="fk4LP">
         <property id="3677613243630680837" name="imageRepo" index="2GUnF7" />
@@ -119,13 +120,13 @@
       <concept id="7082481588271927199" name="WWTP.structure.Container_Reference" flags="ng" index="2ZuOz_">
         <reference id="7082481588271927200" name="container" index="2ZuOzq" />
       </concept>
-      <concept id="4618711423232536205" name="WWTP.structure.Rol" flags="ng" index="35M9Gs" />
+      <concept id="4618711423232536205" name="WWTP.structure.Role" flags="ng" index="35M9Gs" />
       <concept id="4618711423232536207" name="WWTP.structure.Rule" flags="ng" index="35M9Gu">
         <property id="4618711423232536224" name="action" index="35M9GL" />
         <reference id="4618711423232536233" name="resource" index="35M9GS" />
         <child id="7937252579002023513" name="roles" index="2xOjtN" />
       </concept>
-      <concept id="4618711423232536230" name="WWTP.structure.Rol_Reference" flags="ng" index="35M9GR">
+      <concept id="4618711423232536230" name="WWTP.structure.Role_Reference" flags="ng" index="35M9GR">
         <reference id="4618711423232536231" name="role" index="35M9GQ" />
       </concept>
       <concept id="1002105271165506381" name="WWTP.structure.OperateActuator" flags="ng" index="16Hu8y">
@@ -138,6 +139,12 @@
         <child id="6762967158191120230" name="sludge_flows" index="IhVQE" />
         <child id="1370887510182958420" name="devices" index="1cvWIT" />
         <child id="8835431912742353662" name="water_flows" index="1eHrxX" />
+      </concept>
+      <concept id="8803956863434857915" name="WWTP.structure.User" flags="ng" index="1cM6Q$">
+        <property id="8803956863434857918" name="email" index="1cM6Qx" />
+        <property id="8803956863434857916" name="name" index="1cM6Qz" />
+        <property id="8803956863434857921" name="login" index="1cM6Ru" />
+        <reference id="8803956863434857925" name="role" index="1cM6Rq" />
       </concept>
       <concept id="8835431912742353631" name="WWTP.structure.Water_Flow" flags="ng" index="1eHrxs">
         <reference id="8835431912742378898" name="to" index="1eHhWh" />
@@ -289,6 +296,12 @@
   </node>
   <node concept="fk4LL" id="1VsljEocxJq">
     <property role="TrG5h" value="WWTP - Muro de Alcoy" />
+    <node concept="1cM6Q$" id="3$iHPx3c7q4" role="1cM6Ro">
+      <property role="1cM6Qz" value="Juan" />
+      <property role="1cM6Qx" value="juan@juan.com" />
+      <property role="1cM6Ru" value="juan" />
+      <ref role="1cM6Rq" node="6SAMiFft9Pv" resolve="Engineer" />
+    </node>
     <node concept="35M9Gu" id="6SAMiFg14AG" role="2xhYtq">
       <property role="35M9GL" value="40oXp65O6Uo/Read" />
       <ref role="35M9GS" node="1VsljEocxNF" resolve="wwtp/GChamber/ph" />
@@ -307,7 +320,7 @@
       <property role="fk49s" value="2000" />
       <property role="fk497" value="20000" />
       <property role="fk49o" value="2000" />
-      <property role="fk49l" value="3.223.97.169" />
+      <property role="fk49l" value="172.21.7.178" />
       <property role="fk49r" value="Linux" />
       <property role="fk499" value="2cS6XcGq5Ay/ARM" />
       <node concept="2GUnFb" id="4wNBe9AGSOD" role="MQ7lO">
@@ -496,7 +509,7 @@
       <property role="fk49s" value="2000" />
       <property role="fk497" value="10000" />
       <property role="fk49o" value="2000" />
-      <property role="fk49l" value="54.163.2.209" />
+      <property role="fk49l" value="172.21.8.178" />
       <property role="fk49r" value="Linux" />
       <node concept="2GUnFb" id="11bGKUlVbQ2" role="MQ7lO">
         <property role="TrG5h" value="pod-predictor" />
