@@ -2422,6 +2422,10 @@
       <ref role="30HIoZ" to="40ag:2cS6XcGq5uy" resolve="IoT_System" />
       <ref role="3lhOvi" node="1vojgn5SWey" resolve="start" />
     </node>
+    <node concept="3lhOvk" id="6iEBxzAJV7P" role="3lj3bC">
+      <ref role="30HIoZ" to="40ag:2cS6XcGq5uy" resolve="IoT_System" />
+      <ref role="3lhOvi" node="6iEBxzAJVH7" resolve="delete" />
+    </node>
     <node concept="3lhOvk" id="40oXp66l5Zb" role="3lj3bC">
       <ref role="3lhOvi" node="40oXp66QjTF" resolve="grafana/dashboards/rol" />
       <ref role="30HIoZ" to="40ag:40oXp65O6Ud" resolve="Rol" />
@@ -10879,6 +10883,18 @@
         </node>
         <node concept="2EixSi" id="1vojgn5SWgY" role="2EinRH" />
       </node>
+      <node concept="356sEK" id="6iEBxzACnKo" role="383Ya9">
+        <node concept="356sEF" id="6iEBxzACnKp" role="356sEH">
+          <property role="TrG5h" value="kubectl create -f grafana/dashboard-config.yaml" />
+        </node>
+        <node concept="2EixSi" id="6iEBxzACnKq" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="6iEBxzACnMr" role="383Ya9">
+        <node concept="356sEF" id="6iEBxzACnMs" role="356sEH">
+          <property role="TrG5h" value="kubectl create -f grafana/dashboards/" />
+        </node>
+        <node concept="2EixSi" id="6iEBxzACnMt" role="2EinRH" />
+      </node>
       <node concept="356sEK" id="1vojgn5SWgZ" role="383Ya9">
         <node concept="2EixSi" id="1vojgn5SWh2" role="2EinRH" />
       </node>
@@ -10908,6 +10924,39 @@
       </node>
       <node concept="356sEK" id="1vojgn5SWhj" role="383Ya9">
         <node concept="2EixSi" id="1vojgn5SWhm" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="6iEBxzACnQE" role="383Ya9">
+        <node concept="356sEF" id="6iEBxzACnQF" role="356sEH">
+          <property role="TrG5h" value="# Grafana RBAC configuration" />
+        </node>
+        <node concept="2EixSi" id="6iEBxzACnQG" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="6iEBxzADT$p" role="383Ya9">
+        <node concept="356sEF" id="6iEBxzADT$q" role="356sEH">
+          <property role="TrG5h" value="sleep 20" />
+        </node>
+        <node concept="2EixSi" id="6iEBxzADT$r" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="6iEBxzACnV5" role="383Ya9">
+        <node concept="356sEF" id="6iEBxzACnV6" role="356sEH">
+          <property role="TrG5h" value="chmod +x grafana/rbac.sh" />
+        </node>
+        <node concept="2EixSi" id="6iEBxzACnV7" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="6iEBxzACnOx" role="383Ya9">
+        <node concept="356sEF" id="6iEBxzACnOy" role="356sEH">
+          <property role="TrG5h" value="sed -i -e 's/\r$//' grafana/rbac.sh" />
+        </node>
+        <node concept="2EixSi" id="6iEBxzACnOz" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="6iEBxzACnSQ" role="383Ya9">
+        <node concept="356sEF" id="6iEBxzACnSR" role="356sEH">
+          <property role="TrG5h" value="./grafana/rbac.sh" />
+        </node>
+        <node concept="2EixSi" id="6iEBxzACnSS" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="6iEBxzADcne" role="383Ya9">
+        <node concept="2EixSi" id="6iEBxzADcng" role="2EinRH" />
       </node>
       <node concept="356sEK" id="1vojgn5SWhn" role="383Ya9">
         <node concept="356sEF" id="1vojgn5SWho" role="356sEH">
@@ -15852,6 +15901,168 @@
       </node>
     </node>
     <node concept="n94m4" id="40ccUrlUTZZ" role="lGtFl">
+      <ref role="n9lRv" to="40ag:2cS6XcGq5uy" resolve="IoT_System" />
+    </node>
+  </node>
+  <node concept="356sEV" id="6iEBxzAJVH7">
+    <property role="TrG5h" value="delete" />
+    <property role="3Le9LX" value=".sh" />
+    <node concept="356WMU" id="6iEBxzAJW6l" role="356KY_">
+      <node concept="356sEK" id="6iEBxzAJW6m" role="383Ya9">
+        <node concept="356sEF" id="6iEBxzAJW6n" role="356sEH">
+          <property role="TrG5h" value="#!/bin/bash" />
+        </node>
+        <node concept="2EixSi" id="6iEBxzAJW6p" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="6iEBxzAJW6q" role="383Ya9">
+        <node concept="2EixSi" id="6iEBxzAJW6t" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="6iEBxzAJW6u" role="383Ya9">
+        <node concept="356sEF" id="6iEBxzAJW6v" role="356sEH">
+          <property role="TrG5h" value="# Delete resources in the monitoring namespace" />
+        </node>
+        <node concept="2EixSi" id="6iEBxzAJW6x" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="6iEBxzAJW6y" role="383Ya9">
+        <node concept="356sEF" id="6iEBxzAJW6z" role="356sEH">
+          <property role="TrG5h" value="kubectl delete deployment --all --grace-period=0 --force --namespace monitoring" />
+        </node>
+        <node concept="2EixSi" id="6iEBxzAJW6_" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="6iEBxzAJW6A" role="383Ya9">
+        <node concept="356sEF" id="6iEBxzAJW6B" role="356sEH">
+          <property role="TrG5h" value="kubectl delete service --all --grace-period=0 --force --namespace monitoring" />
+        </node>
+        <node concept="2EixSi" id="6iEBxzAJW6D" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="6iEBxzAJW6E" role="383Ya9">
+        <node concept="356sEF" id="6iEBxzAJW6F" role="356sEH">
+          <property role="TrG5h" value="kubectl delete configmap --all --grace-period=0 --force --namespace monitoring" />
+        </node>
+        <node concept="2EixSi" id="6iEBxzAJW6H" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="6iEBxzAJW6I" role="383Ya9">
+        <node concept="356sEF" id="6iEBxzAJW6J" role="356sEH">
+          <property role="TrG5h" value="kubectl delete daemonset --all --grace-period=0 --force --namespace monitoring" />
+        </node>
+        <node concept="2EixSi" id="6iEBxzAJW6L" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="6iEBxzAJW6M" role="383Ya9">
+        <node concept="2EixSi" id="6iEBxzAJW6P" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="6iEBxzAJW6Q" role="383Ya9">
+        <node concept="356sEF" id="6iEBxzAJW6R" role="356sEH">
+          <property role="TrG5h" value="# Delete cluster role" />
+        </node>
+        <node concept="2EixSi" id="6iEBxzAJW6T" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="6iEBxzAJW6U" role="383Ya9">
+        <node concept="356sEF" id="6iEBxzAJW6V" role="356sEH">
+          <property role="TrG5h" value="kubectl delete clusterrole prometheus" />
+        </node>
+        <node concept="2EixSi" id="6iEBxzAJW6X" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="6iEBxzAJW6Y" role="383Ya9">
+        <node concept="356sEF" id="6iEBxzAJW6Z" role="356sEH">
+          <property role="TrG5h" value="kubectl delete clusterrolebinding prometheus" />
+        </node>
+        <node concept="2EixSi" id="6iEBxzAJW71" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="6iEBxzAJW72" role="383Ya9">
+        <node concept="356sEF" id="6iEBxzAJW73" role="356sEH">
+          <property role="TrG5h" value="kubectl delete clusterrole adaptation-engine" />
+        </node>
+        <node concept="2EixSi" id="6iEBxzAJW75" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="6iEBxzAJW76" role="383Ya9">
+        <node concept="356sEF" id="6iEBxzAJW77" role="356sEH">
+          <property role="TrG5h" value="kubectl delete clusterrolebinding adaptation-engine" />
+        </node>
+        <node concept="2EixSi" id="6iEBxzAJW79" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="6iEBxzAJW7a" role="383Ya9">
+        <node concept="2EixSi" id="6iEBxzAJW7d" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="6iEBxzAJW7e" role="383Ya9">
+        <node concept="356sEF" id="6iEBxzAJW7f" role="356sEH">
+          <property role="TrG5h" value="# Delete kube-state-metrics resources" />
+        </node>
+        <node concept="2EixSi" id="6iEBxzAJW7h" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="6iEBxzAJW7i" role="383Ya9">
+        <node concept="356sEF" id="6iEBxzAJW7j" role="356sEH">
+          <property role="TrG5h" value="kubectl delete clusterrole kube-state-metrics" />
+        </node>
+        <node concept="2EixSi" id="6iEBxzAJW7l" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="6iEBxzAJW7m" role="383Ya9">
+        <node concept="356sEF" id="6iEBxzAJW7n" role="356sEH">
+          <property role="TrG5h" value="kubectl delete clusterrolebinding kube-state-metrics" />
+        </node>
+        <node concept="2EixSi" id="6iEBxzAJW7p" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="6iEBxzAJW7q" role="383Ya9">
+        <node concept="356sEF" id="6iEBxzAJW7r" role="356sEH">
+          <property role="TrG5h" value="kubectl delete deployment kube-state-metrics --grace-period=0 --force --namespace kube-system" />
+        </node>
+        <node concept="2EixSi" id="6iEBxzAJW7t" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="6iEBxzAJW7u" role="383Ya9">
+        <node concept="356sEF" id="6iEBxzAJW7v" role="356sEH">
+          <property role="TrG5h" value="kubectl delete serviceaccount kube-state-metrics --grace-period=0 --force --namespace kube-system" />
+        </node>
+        <node concept="2EixSi" id="6iEBxzAJW7x" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="6iEBxzAJW7y" role="383Ya9">
+        <node concept="356sEF" id="6iEBxzAJW7z" role="356sEH">
+          <property role="TrG5h" value="kubectl delete service kube-state-metrics --grace-period=0 --force --namespace kube-system" />
+        </node>
+        <node concept="2EixSi" id="6iEBxzAJW7_" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="6iEBxzAJW7A" role="383Ya9">
+        <node concept="2EixSi" id="6iEBxzAJW7D" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="6iEBxzAJW7E" role="383Ya9">
+        <node concept="356sEF" id="6iEBxzAJW7F" role="356sEH">
+          <property role="TrG5h" value="# Delete resources in the default namespace" />
+        </node>
+        <node concept="2EixSi" id="6iEBxzAJW7H" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="6iEBxzAJW7I" role="383Ya9">
+        <node concept="356sEF" id="6iEBxzAJW7J" role="356sEH">
+          <property role="TrG5h" value="kubectl delete deployment --all --grace-period=0 --force --namespace default" />
+        </node>
+        <node concept="2EixSi" id="6iEBxzAJW7L" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="6iEBxzAJW7M" role="383Ya9">
+        <node concept="356sEF" id="6iEBxzAJW7N" role="356sEH">
+          <property role="TrG5h" value="kubectl delete service --all --grace-period=0 --force --namespace default" />
+        </node>
+        <node concept="2EixSi" id="6iEBxzAJW7P" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="6iEBxzAJW7Q" role="383Ya9">
+        <node concept="356sEF" id="6iEBxzAJW7R" role="356sEH">
+          <property role="TrG5h" value="kubectl delete configmap --all --grace-period=0 --force --namespace default" />
+        </node>
+        <node concept="2EixSi" id="6iEBxzAJW7T" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="6iEBxzAJW7U" role="383Ya9">
+        <node concept="2EixSi" id="6iEBxzAJW7X" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="6iEBxzAJW7Y" role="383Ya9">
+        <node concept="356sEF" id="6iEBxzAJW7Z" role="356sEH">
+          <property role="TrG5h" value="# Delete monitoring namespace" />
+        </node>
+        <node concept="2EixSi" id="6iEBxzAJW81" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="6iEBxzAJW82" role="383Ya9">
+        <node concept="356sEF" id="6iEBxzAJW83" role="356sEH">
+          <property role="TrG5h" value="kubectl delete namespace monitoring" />
+        </node>
+        <node concept="2EixSi" id="6iEBxzAJW85" role="2EinRH" />
+      </node>
+    </node>
+    <node concept="n94m4" id="6iEBxzAJVH9" role="lGtFl">
       <ref role="n9lRv" to="40ag:2cS6XcGq5uy" resolve="IoT_System" />
     </node>
   </node>
