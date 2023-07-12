@@ -120,12 +120,12 @@
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="MV5QEU9Fu8" resolve="AdaptationRule" />
     </node>
-    <node concept="1TJgyj" id="69a1RFtbkUT" role="1TKVEi">
-      <property role="IQ2ns" value="7082481588271664825" />
+    <node concept="1TJgyj" id="6iEBxzAKWLS" role="1TKVEi">
+      <property role="IQ2ns" value="7253783979621600376" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="brokers" />
+      <property role="20kJfa" value="mqttBroker" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="69a1RFtckYv" resolve="Container_Reference" />
+      <ref role="20lvS9" node="6iEBxzAKWLx" resolve="Broker" />
     </node>
     <node concept="1TJgyj" id="6TALccFbmpI" role="1TKVEi">
       <property role="IQ2ns" value="7955262134318622318" />
@@ -505,13 +505,6 @@
     </node>
     <node concept="PrWs8" id="9gHIfMFhSO" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
-    </node>
-    <node concept="1TJgyj" id="69a1RFtcoyv" role="1TKVEi">
-      <property role="IQ2ns" value="7082481588271941791" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="topics" />
-      <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="69a1RFt1WKQ" resolve="Topic" />
     </node>
     <node concept="1TJgyj" id="1RNaUxCBu09" role="1TKVEi">
       <property role="IQ2ns" value="2158116648750276617" />
@@ -1012,7 +1005,7 @@
     <property role="EcuMT" value="7082481588271927199" />
     <property role="3GE5qa" value="Infrastructure" />
     <property role="TrG5h" value="Container_Reference" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <ref role="1TJDcQ" node="6iEBxzAKWLx" resolve="Broker" />
     <node concept="1TJgyj" id="69a1RFtckYw" role="1TKVEi">
       <property role="IQ2ns" value="7082481588271927200" />
       <property role="20kJfa" value="container" />
@@ -1476,6 +1469,46 @@
       <property role="IQ2nx" value="8803956863434857921" />
       <property role="TrG5h" value="login" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="6iEBxzAKWLx">
+    <property role="EcuMT" value="7253783979621600353" />
+    <property role="3GE5qa" value="Infrastructure" />
+    <property role="TrG5h" value="Broker" />
+    <property role="R5$K7" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyi" id="6iEBxzAKWLJ" role="1TKVEl">
+      <property role="IQ2nx" value="7253783979621600367" />
+      <property role="TrG5h" value="username" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyi" id="6iEBxzAKWLN" role="1TKVEl">
+      <property role="IQ2nx" value="7253783979621600371" />
+      <property role="TrG5h" value="password" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyj" id="6iEBxzAKWLz" role="1TKVEi">
+      <property role="IQ2ns" value="7253783979621600355" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="topics" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="69a1RFt1WKQ" resolve="Topic" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="6iEBxzAKWLD">
+    <property role="EcuMT" value="7253783979621600361" />
+    <property role="3GE5qa" value="Infrastructure" />
+    <property role="TrG5h" value="ExternalBroker" />
+    <ref role="1TJDcQ" node="6iEBxzAKWLx" resolve="Broker" />
+    <node concept="1TJgyi" id="6iEBxzAKWLE" role="1TKVEl">
+      <property role="IQ2nx" value="7253783979621600362" />
+      <property role="TrG5h" value="host" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyi" id="6iEBxzAKWLG" role="1TKVEl">
+      <property role="IQ2nx" value="7253783979621600364" />
+      <property role="TrG5h" value="port" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
   </node>
 </model>
