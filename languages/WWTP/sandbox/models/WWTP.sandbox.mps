@@ -18,8 +18,6 @@
         <property id="7253783979621600364" name="port" index="22ql9O" />
       </concept>
       <concept id="7253783979621600353" name="WWTP.structure.Broker" flags="ng" index="22ql9T">
-        <property id="7253783979621600371" name="password" index="22ql9F" />
-        <property id="7253783979621600367" name="username" index="22ql9R" />
         <child id="7253783979621600355" name="topics" index="22ql9V" />
       </concept>
       <concept id="2223746026162203921" name="WWTP.structure.Num_Value" flags="ng" index="26MvwF">
@@ -300,9 +298,9 @@
   <node concept="fk4LL" id="1VsljEocxJq">
     <property role="TrG5h" value="WWTP - Muro de Alcoy" />
     <node concept="1cM6Q$" id="3$iHPx3c7q4" role="1cM6Ro">
-      <property role="1cM6Qz" value="Jhon" />
-      <property role="1cM6Qx" value="jhon@wwtp.com" />
-      <property role="1cM6Ru" value="jhon" />
+      <property role="1cM6Qz" value="John" />
+      <property role="1cM6Qx" value="john@wwtp.com" />
+      <property role="1cM6Ru" value="john" />
       <ref role="1cM6Rq" node="6SAMiFft9Pv" resolve="Engineer" />
     </node>
     <node concept="35M9Gu" id="6SAMiFg14AG" role="2xhYtq">
@@ -455,7 +453,7 @@
       </node>
     </node>
     <node concept="MQ7l0" id="1VsljEocxNb" role="MQ7m6">
-      <property role="TrG5h" value="WWTP Font de la Pedra" />
+      <property role="TrG5h" value="WWTP Muro de Alcoy" />
       <node concept="MQ7l0" id="5FIiAZiTyTB" role="MQ7lX">
         <property role="TrG5h" value="Water line" />
         <node concept="o8oVO" id="5FIiAZiTyTK" role="MQ7lX">
@@ -2717,8 +2715,6 @@
     <node concept="22ql9L" id="6iEBxzB9K0U" role="22ql9w">
       <property role="22ql9M" value="som-research.uoc.edu" />
       <property role="22ql9O" value="443" />
-      <property role="22ql9R" value="test" />
-      <property role="22ql9F" value="testuserpass" />
       <node concept="2ZjsHc" id="6iEBxzBmyFS" role="22ql9V">
         <property role="TrG5h" value="wwtp/GChamber/ph" />
       </node>
