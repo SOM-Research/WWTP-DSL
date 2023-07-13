@@ -31,20 +31,20 @@
 5.	Restart MPS and apply language migrations: in the top menu select *Migration* and then *Run Migration Asistant*. Finally click on *Migrate*.
 
 <p align="center">
-<img src="/docs/img/migration.jpg" alt="Migration" style="width:90%;"/>
+<img src="/docs/img/migration.jpg" alt="Migration" style="width:70%;"/>
 </p>
 
 
 6. Rebuild (right click and *Rebuild*) the project following this order. First Rebuild Solution Shapes. Then Rebuild Language 'WWTP'. Finally, Rebuild Solution 'WWTP.sandbox' to execute the example model and generate the code.
 
 <p align="center">
-<img src="/docs/img/rebuild1.png" alt="Migration" style="width:60%;"/>
+<img src="/docs/img/rebuild1.png" alt="Migration" style="width:50%;"/>
 </p>
 
 <p align="center">
-<img src="/docs/img/rebuild2.png" alt="Migration" style="width:60%;"/>
+<img src="/docs/img/rebuild2.png" alt="Migration" style="width:50%;"/>
 </p>
 
 <p align="center">
-<img src="/docs/img/rebuild3.png" alt="Migration" style="width:60%;"/>
+<img src="/docs/img/rebuild3.png" alt="Migration" style="width:50%;"/>
 </p>

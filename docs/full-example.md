@@ -100,7 +100,7 @@ Run the script and wait (about one minute) until all the tools are deployed and 
 
 The deployed applications can be categorized into two groups: (1) the framework tools to manage the system in operation, and (2) the IoT system applications that you have modeled using the DSL. 
 
-###3.1 Framework tools
+### 3.1 Framework tools
 The first group encompasses tools such as Prometheus, an adaptation engine, a mqtt exporter, Grafana, and other tools that collect information about the current state of the system. Pods and containers for these applications are deployed in the namespace called *monitoring*. From a browser, you can access the user interface of three of these tools (where *ip_cluster* can be the ip address of the master node of the cluster):
 
 * Prometheus
@@ -118,7 +118,7 @@ You can check the dashboards generated for each user of the system. For example,
 <img src="/docs/img/dashboard.jpg" alt="Grafana Dashboard" style="width:80%;"/>
 </p>
 
-###3.2 IoT system applications
+### 3.2 IoT system applications
 The second group of deployed applications refer to the applications that you have previously specified in the model using the DSL. Pods and containers for these applications are deployed in the namespace called *default*. For this example, we modeled the deployment of the *pod-broker* container on the cloud-node. You can check the execution of this container with the command:
 
 	kubectl get pods -n default
