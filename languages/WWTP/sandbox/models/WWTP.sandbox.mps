@@ -2537,7 +2537,7 @@
         <node concept="fk6Sm" id="7FaGf1nlh9j" role="1cvWIT">
           <property role="TrG5h" value="GC-cond" />
           <property role="1fGzIU" value="µS/cm" />
-          <property role="3O8OIB" value="1200" />
+          <property role="3O8OIB" value="4000" />
           <property role="fk6TG" value="Bosch" />
           <property role="fk6TD" value="2cS6XcGq7mu/WiFi" />
           <property role="2A5aiE" value="1°5'3'' N" />
@@ -2549,7 +2549,7 @@
         <node concept="fk6Sm" id="3IGpv3AYpKv" role="1cvWIT">
           <property role="TrG5h" value="GC-cod" />
           <property role="1fGzIU" value="mg/L" />
-          <property role="3O8OIB" value="250" />
+          <property role="3O8OIB" value="500" />
           <property role="fk6TG" value="Winsen" />
           <property role="fk6TD" value="2cS6XcGq7mu/WiFi" />
           <property role="2A5aiE" value="1°6'3'' N" />
@@ -2561,7 +2561,7 @@
         <node concept="fk6Sm" id="7FaGf1nlh9I" role="1cvWIT">
           <property role="TrG5h" value="GC-tts" />
           <property role="1fGzIU" value="mg/l" />
-          <property role="3O8OIB" value="60" />
+          <property role="3O8OIB" value="500" />
           <property role="fk6TG" value="Winsen" />
           <property role="fk6TD" value="2cS6XcGq7mN/Z_Wave" />
           <property role="2A5aiE" value="1°5'4'' N" />
@@ -2585,7 +2585,7 @@
         <node concept="fk6Sm" id="3IGpv3AYpLW" role="1cvWIT">
           <property role="TrG5h" value="GC-toc" />
           <property role="1fGzIU" value="ml/L" />
-          <property role="3O8OIB" value="25" />
+          <property role="3O8OIB" value="500" />
           <property role="fk6TG" value="S. Electric" />
           <property role="fk6TD" value="2cS6XcGq7mn/Serial" />
           <property role="2A5aiE" value="1°7'2'' N" />
