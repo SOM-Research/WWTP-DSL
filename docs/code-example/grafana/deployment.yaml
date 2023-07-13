@@ -33,6 +33,12 @@ spec:
           - mountPath: /etc/grafana/provisioning/datasources
             name: grafana-datasources
             readOnly: false
+          - mountPath: /etc/grafana/provisioning/dashboards
+            name: dashboard-config
+          - mountPath: /var/lib/grafana/dashboards/plant-operator
+            name: plant-operator-dashboard
+          - mountPath: /var/lib/grafana/dashboards/engineer
+            name: engineer-dashboard
       volumes:
         - name: grafana-storage
           emptyDir: {}
@@ -40,3 +46,15 @@ spec:
           configMap:
               defaultMode: 420
               name: grafana-datasources
+        - name: dashboard-config
+          configMap:
+              defaultMode: 420
+              name: dashboard-config
+        - name: plant-operator-dashboard
+          configMap:
+            defaultMode: 420
+            name: plant-operator-dashboard
+        - name: engineer-dashboard
+          configMap:
+            defaultMode: 420
+            name: engineer-dashboard

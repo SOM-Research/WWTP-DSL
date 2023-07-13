@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Add labels to nodes
+kubectl label nodes node-A node=node-A
+kubectl label nodes node-A layer=edge
+kubectl label nodes cloud-node node=cloud-node
+kubectl label nodes cloud-node layer=cloud
+
 # Namespace
 kubectl create -f namespace/
 
@@ -23,9 +29,7 @@ kubectl create -f node-exporter/daemonset.yaml
 kubectl create -f node-exporter/service.yaml
 
 # mqtt-exporter
-kubectl create -f mqtt-exporter/config-map.yaml
-kubectl create -f mqtt-exporter/deployment.yaml
-kubectl create -f mqtt-exporter/service.yaml
+kubectl create -f mqtt-exporter/
 
 # adaptation-engine
 kubectl create -f adaptation-engine/clusterRole.yaml
@@ -34,6 +38,8 @@ kubectl create -f adaptation-engine/service.yaml
 
 # Grafana
 kubectl create -f grafana/config-map.yaml
+kubectl create -f grafana/dashboards/
+kubectl create -f grafana/dashboard-config.yaml
 kubectl create -f grafana/deployment.yaml
 kubectl create -f grafana/service.yaml
 
@@ -41,5 +47,11 @@ kubectl create -f grafana/service.yaml
 kubectl create -f iot-system/config-map.yaml
 kubectl create -f iot-system/pods.yaml
 kubectl create -f iot-system/services.yaml
+
+# Grafana RBAC configuration
+sleep 20
+chmod +x grafana/rbac.sh
+sed -i -e 's/\r$//' grafana/rbac.sh
+./grafana/rbac.sh
 
 echo "Configuration completed"

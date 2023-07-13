@@ -6,41 +6,67 @@ metadata:
 data:
   prometheus.rules: |-
     groups:
-    - name: Alert-GC-level Alarm
+    - name: Alert-High conductivity alarm
       interval: 1s
       rules:
-      - alert: GC-level Alarm
+      - alert: High conductivity alarm
         # Condition for alerting
-        expr: wwtp_level > 400
-        for: 50s
+        expr: wwtp_GChamber_cond > 5000
+        for: 2m
         annotations:
-          adaptations: '{"operate_actuator_0.0872584705149565":{"broker_ip":"3.223.97.169","port":30070,"topic":"wwtp/valve","message":"open"},"operate_actuator_0.8010238045052724":{"broker_ip":"3.223.97.169","port":30070,"topic":"wwtp/buzzer1","message":"on"}}'
-        labels:
-          severity: 'critical'
-          actions: 'all'
-
-    - name: Alert-GC-EConductivity Alarm
-      interval: 1s
-      rules:
-      - alert: GC-EConductivity Alarm
-        # Condition for alerting
-        expr: (wwtp_ec1 or wwtp_ec2) > 2500
-        for: 10m
-        annotations:
-          adaptations: '{"operate_actuator_0.9226002733987007":{"broker_ip":"3.223.97.169","port":30070,"topic":"wwtp/buzzer1","message":"on"},"operate_actuator_0.027974350478626064":{"broker_ip":"3.223.97.169","port":30070,"topic":"wwtp/buzzer2","message":"on"}}'
+          adaptations: '{"operate_actuator_0.2396376150791143":{"broker_ip":"som-research.uoc.edu","port":443,"topic":"wwtp/GChamber/valve","message":"on"}}'
         labels:
           severity: 'critical'
           actions: '0'
 
-    - name: Alert-CPU high consumption
+    - name: Alert-High TTS alarm
       interval: 1s
       rules:
-      - alert: CPU high consumption
+      - alert: High TTS alarm
         # Condition for alerting
-        expr: 100 - (avg by(node_hostname) (rate(node_cpu_seconds_total{mode="idle",node_hostname="fog-node-1"}[35s])) * 100) > 80
+        expr: wwtp_GChamber_tss > 1000
         for: 2m
         annotations:
-          adaptations: '{"offloading_0.5465681366993159":{"pod_name":"realtime-app","image":"realtime-app:latest","namespace":"default","requirements":{"memory":"600M","cpu":"500m"},"volumes":[],"hosts":{"node":{"operator":"In","values":["edge-node-1"]},"region":{"operator":"In","values":[]},"cluster":{"operator":"In","values":[]}}}}'
+          adaptations: '{"operate_actuator_0.6532723081216287":{"broker_ip":"som-research.uoc.edu","port":443,"topic":"wwtp/GChamber/buzzer","message":"on"}}'
+        labels:
+          severity: 'critical'
+          actions: '0'
+
+    - name: Alert-High COD alarm
+      interval: 1s
+      rules:
+      - alert: High COD alarm
+        # Condition for alerting
+        expr: wwtp_GChamber_cod > 1500
+        for: 2m
+        annotations:
+          adaptations: '{"operate_actuator_0.9961196661669722":{"broker_ip":"som-research.uoc.edu","port":443,"topic":"wwtp/GChamber/valve","message":"on"}}'
+        labels:
+          severity: 'critical'
+          actions: '0'
+
+    - name: Alert-High temperature alarm
+      interval: 1s
+      rules:
+      - alert: High temperature alarm
+        # Condition for alerting
+        expr: wwtp_GChamber_temp > 50
+        for: 2m
+        annotations:
+          adaptations: '{"operate_actuator_0.7332576734386149":{"broker_ip":"som-research.uoc.edu","port":443,"topic":"wwtp/GChamber/buzzer","message":"on"}}'
+        labels:
+          severity: 'critical'
+          actions: '0'
+
+    - name: Alert-pH alarm
+      interval: 1s
+      rules:
+      - alert: pH alarm
+        # Condition for alerting
+        expr: wwtp_GChamber_ph < 6 or wwtp_GChamber_ph > 9
+        for: 2m
+        annotations:
+          adaptations: '{"operate_actuator_0.7112724631684801":{"broker_ip":"som-research.uoc.edu","port":443,"topic":"wwtp/GChamber/buzzer","message":"on"}}'
         labels:
           severity: 'critical'
           actions: '0'

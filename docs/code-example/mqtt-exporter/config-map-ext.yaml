@@ -7,14 +7,14 @@ data:
   conf.yaml: |
     # MQTT All values default to paho.mqtt.client defaults
     mqtt:
-      host:      '3.223.97.169'
-      port:       30070
+      host:      'som-research.uoc.edu'
+      port:       443
 
     metrics:
-      - name:     'wwtp_ph'
-        help:     'Topic wwtp/ph'
+      - name:     'wwtp_GChamber_ph'
+        help:     'Topic wwtp/GChamber/ph'
         type:     'gauge'
-        topic:    'wwtp/ph'
+        topic:    'wwtp/GChamber/ph'
         label_configs:
           - source_labels:  ['__msg_topic__']           # Required (when label_configs is present)
             separator:      '/'                         # Optional default ';'
@@ -23,10 +23,10 @@ data:
             replacement:    '\1'                        # Optional default '\1'
             action:         'replace'                   # Optional default 'replace'
 
-      - name:     'wwtp_ec2'
-        help:     'Topic wwtp/ec2'
+      - name:     'wwtp_GChamber_cond'
+        help:     'Topic wwtp/GChamber/cond'
         type:     'gauge'
-        topic:    'wwtp/ec2'
+        topic:    'wwtp/GChamber/cond'
         label_configs:
           - source_labels:  ['__msg_topic__']           # Required (when label_configs is present)
             separator:      '/'                         # Optional default ';'
@@ -35,10 +35,10 @@ data:
             replacement:    '\1'                        # Optional default '\1'
             action:         'replace'                   # Optional default 'replace'
 
-      - name:     'wwtp_temp'
-        help:     'Topic wwtp/temp'
+      - name:     'wwtp_GChamber_cod'
+        help:     'Topic wwtp/GChamber/cod'
         type:     'gauge'
-        topic:    'wwtp/temp'
+        topic:    'wwtp/GChamber/cod'
         label_configs:
           - source_labels:  ['__msg_topic__']           # Required (when label_configs is present)
             separator:      '/'                         # Optional default ';'
@@ -47,10 +47,10 @@ data:
             replacement:    '\1'                        # Optional default '\1'
             action:         'replace'                   # Optional default 'replace'
 
-      - name:     'wwtp_buzzer1'
-        help:     'Topic wwtp/buzzer1'
+      - name:     'wwtp_GChamber_tss'
+        help:     'Topic wwtp/GChamber/tss'
         type:     'gauge'
-        topic:    'wwtp/buzzer1'
+        topic:    'wwtp/GChamber/tss'
         label_configs:
           - source_labels:  ['__msg_topic__']           # Required (when label_configs is present)
             separator:      '/'                         # Optional default ';'
@@ -59,10 +59,10 @@ data:
             replacement:    '\1'                        # Optional default '\1'
             action:         'replace'                   # Optional default 'replace'
 
-      - name:     'wwtp_buzzer2'
-        help:     'Topic wwtp/buzzer2'
+      - name:     'wwtp_GChamber_temp'
+        help:     'Topic wwtp/GChamber/temp'
         type:     'gauge'
-        topic:    'wwtp/buzzer2'
+        topic:    'wwtp/GChamber/temp'
         label_configs:
           - source_labels:  ['__msg_topic__']           # Required (when label_configs is present)
             separator:      '/'                         # Optional default ';'
@@ -71,10 +71,10 @@ data:
             replacement:    '\1'                        # Optional default '\1'
             action:         'replace'                   # Optional default 'replace'
 
-      - name:     'wwtp_valve'
-        help:     'Topic wwtp/valve'
+      - name:     'wwtp_GChamber_toc'
+        help:     'Topic wwtp/GChamber/toc'
         type:     'gauge'
-        topic:    'wwtp/valve'
+        topic:    'wwtp/GChamber/toc'
         label_configs:
           - source_labels:  ['__msg_topic__']           # Required (when label_configs is present)
             separator:      '/'                         # Optional default ';'
@@ -83,10 +83,10 @@ data:
             replacement:    '\1'                        # Optional default '\1'
             action:         'replace'                   # Optional default 'replace'
 
-      - name:     'wwtp_ec1'
-        help:     'Topic wwtp/ec1'
+      - name:     'wwtp_GChamber_valve'
+        help:     'Topic wwtp/GChamber/valve'
         type:     'gauge'
-        topic:    'wwtp/ec1'
+        topic:    'wwtp/GChamber/valve'
         label_configs:
           - source_labels:  ['__msg_topic__']           # Required (when label_configs is present)
             separator:      '/'                         # Optional default ';'
@@ -95,22 +95,10 @@ data:
             replacement:    '\1'                        # Optional default '\1'
             action:         'replace'                   # Optional default 'replace'
 
-      - name:     'wwtp_tss'
-        help:     'Topic wwtp/tss'
+      - name:     'wwtp_GChamber_buzzer'
+        help:     'Topic wwtp/GChamber/buzzer'
         type:     'gauge'
-        topic:    'wwtp/tss'
-        label_configs:
-          - source_labels:  ['__msg_topic__']           # Required (when label_configs is present)
-            separator:      '/'                         # Optional default ';'
-            regex:          '(.*)'                      # Optional default '(.*)'
-            target_label:   '__topic__'                 # Required (when label_configs is present and 'action' = 'replace')
-            replacement:    '\1'                        # Optional default '\1'
-            action:         'replace'                   # Optional default 'replace'
-
-      - name:     'wwtp_level'
-        help:     'Topic wwtp/level'
-        type:     'gauge'
-        topic:    'wwtp/level'
+        topic:    'wwtp/GChamber/buzzer'
         label_configs:
           - source_labels:  ['__msg_topic__']           # Required (when label_configs is present)
             separator:      '/'                         # Optional default ';'

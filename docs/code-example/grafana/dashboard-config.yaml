@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: dashboard-config
+  namespace: monitoring
+data:
+  dashboard-config.yaml: |-
+    apiVersion: 1
+
+    providers:
+     - name: 'plant-operator'
+       folder: 'plant-operator'
+       type: file
+       options:
+         path: /var/lib/grafana/dashboards/plant-operator
+     - name: 'engineer'
+       folder: 'engineer'
+       type: file
+       options:
+         path: /var/lib/grafana/dashboards/engineer
