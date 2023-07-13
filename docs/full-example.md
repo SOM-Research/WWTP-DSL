@@ -7,7 +7,7 @@ The model discussed here can be accessed by downloading this project and followi
 Once you have opened the model in MPS, we recommend using the tabular notation that includes graphical diagrams and tables to describe sensors, actuators and nodes, etc. To select the tabular notation, right-click anywhere in the model, select *Push Editor Hints*, and select the *Tabular notation* as follows.
 
 <p align="center">
-<img src="/docs/img/tab-notation.jpg" alt="Notation" style="width:100%;"/>
+<img src="/docs/img/tab-notation.jpg" alt="Notation" style="width:95%;"/>
 </p>
 
 ## 1. Modeling

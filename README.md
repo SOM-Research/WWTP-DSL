@@ -13,15 +13,18 @@ The metamodel (abstract syntax) of the DSL is summarised in the following figure
 
 ## Documentation
 
-* [Installation guide](https://github.com/SOM-Research/WWTP-DSL/tree/main/docs/installation-guide.pdf)
+* [Installation guide](https://github.com/SOM-Research/WWTP-DSL/tree/main/docs/installation-guide.md)
+* [Example - Muro de Alcoy WWTP](https://github.com/SOM-Research/WWTP-DSL/tree/main/docs/full-example.md)
 * [Generated code example](https://github.com/SOM-Research/WWTP-DSL/tree/main/docs/code-example)
 
 ## Publications and Other Resources
 
+* Alfonso, I., Garcés, K., Castro, H., & Cabot, J. (2023, February). A model-based infrastructure for the specification and runtime execution of self-adaptive IoT architectures. In Computing journal. https://doi.org/10.1007/s00607-022-01145-7
+
+* Alfonso, I., Garcés, K., Castro, H., & Cabot, J. Modelado de Sistemas IoT para la Industria en Minerıa Subterránea de Carbón. Actas de las XXVI Jornadas de Ingeniería del Software y Bases de Datos (JISBD 2022), Sistedes, 2022. http://hdl.handle.net/11705/JISBD/2022/8557 (only in Spanish).
+
 * Alfonso, I., Garcés, K., Castro, H., & Cabot, J. (2021, October). Modeling self-adaptative IoT architectures. In 2021 ACM/IEEE International Conference on Model Driven Engineering Languages and Systems Companion. https://doi.org/10.1109/MODELS-C53483.2021.00122
 
 * Modeling self-adaptive IoT architectures. Post in [modeling-languajes](https://modeling-languages.com/modeling-self-adaptative-iot-architectures/)
-
-* Alfonso, I., Garcés, K., Castro, H., & Cabot, J. Modelado de Sistemas IoT para la Industria en Minerıa Subterránea de Carbón. Actas de las XXVI Jornadas de Ingeniería del Software y Bases de Datos (JISBD 2022), Sistedes, 2022. http://hdl.handle.net/11705/JISBD/2022/8557 (only in Spanish).
 
 * Modelando Sistemas IoT para la Industria Minera - Ejemplo de Creación de un Lenguaje Específico de Dominio. Post in [Ingeniería de Software](https://ingenieriadesoftware.es/modelando-sistemas-iot-para-la-industria-minera-ejemplo-de-creacion-de-un-lenguaje-especifico-de-dominio/) (only in Spanish).
