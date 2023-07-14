@@ -38,7 +38,7 @@
 <img src="/docs/img/migration.jpg" alt="Migration" style="width:70%;"/>
 </p>
 
-6. Finally, rebuild (right click and *Rebuild*) the project: first rebuild the complete project, and then rebuild the *Language 'WWTP'*. Now you will be able to explore the [WWTP - Muro de Alcoy example model](https://github.com/SOM-Research/WWTP-DSL/tree/main/docs/code-example).
+6. Finally, rebuild (right click and *Rebuild*) the project: first rebuild the complete project, and then rebuild the *Language 'WWTP'*. Now you will be able to explore the [WWTP - Muro de Alcoy example model](https://github.com/SOM-Research/WWTP-DSL/tree/main/docs/full-example.md).
 
 <p align="center">
 <img src="/docs/img/rebuild2.jpg" alt="Rebuild Complete Project" style="width:80%;"/>
