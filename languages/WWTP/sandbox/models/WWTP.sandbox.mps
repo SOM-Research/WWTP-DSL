@@ -3,7 +3,7 @@
   <persistence version="9" />
   <languages>
     <use id="222ccd66-f9d6-4014-8569-354bddee8138" name="WWTP" version="0" />
-    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="11" />
+    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="12" />
     <use id="8ca79d43-eb45-4791-bdd4-0d6130ff895b" name="de.itemis.mps.editor.diagram.layout" version="0" />
   </languages>
   <imports />
@@ -2531,7 +2531,7 @@
           <property role="2A5aiE" value="1°3'3'' N" />
           <property role="2A5aiJ" value="0°3'3'' O" />
           <ref role="fk6Sr" node="46bHwglzUMf" resolve="pH" />
-          <ref role="MQ7mx" node="1VsljEocxNm" resolve="edge-node-1" />
+          <ref role="MQ7mx" node="1VsljEocxNm" resolve="node-A" />
           <ref role="2Z02Rh" node="6iEBxzBmyFS" resolve="wwtp/GChamber/ph" />
         </node>
         <node concept="fk6Sm" id="7FaGf1nlh9j" role="1cvWIT">
@@ -2542,8 +2542,8 @@
           <property role="fk6TD" value="2cS6XcGq7mu/WiFi" />
           <property role="2A5aiE" value="1°5'3'' N" />
           <property role="2A5aiJ" value="0°3'4'' O" />
-          <ref role="fk6Sr" node="1GcyzcRMbZl" resolve="EConductivity" />
-          <ref role="MQ7mx" node="1VsljEocxNm" resolve="edge-node-1" />
+          <ref role="fk6Sr" node="1GcyzcRMbZl" resolve="Conductivity" />
+          <ref role="MQ7mx" node="1VsljEocxNm" resolve="node-A" />
           <ref role="2Z02Rh" node="6iEBxzBmyFX" resolve="wwtp/GChamber/cond" />
         </node>
         <node concept="fk6Sm" id="3IGpv3AYpKv" role="1cvWIT">
@@ -2555,7 +2555,7 @@
           <property role="2A5aiE" value="1°6'3'' N" />
           <property role="2A5aiJ" value="0°5'3'' O" />
           <ref role="fk6Sr" node="3IGpv3AYpKE" resolve="COD" />
-          <ref role="MQ7mx" node="1VsljEocxNm" resolve="edge-node-1" />
+          <ref role="MQ7mx" node="1VsljEocxNm" resolve="node-A" />
           <ref role="2Z02Rh" node="6iEBxzBmyGc" resolve="wwtp/GChamber/cod" />
         </node>
         <node concept="fk6Sm" id="7FaGf1nlh9I" role="1cvWIT">
@@ -2567,7 +2567,7 @@
           <property role="2A5aiE" value="1°5'4'' N" />
           <property role="2A5aiJ" value="0°3'5'' O" />
           <ref role="fk6Sr" node="1GcyzcRMbZI" resolve="TSS" />
-          <ref role="MQ7mx" node="1VsljEocxNm" resolve="edge-node-1" />
+          <ref role="MQ7mx" node="1VsljEocxNm" resolve="node-A" />
           <ref role="2Z02Rh" node="6iEBxzBmyG1" resolve="wwtp/GChamber/tss" />
         </node>
         <node concept="fk6Sm" id="3IGpv3AYpL$" role="1cvWIT">
@@ -2579,7 +2579,7 @@
           <property role="2A5aiE" value="1°6'2'' N" />
           <property role="2A5aiJ" value="1°5'2'' O" />
           <ref role="fk6Sr" node="6CCMDSRediz" resolve="Temp" />
-          <ref role="MQ7mx" node="1VsljEocxNm" resolve="edge-1" />
+          <ref role="MQ7mx" node="1VsljEocxNm" resolve="node-A" />
           <ref role="2Z02Rh" node="6iEBxzBmyFU" resolve="wwtp/GChamber/temp" />
         </node>
         <node concept="fk6Sm" id="3IGpv3AYpLW" role="1cvWIT">
@@ -2591,7 +2591,7 @@
           <property role="2A5aiE" value="1°7'2'' N" />
           <property role="2A5aiJ" value="1°5'3'' O" />
           <ref role="fk6Sr" node="3IGpv3AYpLb" resolve="TOC" />
-          <ref role="MQ7mx" node="1VsljEocxNm" resolve="edge-1" />
+          <ref role="MQ7mx" node="1VsljEocxNm" resolve="node-A" />
           <ref role="2Z02Rh" node="6iEBxzBmyGM" resolve="wwtp/GChamber/toc" />
         </node>
         <node concept="fk6So" id="7FaGf1nlhal" role="1cvWIT">
@@ -2600,7 +2600,7 @@
           <property role="fk6TD" value="2cS6XcGq7mm/Ethernet" />
           <property role="2A5aiE" value="1°5'5'' N" />
           <property role="2A5aiJ" value="0°3'6'' N" />
-          <ref role="MQ7mx" node="1VsljEocxNm" resolve="edge-node-1" />
+          <ref role="MQ7mx" node="1VsljEocxNm" resolve="node-A" />
           <ref role="fk6Sv" node="13ZXatMJQyu" resolve="Signal lamp" />
           <ref role="2Z02Rh" node="6iEBxzBmyGT" resolve="wwtp/GChamber/valve" />
         </node>
@@ -2611,7 +2611,7 @@
           <property role="2A5aiE" value="1°5'2'' N" />
           <property role="2A5aiJ" value="0°3'1'' N" />
           <ref role="fk6Sv" node="1VsljEof3vJ" resolve="Buzzer" />
-          <ref role="MQ7mx" node="1VsljEocxNm" resolve="edge-node-1" />
+          <ref role="MQ7mx" node="1VsljEocxNm" resolve="node-A" />
           <ref role="2Z02Rh" node="6iEBxzBmyH1" resolve="wwtp/GChamber/buzzer" />
         </node>
         <node concept="1eHrxs" id="7FaGf1nlib9" role="1eHrxX">
@@ -2638,17 +2638,17 @@
           <ref role="IiAhU" node="7FaGf1nlhgP" resolve="BR-01" />
         </node>
         <node concept="1eHrxs" id="7D_7WxMW7HJ" role="1eHrxX">
-          <ref role="1eHhWh" node="7D_7WxMW7A2" />
+          <ref role="1eHhWh" node="7D_7WxMW7A2" resolve="Cl-01" />
         </node>
       </node>
       <node concept="2RUTpz" id="7FaGf1nlhQJ" role="3bI92G">
         <property role="TrG5h" value="F-01" />
         <ref role="HRfQO" node="5FIiAZiTyTN" resolve="Secondary" />
         <node concept="1eHrxs" id="22mI4hYxGKQ" role="1eHrxX">
-          <ref role="1eHhWh" node="22mI4hYvKhs" />
+          <ref role="1eHhWh" node="22mI4hYvKhs" resolve="U-01" />
         </node>
         <node concept="1eHrxs" id="22mI4hYxGXh" role="1eHrxX">
-          <ref role="1eHhWh" node="22mI4hYx20V" />
+          <ref role="1eHhWh" node="22mI4hYx20V" resolve="El-01" />
         </node>
       </node>
       <node concept="2RUTpx" id="7FaGf1nlhVV" role="3bI92G">

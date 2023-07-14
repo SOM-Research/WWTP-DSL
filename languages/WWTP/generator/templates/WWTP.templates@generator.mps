@@ -762,7 +762,7 @@
       </node>
     </node>
     <node concept="3aamgX" id="1pvwCw0r1TD" role="3acgRq">
-      <ref role="30HIoZ" to="40ag:RCcmXbntdd" resolve="Operate_Actuator" />
+      <ref role="30HIoZ" to="40ag:RCcmXbntdd" resolve="OperateActuator" />
       <node concept="gft3U" id="11RiBCiqmS5" role="1lVwrX">
         <node concept="356sEK" id="11RiBCi_Tv$" role="gfFT$">
           <node concept="2EixSi" id="11RiBCi_TvA" role="2EinRH" />
@@ -1082,7 +1082,7 @@
         <node concept="356sEF" id="sLBhTUcHwW" role="gfFT$">
           <property role="TrG5h" value="OperateActuators" />
           <node concept="5jKBG" id="1tagy_MvLpC" role="lGtFl">
-            <ref role="v9R2y" node="3mzWCjKFFmO" resolve="Test" />
+            <ref role="v9R2y" node="3mzWCjKFFmO" resolve="UnitOperationTemplate" />
             <node concept="2OqwBi" id="1tagy_MEmMp" role="v9R3O">
               <node concept="30H73N" id="1tagy_M_btU" role="2Oq$k0" />
               <node concept="3TrEf2" id="1tagy_MEncd" role="2OqNvi">
@@ -2379,7 +2379,7 @@
           <node concept="356sEF" id="3S9BFAUbu$t" role="356sEH">
             <property role="TrG5h" value="expression" />
             <node concept="5jKBG" id="3S9BFAUbw5S" role="lGtFl">
-              <ref role="v9R2y" node="3S9BFAU8ctv" resolve="testing" />
+              <ref role="v9R2y" node="3S9BFAU8ctv" resolve="SensorTypeConditionTemplate" />
               <node concept="2OqwBi" id="3S9BFAUb$3$" role="v9R3O">
                 <node concept="30H73N" id="3S9BFAUbzUX" role="2Oq$k0" />
                 <node concept="3TrEf2" id="3S9BFAUb$rn" role="2OqNvi">
@@ -2395,7 +2395,7 @@
                     </node>
                   </node>
                   <node concept="3Tsc0h" id="3S9BFAUb_qX" role="2OqNvi">
-                    <ref role="3TtcxE" to="40ag:1c6nIPvuplk" resolve="iot_devices" />
+                    <ref role="3TtcxE" to="40ag:1c6nIPvuplk" resolve="devices" />
                   </node>
                 </node>
                 <node concept="UnYns" id="3S9BFAUbEH8" role="2OqNvi">
@@ -2544,8 +2544,8 @@
       <ref role="3lhOvi" node="6iEBxzAJVH7" resolve="delete" />
     </node>
     <node concept="3lhOvk" id="40oXp66l5Zb" role="3lj3bC">
-      <ref role="3lhOvi" node="40oXp66QjTF" resolve="grafana/dashboards/rol" />
-      <ref role="30HIoZ" to="40ag:40oXp65O6Ud" resolve="Rol" />
+      <ref role="3lhOvi" node="40oXp66QjTF" resolve="file_name" />
+      <ref role="30HIoZ" to="40ag:40oXp65O6Ud" resolve="Role" />
     </node>
     <node concept="3lhOvk" id="7CHW1WQGqLm" role="3lj3bC">
       <ref role="30HIoZ" to="40ag:2cS6XcGq5uy" resolve="IoT_System" />
@@ -15131,7 +15131,7 @@
       </node>
     </node>
     <node concept="n94m4" id="40oXp66QjTH" role="lGtFl">
-      <ref role="n9lRv" to="40ag:40oXp65O6Ud" resolve="Rol" />
+      <ref role="n9lRv" to="40ag:40oXp65O6Ud" resolve="Role" />
     </node>
     <node concept="17Uvod" id="6SAMiFft4E9" role="lGtFl">
       <property role="2qtEX9" value="name" />
@@ -16482,6 +16482,12 @@
           <property role="TrG5h" value="kubectl delete deployment --all --grace-period=0 --force --namespace default" />
         </node>
         <node concept="2EixSi" id="7a07fD3TjRS" role="2EinRH" />
+      </node>
+      <node concept="356sEK" id="7dxATGExdu0" role="383Ya9">
+        <node concept="356sEF" id="7dxATGExdu1" role="356sEH">
+          <property role="TrG5h" value="kubectl delete pod --all --grace-period=0 --force --namespace default" />
+        </node>
+        <node concept="2EixSi" id="7dxATGExdu2" role="2EinRH" />
       </node>
       <node concept="356sEK" id="7a07fD3TjRT" role="383Ya9">
         <node concept="356sEF" id="7a07fD3TjRU" role="356sEH">

@@ -3,7 +3,7 @@
   <persistence version="9" />
   <languages>
     <use id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure" version="9" />
-    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="11" />
+    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="12" />
     <use id="8ca79d43-eb45-4791-bdd4-0d6130ff895b" name="de.itemis.mps.editor.diagram.layout" version="0" />
     <devkit ref="78434eb8-b0e5-444b-850d-e7c4ad2da9ab(jetbrains.mps.devkit.aspect.structure)" />
   </languages>
@@ -1375,7 +1375,7 @@
     <property role="EcuMT" value="4618711423232536205" />
     <property role="TrG5h" value="Role" />
     <property role="3GE5qa" value="RBAC" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="40oXp65RnUx" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -1384,7 +1384,7 @@
     <property role="EcuMT" value="4618711423232536207" />
     <property role="3GE5qa" value="RBAC" />
     <property role="TrG5h" value="Rule" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyi" id="40oXp65O6Uw" role="1TKVEl">
       <property role="IQ2nx" value="4618711423232536224" />
       <property role="TrG5h" value="action" />
@@ -1409,7 +1409,7 @@
     <property role="3GE5qa" value="RBAC" />
     <property role="TrG5h" value="Resource" />
     <property role="R5$K7" value="true" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="40oXp662qPA" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -1436,7 +1436,7 @@
     <property role="EcuMT" value="4618711423232536230" />
     <property role="3GE5qa" value="RBAC" />
     <property role="TrG5h" value="Role_Reference" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="40oXp65O6UB" role="1TKVEi">
       <property role="IQ2ns" value="4618711423232536231" />
       <property role="20kJfa" value="role" />
@@ -1448,7 +1448,7 @@
     <property role="EcuMT" value="8803956863434857915" />
     <property role="3GE5qa" value="RBAC" />
     <property role="TrG5h" value="User" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="7CHW1WQTpR5" role="1TKVEi">
       <property role="IQ2ns" value="8803956863434857925" />
       <property role="20kJfa" value="role" />
@@ -1476,7 +1476,7 @@
     <property role="3GE5qa" value="Infrastructure" />
     <property role="TrG5h" value="Broker" />
     <property role="R5$K7" value="true" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyi" id="6iEBxzAKWLJ" role="1TKVEl">
       <property role="IQ2nx" value="7253783979621600367" />
       <property role="TrG5h" value="username" />
